@@ -13,7 +13,7 @@ This is an unofficial SvelteKit monorepo starter powered by Turborepo.
 
 **Apps**
 - `./apps/site`: main website
-- `./apps/docs`: [Sveleton](https://github.com/Brisklemonade/sveleton) (TODO: replace with KitDocs)
+- `./apps/docs`: [KitDocs](https://github.com/svelteness/kit-docs)
   
 **Packages**
 - `./packages/components`: core components

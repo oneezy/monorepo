@@ -1,44 +1,30 @@
-import { mdsvex } from 'mdsvex';
-import path from 'path';
-import vercel from '@sveltejs/adapter-vercel';
-import preprocess from 'svelte-preprocess';
-import slug from 'rehype-slug';
+import adapter from '@sveltejs/adapter-auto';
+import { kitDocsPlugin } from '@svelteness/kit-docs/node';
+import Icons from 'unplugin-icons/vite';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	extensions: ['.svelte', '.md', '.svx'],
+  extensions: ['.svelte', '.md'],
 
-	// Consult https://github.com/sveltejs/svelte-preprocess
-	// for more information about preprocessors
-	preprocess: [
-		preprocess({
-			postcss: true
-		}),
-		mdsvex({
-			extensions: ['.svx', '.md'],
-			rehypePlugins: [slug]
-		})
-	],
+  kit: {
+    adapter: adapter(),
 
-	kit: {
-		adapter: vercel(),
+    prerender: {
+      default: true,
+      entries: ['*'],
+    },
 
-		package: {
-			exports: (file) => file === 'index.js'
-		},
-		vite: {
-			resolve: {
-				alias: {
-					$components: path.resolve('./src/components')
-				}
-			},
-			server: {
-				fs: {
-					allow: ['.']
-				}
-			}
-		}
-	}
+    vite: {
+      plugins: [
+        Icons({ compiler: 'svelte' }),
+        kitDocsPlugin({
+          shiki: {
+            theme: 'material-ocean',
+          },
+        }),
+      ],
+    },
+  },
 };
 
 export default config;
