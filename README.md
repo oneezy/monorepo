@@ -1,77 +1,66 @@
-# Turborepo starter with pnpm
+<p align="center">
+  <h1 align="center">Turborepo SvelteKit System starter</h1>
+  <h3 align="center">This is an unofficial SvelteKit monorepo starter powered by Turborepo.</h3>
+</p>
 
-This is an official starter turborepo.
+# What's inside?
 
-## What's inside?
-
-This turborepo uses [pnpm](https://pnpm.io) as a packages manager. It includes the following packages/apps:
+This Turborepo includes the following packages and apps:
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org) app
-- `web`: another [Next.js](https://nextjs.org) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+- `docs`: [Sveleton](https://github.com/Brisklemonade/sveleton) placeholder documentation site
+- `rename-core`: core components
+- `rename-tsconfig`: shared `tsconfig.json`s used throughout the monorepo
+- `eslint-preset-rename`: ESLint preset
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+Each package and app is 100% [Typescript](https://www.typescriptlang.org/).
 
-### Utilities
+# Installation
 
-This turborepo has some additional tools already setup for you:
+Run the following command:
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-## Setup
-
-This repository is used in the `npx create-turbo@latest` command, and selected when choosing which package manager you wish to use with your monorepo (pnpm).
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm run build
+```bash
+npx create-turbosvelte app-name
 ```
 
-### Develop
+# Project Configuration
 
-To develop all apps and packages, run the following command:
+### **Modify the root `package.json`**
 
-```
-cd my-turborepo
-pnpm run dev
-```
+Make sure to modify the contents in the project's root package json to fit your needs.
 
-### Remote Caching
+### **Running concurrent dev enviornments**
 
-Turborepo can use a technique known as [Remote Caching (Beta)](https://turborepo.org/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+As of now if you want to run multiple dev enviornments in parallel, you will have to define different ports in your scripts.
 
-By default, Turborepo will cache locally. To enable Remote Caching (Beta) you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+So you will have to change each `package.json` like such:
 
-```
-cd my-turborepo
-pnpx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
-
-```
-pnpx turbo link
+```bash
+"scripts": {
+    "dev": "svelte-kit dev -p 3200",
+    "build": "svelte-kit build",
+    "preview": "svelte-kit preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+    "package": "svelte-kit package"
+  },
 ```
 
-## Useful Links
+Each project's port will need to be different.
 
-Learn more about the power of Turborepo:
+### **Changing the NPM organization scope**
 
-- [Pipelines](https://turborepo.org/docs/core-concepts/pipelines)
-- [Caching](https://turborepo.org/docs/core-concepts/caching)
-- [Remote Caching (Beta)](https://turborepo.org/docs/core-concepts/remote-caching)
-- [Scoped Tasks](https://turborepo.org/docs/core-concepts/scopes)
-- [Configuration Options](https://turborepo.org/docs/reference/configuration)
-- [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)
+The NPM organization scope for this design system starter is `@rename`. To change this, it's a bit manual at the moment, but you'll need to do the following:
+
+- Rename folders in `packages/*` to replace `rename` with your desired scope
+- Search and replace `rename` with your desired scope
+- Re-run `npm install`
+
+# Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+# License
+
+[MIT](https://choosealicense.com/licenses/mit/)

@@ -1,26 +1,30 @@
 {
-  "name": "web",
-  "version": "0.0.0",
-  "private": true,
+  "name": "@oneezy/web",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "12.0.8",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "ui": "workspace:*"
+    "dev": "svelte-kit dev -p 3000 -o",
+    "build": "svelte-kit build",
+    "package": "svelte-kit package",
+    "preview": "svelte-kit preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+    "lint": "eslint --ignore-path .gitignore ."
   },
   "devDependencies": {
-    "eslint-config-custom": "workspace:*",
-    "eslint": "7.32.0",
-    "next-transpile-modules": "9.0.0",
-    "tsconfig": "workspace:*",
-    "@types/node": "^17.0.12",
-    "@types/react": "17.0.37",
-    "typescript": "^4.5.3"
+    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/kit": "next",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-svelte3": "^3.4.1",
+    "svelte": "^3.48.0",
+    "svelte-check": "^2.7.1",
+    "svelte-preprocess": "^4.10.6",
+    "tslib": "^2.4.0",
+    "typescript": "^4.6.4"
+  },
+  "type": "module",
+  "dependencies": {
+    "@oneezy/components": "workspace:^0.0.1"
   }
 }
