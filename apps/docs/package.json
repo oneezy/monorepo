@@ -1,6 +1,6 @@
 {
 	"name": "@oneezy/docs",
-	"version": "1.0.0",
+	"version": "0.0.1",
 	"description": "A skeleton documentation site powered by MdSvex & Svelte!",
 	"repository": {
 		"type": "git",

@@ -1,9 +1,8 @@
 {
-	"name": "create-turbosvelte",
-	"version": "1.5.5",
-	"author": "",
-	"description": "This is an unofficial SvelteKit monorepo starter powered by Turborepo.",
-	"bin": "./bin/cli.cjs",
+	"name": "pnpm-turborepo-sveltekit",
+	"version": "0.0.1",
+	"author": "oneezy",
+	"description": "PNPM + Turborepo + Sveltekit",
 	"workspaces": [
 		"apps/*",
 		"packages/*"
@@ -20,12 +19,14 @@
 	},
 	"keywords": [
 		"Svelte",
-		"Component Library",
-		"Turborepo"
+		"Sveltekit",
+		"Turborepo",
+    "PNPM",
+    "Monorepo"
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Brisklemonade/turbosvelte.git"
+		"url": "https://github.com/oneezy/monorepo.git"
 	},
 	"license": "MIT",
 	"type": "module"

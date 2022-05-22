@@ -1,27 +1,58 @@
-<p align="center">
-  <h1 align="center">Turborepo SvelteKit System starter</h1>
-  <h3 align="center">This is an unofficial SvelteKit monorepo starter powered by Turborepo.</h3>
-</p>
+# PNPM + Turborepo + Sveltekit Starter 
+
+This is an unofficial SvelteKit monorepo starter powered by Turborepo.
 
 # What's inside?
 
-This Turborepo includes the following packages and apps:
+### Features
+- PNPM
+- Turborepo
+- Sveltekit
 
 ### Apps and Packages
 
-- `docs`: [Sveleton](https://github.com/Brisklemonade/sveleton) placeholder documentation site
-- `rename-core`: core components
-- `rename-tsconfig`: shared `tsconfig.json`s used throughout the monorepo
-- `eslint-preset-rename`: ESLint preset
+**Apps**
+- `./apps/site`: main website
+- `./apps/docs`: [Sveleton](https://github.com/Brisklemonade/sveleton) (TODO: replace with KitDocs)
+  
+**Packages**
+- `./packages/components`: core components
+- `./packages/rename-tsconfig`: shared `tsconfig.json`s used throughout the monorepo
+- `./packages/eslint-preset-rename`: ESLint preset
 
 Each package and app is 100% [Typescript](https://www.typescriptlang.org/).
 
-# Installation
+# Setup
 
-Run the following command:
+**Prereqs**
+```
+node v14  (or later)
+pnpm v7   (or later)
+```
 
-```bash
-npx create-turbosvelte app-name
+**Installation**
+```
+git clone https://gitlab.com/scavenger/scavenger.git
+pnpm i
+pnpm dev
+```
+
+**Add Package**
+```
+1. create folder in ./packages named 'components'
+2. create package.json with proper namespace
+
+  {
+    "name": "@scavenger/components",
+    "version": "0.0.1",
+    "type": "module",
+    "main": "index.js"
+  }
+
+3. navigate to the package you want to share 'components' to
+
+  cd packages/site
+  pnpm add @scavenger/components
 ```
 
 # Project Configuration
@@ -61,6 +92,38 @@ The NPM organization scope for this design system starter is `@rename`. To chang
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-# License
+# References
+**Monorepo**
+- [📽️ Building Svelte Society: Monorepos with pngwn🐧](https://youtu.be/gKxz7R9dX0w)
+- [📽️ Monorepos: Any Size Fits All, by Altan Stalker](https://www.youtube.com/watch?v=elKsZvowdok)
+- [🎧 How to Setup a PNPM Monorepo (Wes Bos and Scott Telenski)](https://syntax.fm/show/401/hasty-treat-how-to-setup-a-pnpm-monorepo)
+- [📖 Visual Studio Code tips for monorepo development](https://medium.com/rewrite-tech/visual-studio-code-tips-for-monorepo-development-with-multi-root-workspaces-and-extension-6b69420ecd12)
+- [📖 Exploring The Monorepo (6 Part Series)](https://dev.to/jonlauridsen/series/12073)
+- [📖 Mono repository done right!](https://blog.ghaiklor.com/2020/07/12/mono-repository-done-right/)
+- [📖 Replacing Lerna + Yarn with PNPM Workspaces](https://www.raulmelo.dev/blog/replacing-lerna-and-yarn-with-pnpm-workspaces)
+- [📖 How to set up monorepo build in GitLab CI](https://how-to.dev/how-to-set-up-monorepo-build-in-gitlab-ci)
+- [🛠️ Monorepo Tools](https://monorepo.tools)
+- [🛠️ Monorepo Workspace (VS Plugin)](https://marketplace.visualstudio.com/items?itemName=folke.vscode-monorepo-workspace)
+- [✨ Prisma + PNPM workspace Starter](https://github.com/millsp/prisma-pnpm-workspace)
+- [✨ Turborepo + Sveltekit Starter](https://github.com/Brisklemonade/turbosvelte)
+- [✨ Vidstack (Big Turborepo + Sveltekit Example)](https://github.com/vidstack/vidstack)
+- [✨ SvelteUI (Big Turborepo + Sveltekit Example)](https://github.com/svelteuidev/svelteui)
 
-[MIT](https://choosealicense.com/licenses/mit/)
+**Docs Starters**
+- [✨ Sveleton](https://github.com/Brisklemonade/sveleton)
+- [✨ KitDocs](https://github.com/svelteness/kit-docs)
+- [✨ Vitebook](https://github.com/vitebook/vitebook)
+- [✨ BooKit](https://vitebook.dev)
+
+**Blog Starters**
+- [✨ Hagura](https://github.com/sharu725/hagura-sveltekit)
+
+**Tailwind UI**
+- [✨ Tailblocks](https://tailblocks.cc/)
+- [✨ HyperUI](https://www.hyperui.dev/)
+
+**Svelte Themes**
+- [✨ Svelte Themes](https://www.sveltethemes.dev/)
+
+**Full-Stack Sveltekit**
+- [SVEMIX](https://www.svemix.com/)
