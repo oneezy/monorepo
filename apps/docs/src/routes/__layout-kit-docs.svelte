@@ -10,6 +10,7 @@
 </script>
 
 <script>
+  import { Buttton } from '@oneezy/components';
   import '@svelteness/kit-docs/client/polyfills/index.js';
   import '@svelteness/kit-docs/client/styles/normalize.css';
   import '@svelteness/kit-docs/client/styles/fonts.css';
@@ -18,7 +19,6 @@
 
   import { page } from '$app/stores';
   import SvelteLogo from '$img/svelte-horizontal.svg?raw';
-  // import { Button } from '@oneezy/components';
   import {
     Button,
     KitDocs,
@@ -63,6 +63,8 @@
         {@html SvelteLogo}
       </Button>
     </div>
+
+    <Buttton />
 
     <slot />
   </KitDocsLayout>

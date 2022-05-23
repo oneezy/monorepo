@@ -1,8 +1,8 @@
 {
 	"name": "pnpm-turborepo-sveltekit",
+	"description": "PNPM + Turborepo + Sveltekit",
 	"version": "0.0.1",
 	"author": "oneezy",
-	"description": "PNPM + Turborepo + Sveltekit",
 	"workspaces": [
 		"apps/*",
 		"packages/*"
@@ -13,16 +13,15 @@
 		"lint": "turbo run lint"
 	},
 	"devDependencies": {
-		"turbo": "latest",
-		"prettier": "^2.4.1",
-		"prettier-plugin-svelte": "^2.4.0"
+		"prettier": "^2.6.2",
+		"turbo": "latest"
 	},
 	"keywords": [
 		"Svelte",
 		"Sveltekit",
 		"Turborepo",
-    "PNPM",
-    "Monorepo"
+		"PNPM",
+		"Monorepo"
 	],
 	"repository": {
 		"type": "git",

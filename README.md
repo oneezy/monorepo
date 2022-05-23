@@ -1,26 +1,20 @@
 # PNPM + Turborepo + Sveltekit Starter 
 
-This is an unofficial SvelteKit monorepo starter powered by Turborepo.
+This is an unofficial [Sveltekit](https://kit.svelte.dev/) monorepo starter powered by [Turborepo](https://turborepo.org/) and [PNPM](https://pnpm.io/).
 
 # What's inside?
-
-### Features
-- PNPM
-- Turborepo
-- Sveltekit
-
 ### Apps and Packages
 
+Apps and sites live in the `apps` folder while libraries and configs live in the `packages` folder.
+
 **Apps**
-- `./apps/site`: main website
-- `./apps/docs`: [KitDocs](https://github.com/svelteness/kit-docs)
+- `web`: main website
+- `docs`: [KitDocs](https://github.com/svelteness/kit-docs)
   
 **Packages**
-- `./packages/components`: core components
-- `./packages/rename-tsconfig`: shared `tsconfig.json`s used throughout the monorepo
-- `./packages/eslint-preset-rename`: ESLint preset
-
-Each package and app is 100% [Typescript](https://www.typescriptlang.org/).
+- `components`: UI Library
+- `rename-tsconfig`: shared `tsconfig.json`s used throughout the monorepo
+- `eslint-preset-rename`: ESLint preset
 
 # Setup
 
@@ -32,67 +26,78 @@ pnpm v7   (or later)
 
 **Installation**
 ```
-git clone https://gitlab.com/scavenger/scavenger.git
+git clone https://github.com/oneezy/monorepo.git
 pnpm i
 pnpm dev
 ```
 
 **Add Package**
+1. create new folder in `./apps` (i.e. `docs`)
+2. create new folder in `./packages` (i.e. `components`)
+3. go to `components` folder and create `package.json` with proper namespace
+```json
+{
+  "name": "@oneezy/components",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "index.js"
+}
 ```
-1. create folder in ./packages named 'components'
-2. create package.json with proper namespace
+4. cd into the app you want to add the package to and use the `pnpm add` command
+```json
+cd apps/docs
+pnpm add @oneezy/components
 
-  {
-    "name": "@scavenger/components",
-    "version": "0.0.1",
-    "type": "module",
-    "main": "index.js"
-  }
-
-3. navigate to the package you want to share 'components' to
-
-  cd packages/site
-  pnpm add @scavenger/components
+// pnpm adds the workspace at the bottom of your docs/package.json
+"dependencies": {
+  "@oneezy/components": "workspace:^0.0.1"
+}
 ```
 
 # Project Configuration
 
-### **Modify the root `package.json`**
+### Modify the root `package.json`
 
 Make sure to modify the contents in the project's root package json to fit your needs.
 
-### **Running concurrent dev enviornments**
+### Running Multiple Dev Environments
 
-As of now if you want to run multiple dev enviornments in parallel, you will have to define different ports in your scripts.
+If you want to run multiple dev enviornments in parallel, you will have to define different ports in each of your apps `package.json` npm scripts (i.e. `-p 3001`). Each apps port will need to be different.
 
-So you will have to change each `package.json` like such:
-
-```bash
+```json
+"name": "@oneezy/docs",
+"version": "0.0.1",
 "scripts": {
-    "dev": "svelte-kit dev -p 3200",
-    "build": "svelte-kit build",
-    "preview": "svelte-kit preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
-    "package": "svelte-kit package"
-  },
+  "dev": "svelte-kit dev -p 3001 -o",
+  "build": "svelte-kit build",
+  "preview": "svelte-kit preview",
+  "check": "svelte-check --tsconfig ./tsconfig.json",
+  "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+  "package": "svelte-kit package"
+},
 ```
 
-Each project's port will need to be different.
-
-### **Changing the NPM organization scope**
-
-The NPM organization scope for this design system starter is `@rename`. To change this, it's a bit manual at the moment, but you'll need to do the following:
-
-- Rename folders in `packages/*` to replace `rename` with your desired scope
-- Search and replace `rename` with your desired scope
-- Re-run `npm install`
+# Todo
+- [ ] create **tailwind** `package` and add to `apps`
+- [ ] would backend code live in `apps` or `packages` or somewhere else?
+- [ ] create `clean` command to remove `.build` directories, `node_modules` and `package-lock`'s
+- [ ] why is `pnpm build` failing on `apps/docs`?
+- [ ] make `pnpm preview` work on multiple ports
+- [ ] learn how to open one dev environment at a time i.e. `pnpm dev:docs`
+- [ ] setup turborepo cache
+- [ ] show example how to create turborepo dependency graph
+- [ ] make sure to keep this example basic as possible
+- [ ] create more advanced example from the basic example
+  - [ ] husky
+  - [ ] semver
+  - [ ] changelogs
 
 # Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 # References
+
 **Monorepo**
 - [📽️ Building Svelte Society: Monorepos with pngwn🐧](https://youtu.be/gKxz7R9dX0w)
 - [📽️ Monorepos: Any Size Fits All, by Altan Stalker](https://www.youtube.com/watch?v=elKsZvowdok)
@@ -105,7 +110,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 - [📖 How to set up monorepo build in GitLab CI](https://how-to.dev/how-to-set-up-monorepo-build-in-gitlab-ci)
 - [📖 Why TurboRepo Will Be The First Big Trend of 2022](https://dev.to/swyx/why-turborepo-will-be-the-first-big-trend-of-2022-4gfj)
 - [📖 Turborepo with Svelte](https://nenadkostic.com/blog/turborepo-sveltekit/)
-- [🛠️ Monorepo Tools](https://monorepo.tools)
+- [🛠️ Monorepo.tools](https://monorepo.tools)
 - [🛠️ Monorepo Workspace (VS Plugin)](https://marketplace.visualstudio.com/items?itemName=folke.vscode-monorepo-workspace)
 - [✨ Prisma + PNPM workspace Starter](https://github.com/millsp/prisma-pnpm-workspace)
 - [✨ Turborepo + Sveltekit Starter](https://github.com/Brisklemonade/turbosvelte)
@@ -130,3 +135,6 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 **Full-Stack Sveltekit**
 - [SVEMIX](https://www.svemix.com/)
+
+
+# Thanks Everyone!
