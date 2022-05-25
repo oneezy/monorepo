@@ -40,14 +40,6 @@
 		"prettier": "^2.6.2",
 		"turbo": "latest"
 	},
-	"lint-staged": {
-		"apps/**/*.{js,ts,svelte,svx}": [
-			"eslint --fix"
-		],
-		"packages/ui/**/*.{js,ts,svelte,svx}": [
-			"eslint --fix"
-		]
-	},
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
