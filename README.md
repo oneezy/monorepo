@@ -8,8 +8,8 @@ This is an unofficial [Sveltekit](https://kit.svelte.dev/) monorepo starter powe
 Apps and sites live in the `apps` folder while libraries and configs live in the `packages` folder.
 
 **Apps**
-- `web`: main website
-- `docs`: [KitDocs](https://github.com/svelteness/kit-docs)
+- `web`: [Sveltekit Skeleton](https://kit.svelte.dev)
+- `docs`: [Sveltekit Skeleton](https://kit.svelte.dev) + [TailWindCSS](https://tailwindcss.com/)
   
 **Packages**
 - `components`: UI Library
