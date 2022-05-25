@@ -10,7 +10,9 @@
 	"scripts": {
 		"build": "turbo run build",
 		"dev": "turbo run dev --parallel",
-		"lint": "turbo run lint"
+		"preview": "turbo run preview",
+		"lint": "turbo run lint",
+    "clean": "git clean -fXd"
 	},
 	"devDependencies": {
 		"prettier": "^2.6.2",

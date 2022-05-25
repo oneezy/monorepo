@@ -10,6 +10,9 @@
 		"dev": {
 			"cache": false
 		},
+		"preview": {
+			"cache": false
+		},
 		"package": {
 			"outputs": ["package"]
 		}

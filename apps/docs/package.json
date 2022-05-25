@@ -5,18 +5,23 @@
     "dev": "svelte-kit dev -p 3001 -o",
     "build": "svelte-kit build",
     "package": "svelte-kit package",
-    "preview": "svelte-kit preview",
-    "prepare": "svelte-kit sync"
+    "preview": "svelte-kit preview -p 3001 -o",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+    "lint": "eslint --ignore-path .gitignore ."
   },
   "devDependencies": {
-    "@iconify-json/ri": "^1.1.1",
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
-    "@svelteness/kit-docs": "^0.22.12",
-    "clsx": "^1.1.1",
-    "shiki": "^0.10.1",
-    "svelte": "^3.44.0",
-    "unplugin-icons": "^0.13.4"
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-svelte3": "^3.4.1",
+    "svelte": "^3.48.0",
+    "svelte-check": "^2.7.1",
+    "svelte-preprocess": "^4.10.6",
+    "tslib": "^2.4.0",
+    "typescript": "^4.6.4"
   },
   "type": "module",
   "dependencies": {

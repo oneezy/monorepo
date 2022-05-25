@@ -1,11 +1,11 @@
-<script context="module">
-  export const prerender = true;
-
-  /** @type {import("@sveltejs/kit").Load} */
-  export function load() {
-    return {
-      status: 307,
-      redirect: '/docs',
-    };
-  }
+<script lang="ts">
+  import { Buttton } from '@oneezy/components';
 </script>
+
+<h1>Docs</h1>
+<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<Buttton />
+
+<style>
+    /* your styles go here */
+</style>
