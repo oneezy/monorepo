@@ -29,6 +29,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@oneezy/components": "workspace:^0.0.1"
+		"@oneezy/components": "workspace:^0.0.1",
+		"@oneezy/tsconfig": "workspace:^0.0.0"
 	}
 }

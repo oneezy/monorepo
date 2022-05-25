@@ -13,8 +13,8 @@ Apps and sites live in the `apps` folder while libraries and configs live in the
   
 **Packages**
 - `components`: UI Library
-- `rename-tsconfig`: shared `tsconfig.json`s used throughout the monorepo
-- `eslint-preset-rename`: ESLint preset
+- `tsconfig`: shared `tsconfig.json`s used throughout the monorepo
+- `eslint-preset`: ESLint preset
 
 # Setup
 
