@@ -3,33 +3,6 @@
 	"description": "PNPM + Turborepo + Sveltekit",
 	"version": "0.0.1",
 	"author": "oneezy",
-	"workspaces": [
-		"apps/*",
-		"packages/*"
-	],
-	"scripts": {
-		"build": "turbo run build",
-		"dev": "turbo run dev --parallel",
-		"preview": "turbo run preview",
-		"lint": "turbo run lint",
-		"clean": "git clean -fXd",
-    "test": "turbo run test",
-    "prepare": "husky install"
-	},
-  "lint-staged": {
-    "apps/**/*.{js,ts,svelte,svx}": [
-      "eslint --fix"
-    ],
-    "packages/ui/**/*.{js,ts,svelte,svx}": [
-      "eslint --fix"
-    ]
-  },
-	"devDependencies": {
-		"husky": "^8.0.1",
-		"lint-staged": "^12.4.2",
-		"prettier": "^2.6.2",
-		"turbo": "latest"
-	},
 	"keywords": [
 		"Svelte",
 		"Sveltekit",
@@ -42,5 +15,55 @@
 		"url": "https://github.com/oneezy/monorepo.git"
 	},
 	"license": "MIT",
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev --parallel",
+		"preview": "turbo run preview",
+		"lint": "turbo run lint",
+		"clean": "git clean -fXd",
+		"test": "turbo run test",
+		"prepare": "husky install",
+    "commitlint": "commitlint",
+    "git-cz": "git-cz"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^17.0.1",
+		"@commitlint/config-conventional": "^17.0.0",
+		"commitizen": "^4.2.4",
+		"cz-conventional-changelog": "^3.3.0",
+		"husky": "^8.0.1",
+		"lint-staged": "^12.4.2",
+		"prettier": "^2.6.2",
+		"turbo": "latest"
+	},
+	"lint-staged": {
+		"apps/**/*.{js,ts,svelte,svx}": [
+			"eslint --fix"
+		],
+		"packages/ui/**/*.{js,ts,svelte,svx}": [
+			"eslint --fix"
+		]
+	},
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "header-min-length": [2, "always", 8],
+      "header-max-length": [2, "always", 72],
+      "subject-min-length": [2, "always", 3],
+      "subject-max-length": [2, "always", 50],
+      "body-max-line-length": [2, "always", 80]
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
 	"type": "module"
 }
