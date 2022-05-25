@@ -12,9 +12,21 @@
 		"dev": "turbo run dev --parallel",
 		"preview": "turbo run preview",
 		"lint": "turbo run lint",
-    "clean": "git clean -fXd"
+		"clean": "git clean -fXd",
+    "test": "turbo run test",
+    "prepare": "husky install"
 	},
+  "lint-staged": {
+    "apps/**/*.{js,ts,svelte,svx}": [
+      "eslint --fix"
+    ],
+    "packages/ui/**/*.{js,ts,svelte,svx}": [
+      "eslint --fix"
+    ]
+  },
 	"devDependencies": {
+		"husky": "^8.0.1",
+		"lint-staged": "^12.4.2",
 		"prettier": "^2.6.2",
 		"turbo": "latest"
 	},

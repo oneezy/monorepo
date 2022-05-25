@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Buttton } from '@oneezy/components';
+  import { Buttton } from '@oneezy/ui';
 </script>
 
 <h1>Web</h1>

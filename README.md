@@ -12,7 +12,7 @@ Apps and sites live in the `apps` folder while libraries and configs live in the
 - `docs`: [Sveltekit Skeleton](https://kit.svelte.dev) + [TailWindCSS](https://tailwindcss.com/)
   
 **Packages**
-- `components`: UI Library
+- `ui`: UI Library
 - `tsconfig`: shared `tsconfig.json`s used throughout the monorepo
 - `eslint-preset`: ESLint preset
 
@@ -33,11 +33,11 @@ pnpm dev
 
 **Add Package**
 1. create new folder in `./apps` (i.e. `docs`)
-2. create new folder in `./packages` (i.e. `components`)
-3. go to `components` folder and create `package.json` with proper namespace
+2. create new folder in `./packages` (i.e. `ui`)
+3. go to `ui` folder and create `package.json` with proper namespace
 ```json
 {
-  "name": "@oneezy/components",
+  "name": "@oneezy/ui",
   "version": "0.0.1",
   "type": "module",
   "main": "index.js"
@@ -46,11 +46,11 @@ pnpm dev
 4. cd into the app you want to add the package to and use the `pnpm add` command
 ```json
 cd apps/docs
-pnpm add @oneezy/components
+pnpm add @oneezy/ui
 
 // pnpm adds the workspace at the bottom of your docs/package.json
 "dependencies": {
-  "@oneezy/components": "workspace:^0.0.1"
+  "@oneezy/ui": "workspace:^0.0.1"
 }
 ```
 
