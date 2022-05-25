@@ -27,6 +27,7 @@
   "type": "module",
   "dependencies": {
     "@oneezy/components": "workspace:^0.0.1",
+    "@oneezy/eslint-preset": "workspace:^1.0.0",
     "@oneezy/tsconfig": "workspace:^0.0.0"
   }
 }
