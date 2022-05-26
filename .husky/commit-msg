@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-pnpm echo "✅ commit-msg"
 pnpm exec commitlint --edit "$1"
+pnpm echo "✅ commit-msg"
