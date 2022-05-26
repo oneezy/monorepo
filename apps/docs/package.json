@@ -2,10 +2,10 @@
 	"name": "@oneezy/docs",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "svelte-kit dev -p 3001 -o",
+		"dev": "svelte-kit dev -p 3003 -o",
 		"build": "svelte-kit build",
 		"package": "svelte-kit package",
-		"preview": "svelte-kit preview -p 3001 -o",
+		"preview": "svelte-kit preview -p 3003 -o",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "eslint --ignore-path .gitignore ."

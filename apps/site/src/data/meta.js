@@ -1,0 +1,9 @@
+export const SITE_URL = 'https://scavengerbot.io';
+export const SITE_TITLE = 'Scavenger Bot';
+export const SITE_AUTHOR = "Scavenger Team"
+export const SITE_SEPARATOR = '|';
+export const SITE_DESCRIPTION = "The Most Reliable Trading Bot for Cryptocurrency";
+// export const FB_ID = '902427283166466';
+// export const FB_ADMINS = '1271441153';
+// export const DISCORD_HANDLE = 'oneezy';
+// export const TWITTER_HANDLE = 'oneeezy';

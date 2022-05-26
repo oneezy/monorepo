@@ -2,11 +2,11 @@
   "name": "@oneezy/web",
   "version": "0.0.1",
   "scripts": {
-    "dev": "svelte-kit dev -p 3000 -o",
-    "dev:web": "svelte-kit dev -p 3000 -o",
+    "dev": "svelte-kit dev -p 3002 -o",
+    "dev:web": "svelte-kit dev -p 3002 -o",
     "build": "svelte-kit build",
     "package": "svelte-kit package",
-    "preview": "svelte-kit preview -p 3000 -o",
+    "preview": "svelte-kit preview -p 3002 -o",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "eslint --ignore-path .gitignore ."

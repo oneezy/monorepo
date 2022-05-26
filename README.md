@@ -8,12 +8,12 @@ This is an unofficial [Sveltekit](https://kit.svelte.dev/) monorepo starter powe
 Apps and sites live in the `apps` folder while libraries and configs live in the `packages` folder.
 
 **Apps**
-- `web`: [Sveltekit Skeleton](https://kit.svelte.dev)
-- `docs`: [Sveltekit Skeleton](https://kit.svelte.dev) + [TailWindCSS](https://tailwindcss.com/)
+- `web`: [Sveltekit](https://kit.svelte.dev)
+- `docs`: [Sveltekit](https://kit.svelte.dev) + [TailWindCSS](https://tailwindcss.com/)
   
 **Packages**
 - `ui`: UI Library
-- `tsconfig`: shared `tsconfig.json`s used throughout the monorepo
+- `tsconfig`: shared `tsconfig.json` used throughout the monorepo
 - `eslint-preset`: ESLint preset
 
 # Setup

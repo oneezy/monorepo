@@ -13,7 +13,11 @@ const config = {
 
 	kit: {
 		adapter: adapter()
-	}
+	},
+  
+  experimental: { 
+    inspector: true 
+  }
 };
 
 export default config;
