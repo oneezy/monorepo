@@ -27,14 +27,11 @@
 		"clean": "git clean -fXd",
 		"test": "turbo run test",
 		"prepare": "husky install",
-    "commitlint": "commitlint",
-    "git-cz": "git-cz"
+		"commitlint": "commitlint"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.0.1",
 		"@commitlint/config-conventional": "^17.0.0",
-		"commitizen": "^4.2.4",
-		"cz-conventional-changelog": "^3.3.0",
 		"husky": "^8.0.1",
 		"lint-staged": "^12.4.2",
 		"prettier": "^2.6.2",
@@ -45,16 +42,31 @@
       "@commitlint/config-conventional"
     ],
     "rules": {
-      "header-min-length": [2, "always", 8],
-      "header-max-length": [2, "always", 72],
-      "subject-min-length": [2, "always", 3],
-      "subject-max-length": [2, "always", 50],
-      "body-max-line-length": [2, "always", 80]
-    }
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "header-max-length": [
+        2,
+        "always",
+        120
+      ],
+      "type-enum": [
+        2,
+        "always",
+        [
+          "breaking",
+          "feat",
+          "fix",
+          "docs",
+          "style",
+          "refactor",
+          "perf",
+          "test",
+          "build",
+          "ci",
+          "chore",
+          "revert",
+          "config",
+          "no-release"
+        ]
+      ]
     }
   },
 	"type": "module"
