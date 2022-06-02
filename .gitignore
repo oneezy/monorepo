@@ -17,6 +17,5 @@ package
  build/**
  dist/**
 .pnpm-debug.log
-pnpm-lock.yaml
 .vscode
 .vscode/**

@@ -1,16 +1,15 @@
 import { resolve } from 'path';
-import { mdsvex } from 'mdsvex';
-import mdsvexConfig from './mdsvex.config.js';
 import preprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-auto';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	extensions: ['.svelte', ...mdsvexConfig.extensions],
-
 	kit: {
 		adapter: adapter(),
 		vite: {
+			resolve: {
+				preserveSymlinks: true
+			},
 			resolve: {
 				alias: {
 					$lib: resolve('./src/lib'),
@@ -26,7 +25,6 @@ const config = {
 		preprocess({
 			postcss: true
 		}),
-		mdsvex(mdsvexConfig)
 	],
 
 	experimental: {
