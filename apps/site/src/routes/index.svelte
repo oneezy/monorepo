@@ -24,6 +24,13 @@
     <h1 class="text-black dark:text-white text-4xl font-bold">{SITE_TITLE}</h1>
     <p class="text-slate-500 dark:text-slate-400">{SITE_DESCRIPTION}</p>
   </div>
+
+  <div class="flex items-center justify-center gap-2 mt-8 mb-4">
+    <a href="/" class="text-slate-500 hover:text-black dark:hover:text-white">Home</a>
+    <a href="/docs" class="text-slate-500 hover:text-black dark:hover:text-white">Docs</a>
+    <a href="/app" class="text-slate-500 hover:text-black dark:hover:text-white">App</a>
+  </div>
+
   <div class="flex items-center justify-center gap-2">
     <Social />
     <Theme />
