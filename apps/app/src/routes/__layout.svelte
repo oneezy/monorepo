@@ -1,8 +1,8 @@
-<script lang="ts">
-    import '../app.css'
+<script>
+  // import '../app.css'
 </script>
 
-<slot><!-- optional fallback --></slot>
+<slot></slot>
 
 <style>
     /* your styles go here */

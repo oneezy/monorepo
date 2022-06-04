@@ -8,15 +8,16 @@ const config = {
 		adapter: adapter(),
 		vite: {
 			resolve: {
-				preserveSymlinks: true
-			},
-			resolve: {
+				preserveSymlinks: true,
 				alias: {
 					$lib: resolve('./src/lib'),
 					$data: resolve('./src/data'),
 					$routes: resolve('./src/routes'),
 					$stores: resolve('./src/stores'),
 				},
+        build: {
+          sourcemap: true
+        }
 			}
 		}
 	},

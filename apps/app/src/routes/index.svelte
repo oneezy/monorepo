@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import { Buttton } from '@oneezy/ui';
 </script>
 

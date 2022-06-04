@@ -9,9 +9,9 @@
 	}
 </script>
 
-<script lang="ts">
+<script>
 	export let error;
-	export let status: number;
+	export let status;
 
 	console.error(`There was an error ${status} ${error.message}`);
 </script>
