@@ -1,9 +1,11 @@
 <script>
 	// import '../app.css';
+  import '$root/apps/docs/src/docs.css';
 </script>
 
-<slot><!-- optional fallback --></slot>
+<main id="docs">
+  <slot></slot>
+</main>
 
 <style>
-	/* your styles go here */
 </style>

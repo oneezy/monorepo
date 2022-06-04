@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+#site {
+  background: white !important;
+}
 
 @layer base {
   html {

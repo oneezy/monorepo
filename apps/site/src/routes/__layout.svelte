@@ -9,8 +9,11 @@
   import Device from '$lib/utils/Device.svelte';
   import Scrollbar from '$lib/Scrollbar.svelte';
   // import Social from '$lib/Social.svelte';
-  import '../app.css';
-  
+
+  import '$root/apps/site/src/site.css';
+  import '$root/apps/docs/src/docs.css';
+  import '$root/apps/app/src/app.css';
+
 	const sm = mediaQuery('(min-width: 0px) and (max-width: 767px)');
 	const md = mediaQuery('(min-width: 0px) and (max-width: 1024px)');
 </script>
@@ -33,13 +36,16 @@
   <meta property="fb:admins" content="{FB_ADMINS}" /> -->
 </svelte:head>
 
-<Device />
 
-{#if !$md}
-  <Scrollbar />
-{/if}
-
-<slot />
+<main id="site">
+  <Device />
+  
+  {#if !$md}
+    <Scrollbar />
+  {/if}
+  
+  <slot />
+</main>
 
 <!-- 
 <footer class="container mx-auto p-4 md:p-8">

@@ -1,3 +1,1 @@
-# Rename web
-
-Optional web package
+# Docs

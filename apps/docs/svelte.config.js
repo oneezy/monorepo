@@ -1,23 +1,29 @@
-import adapter from '@sveltejs/adapter-auto';
+import { resolve } from 'path';
 import preprocess from 'svelte-preprocess';
+import adapter from '@sveltejs/adapter-auto';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// Consult https://github.com/sveltejs/svelte-preprocess
-	// for more information about preprocessors
-	preprocess: [
-		preprocess({
-			postcss: true
-		})
-	],
-
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		vite: {
+			resolve: {
+				alias: {
+          $root: resolve('../../'),
+					$src: resolve('./src'),
+				},
+        build: {
+          sourcemap: true
+        }
+			}
+		}
 	},
-  
-  experimental: { 
-    inspector: true 
-  }
+
+	preprocess: preprocess(),
+
+	experimental: {
+		inspector: true
+	}
 };
 
 export default config;
