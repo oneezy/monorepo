@@ -25,6 +25,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@oneezy/ui": "workspace:^0.0.1"
+		"@oneezy/ui": "workspace:^0.0.1",
+		"svelte-accessible-accordion": "^2.1.0"
 	}
 }

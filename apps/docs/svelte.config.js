@@ -8,9 +8,12 @@ const config = {
 		adapter: adapter(),
 		vite: {
 			resolve: {
+        preserveSymlinks: true,
 				alias: {
           $root: resolve('../../'),
 					$src: resolve('./src'),
+					// $lib: resolve('./src/lib'),   <-- won't work!
+					$lib: resolve('../../apps/docs/src/lib'),
 				},
         build: {
           sourcemap: true

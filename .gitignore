@@ -19,3 +19,4 @@ package
 .pnpm-debug.log
 .vscode
 .vscode/**
+pnpm-lock.yaml

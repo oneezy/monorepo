@@ -8,6 +8,7 @@ const config = {
 		adapter: adapter(),
 		vite: {
 			resolve: {
+        preserveSymlinks: true,
 				alias: {
           $root: resolve('../../'),
 					$src: resolve('./src'),

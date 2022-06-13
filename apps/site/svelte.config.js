@@ -6,17 +6,17 @@ import adapter from '@sveltejs/adapter-auto';
 const config = {
 	kit: {
 		adapter: adapter(),
+    alias: {
+      $root: resolve('../../'),
+      $src: resolve('./src'),
+      $lib: resolve('./src/lib'),
+      $data: resolve('./src/data'),
+      $routes: resolve('./src/routes'),
+      $stores: resolve('./src/stores'),
+    },
 		vite: {
 			resolve: {
 				preserveSymlinks: true,
-				alias: {
-          $root: resolve('../../'),
-					$src: resolve('./src'),
-					$lib: resolve('./src/lib'),
-					$data: resolve('./src/data'),
-					$routes: resolve('./src/routes'),
-					$stores: resolve('./src/stores'),
-				},
         build: {
           sourcemap: true
         }
