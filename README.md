@@ -1,6 +1,6 @@
 ![image](https://oneezy.vercel.app/logo.svg) 
 
-# Turborepo + Sveltekit + PNPM + Tailwind Starter [(Demo)](oneezy-monorepo.vercel.app)
+# Turborepo + Sveltekit + PNPM + Tailwind Starter [(Demo)](https://oneezy-monorepo.vercel.app)
 
 
 This is a monorepo starter powered by [Turborepo](https://turborepo.org/), [PNPM Workspaces](https://pnpm.io/), [Sveltekit](https://kit.svelte.dev/), and [TailWindCSS](https://tailwindcss.com/).
