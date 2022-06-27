@@ -1,22 +1,84 @@
-.DS_Store
+
+# Ignore
+###################################################################################################################### 
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, VSCode
+
+*.iml
+
+## Directory-based project format:
+.idea/
+.vscode/
+
+## File-based project format:
+*.ipr
+*.iws
+
+## Plugin-specific files:
+
+# IntelliJ
+/out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+
+# ignore env variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# dependencies
 node_modules
-pnpm-lock.yaml
+.pnp
+.pnp.js
+
+# testing
+coverage
+
+# debug
 /bin
-/turbosvelte-cli
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ignore build files
+.travis.yml
+todo
+.svelte-kit/
+.next/
+out/
 build
 /build
-.svelte-kit
-/.svelte-kit
-package
-/package
-.env
-.env.*
-!.env.example
 .vercel
 .output
 .turbo
  build/**
  dist/**
+
+# ignore pnpm files
 .pnpm-debug.log
-.vscode
-.vscode/**
+pnpm-lock.yaml
+
+# misc
+.DS_Store
+*.pem
+static/resources
+/turbosvelte-cli
+package
+/package
+
+# Exceptions
+###################################################################################################################### 
+!packages/libs/*/dist/
+!packages/utils/*/dist/
+!packages/*/dist/

@@ -1,0 +1,10 @@
+export const SITE_URL = 'https://scavengerbot.io';
+export const SITE_NAME = 'Scavenger Bot';
+export const SITE_TITLE = 'Make. Crypto. Happen.';
+export const SITE_AUTHOR = "Scavenger Team"
+export const SITE_SEPARATOR = '|';
+export const SITE_DESCRIPTION = "Scavenger Bot is a cutting edge cryptocurrency trading bot that's easy to use, low-risk with high-returns.";
+// export const FB_ID = '902427283166466';
+// export const FB_ADMINS = '1271441153';
+// export const DISCORD_HANDLE = 'oneezy';
+// export const TWITTER_HANDLE = 'oneeezy';

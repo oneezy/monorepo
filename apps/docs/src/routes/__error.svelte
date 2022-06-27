@@ -1,44 +1,21 @@
-<script context="module">
-	export function load({ error, status }) {
-		return {
-			props: {
-				error,
-				status
-			}
-		};
+<a href="/" class="bg-white text-black h-20 w-20 relative z-20">go back</a>
+
+<h1>Oops...</h1>
+
+<slot />
+
+<style>
+	a {
+		display: flex;
+
+		width: max-content;
+		margin: -5rem auto 0 auto;
+
+		font-size: 1.5rem;
+		text-align: center;
+
+		color: var(--dark-a, slategray);
+		text-decoration-skip-ink: auto;
+		text-decoration-color: #ffffff50;
 	}
-</script>
-
-<script>
-	export let error;
-	export let status;
-
-	console.error(`There was an error ${status} ${error.message}`);
-</script>
-
-<svelte:head>
-	{#if status >= 500}
-		<title>Internal Server Error</title>
-	{:else}
-		<title>Page Not Found</title>
-	{/if}
-</svelte:head>
-
-<div>
-	{#if status >= 500}
-        <div>
-            <p>Status: {status}</p>
-            <p>Error: {error}</p>
-        </div>
-	{:else if status > 400}
-        <div>
-            <p>Status: {status}</p>
-            <p>Error: {error}</p>
-        </div>
-	{:else}
-    <div>
-        <p>Status: {status}</p>
-        <p>Error: {error}</p>
-    </div>
-	{/if}
-</div>
+</style>

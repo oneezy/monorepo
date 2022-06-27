@@ -1,6 +1,5 @@
-# Scavenger Site
+# `@apps/site`
 The homepage for Scavenger Bot
-
 ## Features
 
 - SvelteKit
@@ -19,34 +18,51 @@ The homepage for Scavenger Bot
 - Custom Scrollbar [(svrollbar)](https://github.com/daylilyfield/svrollbar#readme)
 - Custom 404 Pages
 
-## Setup
-**Install**
+# Features + Todos
 
-```
-npx degit https://github.com/oneezy/sveltekit-starter my-app
-pnpm i
-pnpm dev
-```
+## Shareable Packages
 
-## Todo Considerations *(brain vomit)*
+Many packages can be shared across apps. A full sweep needs to be done on all apps `scavenger/apps/*` and ported over to `scavenger/packages/*`. The package could be things like `ui | lib | shared | static | common | config`, but the main purpose is for reusability.
 
-**Development**
-- [ ] Husky
-- [ ] Conventional Commits
-- [ ] Emoji Commits
-- [ ] Github Actions
-- [ ] Continuous Integration
-- [ ] Changelogs [(changesets)](https://github.com/changesets/changesets)
-- [ ] Monorepo [(pnpm workspaces)](https://pnpm.io/workspaces)
-  - [ ] App 
-  - [ ] Admin 
-  - [ ] Pages 
-  - [ ] Blog 
-  - [ ] Docs [(gitbook)](https://vitebook.dev/) 
-  - [ ] Shop 
-  - [ ] UI Library [(vitebook)](https://vitebook.dev/) 
-  - [ ] Affiliate System
-  - [ ] Tradingview Scripts 
+**Packages**
+- ui
+  - [ ] css
+  - [ ] js
+  - [ ] components
+- static
+  - [ ] fonts
+  - [ ] images
+    - [ ] bg
+    - [ ] icons
+    - [ ] manifest
+    - [ ] social
+    - [ ] opengraph
+    - [ ] email
+    - [ ] marketing
+    - [ ] exchanges
+  - [ ] video
+- metadata
+  - [ ] company
+  - [ ] social
+- utils
+- congif
+  - [ ] svelte.config.js
+  - [ ] tailwind.config.cjs
+  - [ ] mdsvex.config.js
+
+## Extending / Overriding Packages
+
+Many packages start out as a `base.{js,json}` and need to be extended to be used for app specific purposes.
+
+**Create Examples**
+- [ ] `base.js` > `extended.js`
+- [ ] `base.json` > `extended.json`
+- [ ] `base.css` > `extended.css`
+- [ ] `base.svelte` > `extended.svelte`
+
+## App Specific
+
+For things that are specific to the app that won't be shared. Things like `seo | data | content | analytics | components | edge cases`.
 
 **SEO**
 - [ ] Canonical Links
@@ -55,7 +71,7 @@ pnpm dev
 - [ ] Humans.txt
 - [ ] RSS Feed
 - [ ] LD+JSON
-- [ ] Top level URLs `/blog-post` instead of `/blog/blog-post`
+- [ ] Top level URLs `/my-page` instead of `/pages/my-page`
 - [ ] Opengraph and metatags (auto generated)
 
 **PWA Optimized**

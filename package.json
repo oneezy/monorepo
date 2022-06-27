@@ -1,5 +1,5 @@
 {
-	"name": "pnpm-turborepo-sveltekit",
+	"name": "sveltekit-turborepo",
 	"description": "PNPM + Turborepo + Sveltekit",
 	"version": "0.0.1",
 	"author": "oneezy",
@@ -14,27 +14,37 @@
 		"type": "git",
 		"url": "https://github.com/oneezy/monorepo.git"
 	},
+	"main": "index.js",
 	"license": "MIT",
 	"workspaces": [
 		"apps/*",
 		"packages/*"
 	],
 	"scripts": {
+		"preinstall": "pnpm exec inherit -u",
 		"build": "turbo run build",
 		"dev": "turbo run dev --parallel",
 		"preview": "turbo run preview",
 		"lint": "turbo run lint",
 		"clean": "git clean -fXd",
 		"test": "turbo run test",
+		"plop": "plop",
 		"prepare": "husky install"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.0.2",
 		"@commitlint/config-conventional": "^17.0.2",
+		"@monorepo/inherit": "workspace:^0.0.1",
+		"@monorepo/minify": "workspace:^0.0.1",
+		"autoprefixer": "^10.4.7",
 		"husky": "^8.0.1",
 		"lint-staged": "^12.5.0",
-		"prettier": "^2.6.2",
+		"plop": "^3.1.0",
+		"prettier": "^2.7.0",
 		"turbo": "latest"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"svelte-preprocess": "^4.10.6"
+	}
 }

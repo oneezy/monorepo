@@ -1,0 +1,1 @@
+export { default as svelteConfig } from './svelte.config.js';

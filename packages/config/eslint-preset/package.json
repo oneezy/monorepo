@@ -1,0 +1,12 @@
+{
+	"name": "@packages/config-eslint-preset",
+	"version": "1.0.0",
+	"type": "module",
+	"main": "index.js",
+	"dependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.10.1",
+		"@typescript-eslint/parser": "^5.10.1",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-svelte3": "^3.2.1"
+	}
+}

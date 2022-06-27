@@ -1,0 +1,11 @@
+{
+    "devDependencies": {
+        "svrollbar": "^0.12.0",
+        "svelte-accessible-accordion": "^2.1.0"
+    },
+    "dependencies": {
+        "@packages/config": "workspace:^0.0.1",
+        "@packages/metadata": "workspace:^0.0.1",
+        "@packages/ui": "workspace:^0.0.1"
+    }
+}

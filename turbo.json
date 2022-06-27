@@ -3,7 +3,7 @@
 
 		"build": {
 			"dependsOn": ["^build"],
-      "outputs": [".svelte-kit/**"]
+      "outputs": ["build/**", ".svelte-kit/**", "svelte-kit/**"]
 		},
 
 		"lint": {
