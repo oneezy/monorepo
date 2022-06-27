@@ -1,4 +1,5 @@
 ![image](https://oneezy.vercel.app/logo.svg) 
+
 # Turborepo + Sveltekit + PNPM + Tailwind Starter [(Demo)](oneezy-monorepo.vercel.app)
 
 
@@ -307,6 +308,14 @@ $ ls -l
 rw-r--r-- 1 oneezy 197609 1354 Jun  1 13:00 index.svelte
 +lrwxrwxrwx 1 oneezy 197609   20 Jun  1 20:45 my-new-symlink -> ../../symlinked-docs/
 ```
+# Deploying
+This uses Sveltkits `adapter-auto` and is being deployed to [Vercel](vercel.com) but you may need to change it depending on how you want to deploy.
+
+> _**Note:** You might have to do something like this for your build command (I tried running pnpm build --filter @apps/site but it was complaining_
+```
+cd ../.. && npx turbo run build --scope=site --include-dependencies --no-deps
+```
+![image](https://user-images.githubusercontent.com/7369575/176028732-4aabef62-240b-43d5-852b-89c9dd9db50a.png)
 
 
 # References
