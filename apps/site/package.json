@@ -26,7 +26,7 @@
     "@packages/ui": "workspace:^0.0.1"
   },
   "devDependencies": {
-    "@sveltejs/adapter-node": "next",
+    "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
     "@tailwindcss/typography": "^0.5.2",
     "autoprefixer": "^10.4.7",

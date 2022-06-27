@@ -19,7 +19,7 @@
     "preinstall": "pnpm exec inherit -u"
   },
   "devDependencies": {
-    "@sveltejs/adapter-node": "next",
+    "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
     "autoprefixer": "^10.4.7",
     "eslint": "^7.32.0",

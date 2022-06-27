@@ -1,6 +1,6 @@
 import { resolve } from 'path';
 import preprocess from 'svelte-preprocess';
-import adapter from '@sveltejs/adapter-node';
+import adapter from '@sveltejs/adapter-auto';
 import { join } from 'path';
 import { readFileSync } from 'fs';
 import { cwd } from 'process';
