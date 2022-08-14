@@ -4,8 +4,8 @@
         "svelte-accessible-accordion": "^2.1.0"
     },
     "dependencies": {
-        "@packages/config": "workspace:^0.0.1",
-        "@packages/metadata": "workspace:^0.0.1",
-        "@packages/components": "workspace:^0.0.1"
+        "@packages/config": "workspace:^0.1.0",
+        "@packages/metadata": "workspace:^0.1.0",
+        "@packages/components": "workspace:^0.1.0"
     }
 }

@@ -46,8 +46,8 @@
   <Header class="p-4 md:p-8">
     <Logo slot="left" class="ml-8" />
     <nav slot="center" class="flex flex-col items-center justify-center md:flex-row gap-6 capitalize">
-      <Link href="#home">Home</Link>
-      <Link href="#docs">Docs</Link>
+      <Link href="/">Home</Link>
+      <Link href="docs">Docs</Link>
     </nav>
     <div class="flex items-center justify-center gap-2" slot="right">
       <Link href="https://discord.gg/6Ys7gEr" target="_blank">

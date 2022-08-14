@@ -2,7 +2,7 @@
   "name": "@apps/site",
   "description": "A monorepo for all things Scavenger.",
   "author": "Scavenger Dev Team",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "inherits": [
     "@packages/dependencies/package.svelte.json",
     "@packages/dependencies/package.site.json"
@@ -22,11 +22,11 @@
   "type": "module",
   "dependencies": {
     "@packages/config": "workspace:^0.1.0",
-    "@packages/metadata": "workspace:^0.1.0",
-    "@packages/components": "workspace:^0.1.0"
+    "@packages/metadata": "workspace:^0.1.1",
+    "@packages/components": "workspace:^0.1.1"
   },
   "devDependencies": {
-    "@sveltejs/adapter-node": "next",
+    "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
     "@tailwindcss/typography": "^0.5.2",
     "autoprefixer": "^10.4.7",

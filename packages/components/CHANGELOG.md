@@ -1,5 +1,13 @@
 # @packages/components
 
+## 0.1.1
+
+### Patch Changes
+
+- Updated links to github and demo
+- Updated dependencies
+  - @packages/metadata@0.1.1
+
 ## 0.1.0
 
 ### Minor Changes

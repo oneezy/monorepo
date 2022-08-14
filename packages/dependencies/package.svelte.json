@@ -3,7 +3,7 @@
         "preinstall": "pnpm exec inherit -u"
     },
     "devDependencies": {
-        "@sveltejs/adapter-node": "next",
+        "@sveltejs/adapter-static": "next",
         "@sveltejs/kit": "next",
         "@tailwindcss/typography": "^0.5.2",
         "autoprefixer": "^10.4.7",

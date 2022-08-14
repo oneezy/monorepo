@@ -15,11 +15,13 @@
         <span class="-mt-6">Tailwind</span>
       </h3>
       
-      <h2 class="text--secondary text-center font-medium text-base md:text-2xl md:mt-10 tracking-wide">{SITE_DESCRIPTION}</h2>
+      <h2 class="text--primary text-center font-medium text-base md:text-2xl md:mt-10 tracking-wide">
+        Built with ❤️ by the <a href="https://scavengerbot.io" class="text--brand">ScavenberBot™</a> Team  
+      </h2>
     
       <div class="flex flex-col md:flex-row items-center justify-center gap-4">
-        <Button href="/#features" display="hero">Learn More</Button>
-        <Button href="https://scavengerbot.io/dashboard" button="outline" display="hero">Create Bot</Button>
+        <Button href="https://github.com/oneezy/monorepo" target="_blank" display="hero">Github</Button>
+        <Button href="https://oneezy-monorepo.vercel.app" target="_blank" button="outline" display="hero">Demo</Button>
       </div>
     </Content>
   </Container>

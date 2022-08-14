@@ -1,5 +1,11 @@
 # @packages/metadata
 
+## 0.1.1
+
+### Patch Changes
+
+- Updated links to github and demo
+
 ## 0.1.0
 
 ### Minor Changes
