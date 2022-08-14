@@ -1,6 +1,6 @@
 <script>
   import  { SITE_NAME, SITE_DESCRIPTION } from '@packages/metadata';
-  import { Section, Container, Content, Button } from '@packages/components';
+  import { Section, Container, Content, Button, Link } from '@packages/components';
   import TextAnimate from './TextAnimate.svelte';
 </script>
 
@@ -16,7 +16,7 @@
       </h3>
       
       <h2 class="text--primary text-center font-medium text-base md:text-2xl md:mt-10 tracking-wide">
-        Built with ❤️ by the <a href="https://scavengerbot.io" class="text--brand">ScavenberBot™</a> Team  
+        Built with ❤️ by the <a href="https://scavengerbot.io" class="text--brand" target="_blank">ScavengerBot™</a> Team  
       </h2>
     
       <div class="flex flex-col md:flex-row items-center justify-center gap-4">
