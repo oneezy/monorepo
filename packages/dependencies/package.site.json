@@ -6,6 +6,6 @@
     "dependencies": {
         "@packages/config": "workspace:^0.0.1",
         "@packages/metadata": "workspace:^0.0.1",
-        "@packages/ui": "workspace:^0.0.1"
+        "@packages/components": "workspace:^0.0.1"
     }
 }

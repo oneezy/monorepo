@@ -22,6 +22,9 @@
 		},
 		"./svelteConfig": {
 			"import": "./dist/svelte.config.js"
+		},
+		"./viteConfig": {
+			"import": "./dist/vite.config.js"
 		}
 	},
 	"type": "module",

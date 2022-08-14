@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo/minify",
+  "name": "@packages/minify",
   "version": "0.0.1",
   "description": "",
   "author": "Scavenger Dev Team",

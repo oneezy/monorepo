@@ -1,0 +1,14 @@
+{
+	"name": "@packages/components",
+	"version": "0.0.1",
+	"type": "module",
+	"main": "index.js",
+	"svelte": "index.js",
+	"dependencies": {
+		"@packages/metadata": "workspace:^0.0.1",
+		"svrollbar": "^0.12.0"
+	},
+	"devDependencies": {
+		"svelte-inview": "^3.0.1"
+	}
+}

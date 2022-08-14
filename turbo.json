@@ -2,23 +2,28 @@
 	"pipeline": {
 
 		"build": {
-			"dependsOn": ["^build"],
-      "outputs": ["build/**", ".svelte-kit/**", "svelte-kit/**"]
+      "outputs": ["build/**", ".svelte-kit/**", "svelte-kit/**"],
+			"dependsOn": ["^build"]
 		},
 
 		"lint": {
 			"outputs": []
 		},
 
+		"test": {
+      "outputs": [
+        "coverage/**"
+      ],
+      "dependsOn": []
+    },
+
 		"dev": {
 			"cache": false
 		},
 
 		"preview": {
-			"cache": false
+			"cache": true
 		},
-
-		"test": {},
 
 		"package": {
 			"outputs": ["package"]

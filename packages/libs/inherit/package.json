@@ -1,5 +1,5 @@
 {
-    "name": "@monorepo/inherit",
+    "name": "@packages/inherit",
     "version": "0.0.1",
     "description": "",
     "author": "Scavenger Dev Team",
@@ -13,7 +13,7 @@
     },
     "keywords": [],
     "dependencies": {
-        "@monorepo/minify": "workspace:^0.0.1",
+        "@packages/minify": "workspace:^0.0.1",
         "argv-to-object": "^1.0.1",
         "detect-newline": "^4.0.0",
         "parse-package-name": "^1.0.0",

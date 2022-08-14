@@ -1,3 +1,2 @@
-# Rename web
+# @apps/docs
 
-Optional web package

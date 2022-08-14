@@ -8,10 +8,10 @@
     "@packages/dependencies/package.site.json"
   ],
   "scripts": {
-    "dev": "svelte-kit dev -p 3000 -o",
-    "build": "svelte-kit build",
-    "package": "svelte-kit package",
-    "preview": "svelte-kit preview -p 3000 -o",
+    "build": "vite build",
+    "preview": "vite preview --port 3000 --open",
+    "dev": "vite dev --port 3000 --open",
+    "package": "vite package",
     "prepare": "svelte-kit sync",
     "check": "svelte-check",
     "check:watch": "svelte-check --watch",
@@ -23,10 +23,10 @@
   "dependencies": {
     "@packages/config": "workspace:^0.0.1",
     "@packages/metadata": "workspace:^0.0.1",
-    "@packages/ui": "workspace:^0.0.1"
+    "@packages/components": "workspace:^0.0.1"
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/adapter-node": "next",
     "@sveltejs/kit": "next",
     "@tailwindcss/typography": "^0.5.2",
     "autoprefixer": "^10.4.7",
@@ -44,6 +44,7 @@
     "svelte-preprocess": "^4.10.6",
     "tailwindcss": "^3.0.24",
     "svrollbar": "^0.12.0",
-    "svelte-accessible-accordion": "^2.1.0"
+    "svelte-accessible-accordion": "^2.1.0",
+    "vite": "latest"
   }
 }

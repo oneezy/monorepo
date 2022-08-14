@@ -83,7 +83,7 @@ pnpm preview --filter @apps/site
 3. go to `ui` folder and create `package.json` with proper namespace
 ```json
 {
-  "name": "@packages/ui",
+  "name": "@packages/components",
   "version": "0.0.1",
   "type": "module",
   "main": "index.js"
@@ -92,19 +92,19 @@ pnpm preview --filter @apps/site
 4. cd into the app you want to add the package to and use the `pnpm add` command
 ```
 cd apps/docs
-pnpm add @packages/ui
+pnpm add @packages/components
 ```
 
 > *pnpm adds the workspace at the bottom of your `docs/package.json`*
 ```json
 "dependencies": {
-  "@packages/ui": "workspace:^0.0.1"
+  "@packages/components": "workspace:^0.0.1"
 }
 ```
 
 **Add Component**
-1. create new component in `packages/ui/components` directory 
-2. export new component from `packages/ui/index.js` file
+1. create new component in `packages/components/lib` directory 
+2. export new component from `packages/components/index.js` file
 > ***PROTIP:** Quickly geneate components using [plop](https://plopjs.com/documentation)! (automatically handles steps 1 and 2)*
 ```
 pnpm plop
@@ -112,7 +112,7 @@ pnpm plop
 3. use component in an app `apps/site/src/routes/index.svelte`
 ```html
 <script>
-  import * as UI from '@packages/ui';
+  import * as UI from '@packages/components';
 </script>
 
 <UI.MyComponent />
@@ -120,7 +120,7 @@ pnpm plop
 > *Or...*
 ```html
 <script>
-  import { MyComponent } from '@packages/ui/components/MyComponent/MyComponent.svelte';
+  import { MyComponent } from '@packages/components/lib/MyComponent/MyComponent.svelte';
 </script>
 
 <MyComponent />
@@ -146,7 +146,7 @@ i.e.
     "dependencies": {
         "@packages/config": "workspace:^0.0.1",
         "@packages/metadata": "workspace:^0.0.1",
-        "@packages/ui": "workspace:^0.0.1"
+        "@packages/components": "workspace:^0.0.1"
     }
 }
 ```

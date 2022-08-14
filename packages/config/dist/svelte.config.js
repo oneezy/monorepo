@@ -1,11 +1,6 @@
 import { resolve } from 'path';
 import preprocess from 'svelte-preprocess';
-import adapter from '@sveltejs/adapter-auto';
-import { join } from 'path';
-import { readFileSync } from 'fs';
-import { cwd } from 'process';
-
-const pkg = JSON.parse(readFileSync(join(cwd(), 'package.json')));
+import adapter from '@sveltejs/adapter-node';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -15,23 +10,11 @@ const config = {
       // Root
       $root: resolve('../../'),
 
-      // Apps
+      // App (main)
       $site: resolve('../../apps/site/src'),
+      
+      // Apps (plop added)
       $docs: resolve('../../apps/docs/src'),
-    },
-    vite: {
-      build: {
-        target: ['es2020'],
-      },
-      resolve: {
-        preserveSymlinks: false,
-        build: {
-          sourcemap: true
-        },
-      },
-      ssr: {
-        noExternal: Object.keys(pkg.dependencies || {})
-      }
     }
   },
 
@@ -41,7 +24,5 @@ const config = {
     }),
   ]
 };
-
-if (process.env.NODE_ENV === "production") config.kit.vite.resolve.preserveSymlinks = true;
 
 export default config;

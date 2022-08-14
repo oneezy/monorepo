@@ -2,7 +2,7 @@
   "apps/**/*.{js,ts,svelte,svx}": [
     "eslint --fix"
   ],
-  "packages/ui/**/*.{js,ts,svelte,svx}": [
+  "packages/components/**/*.{js,ts,svelte,svx}": [
     "eslint --fix"
   ]
 }

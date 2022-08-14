@@ -1,10 +1,10 @@
 <script>
 	import { page } from '$app/stores'
 	import { SITE_URL, SITE_NAME, SITE_TITLE, SITE_SEPARATOR, SITE_AUTHOR, SITE_DESCRIPTION } from '@packages/metadata'
-	import { Header, HeaderContainer, Scrollbar, Menu, Icon, Nav, Theme, Button, Social, Device } from '@packages/ui'
-  import { mediaQuery } from '@packages/ui/components/mediaQuery/mediaQuery.js'
-	import '@packages/ui/css/global.css'
-  import '$site/app.css'
+	import { Header, Scrollbar, Menu, Logo, Theme, Button, Social, Device, Page, Link, Icon } from '@packages/components'
+  import { mediaQuery } from '@packages/components/lib/mediaQuery/mediaQuery.js'
+	import '@packages/components/global.css';
+  import '$site/app.css';
 
 	const sm = mediaQuery('(min-width: 0px) and (max-width: 767px)')
 	const md = mediaQuery('(min-width: 0px) and (max-width: 1024px)')
@@ -28,36 +28,40 @@
   <meta property="fb:app_id" content="{FB_ID}" />
   <meta property="fb:admins" content="{FB_ADMINS}" /> -->
 </svelte:head>
-
 <Device device="hidden" />
 
-{#if !$md}
-	<Scrollbar />
-{/if}
+<Page id="site">
+  {#if !$md}
+    <Scrollbar />
+  {/if}
 
-<Header class="p-4 md:p-8">
-	{#if $md}
-		<HeaderContainer class="max-w-screen-xl rounded-full py-2 px-4 md:py-4 md:px-8">
-			<Menu slot="left" />
-			<Icon slot="center" />
-			<Theme slot="right" />
-		</HeaderContainer>
-	{:else}
-		<HeaderContainer class="max-w-screen-xl rounded-full py-2 px-4 md:py-4 md:px-8">
-			<Icon slot="left" />
-			<Nav slot="center" />
-			<div class="flex items-center justify-center" slot="right">
-				<Theme />
-				<Button href="/signup">Sign Up</Button>
-			</div>
-		</HeaderContainer>
-	{/if}
-</Header>
+  {#if $md}
+  <Header class="p-4 md:p-8">
+    <Menu slot="left" />
+    <Logo slot="center" />
+    <Theme slot="right" />
+  </Header>
 
-<main id="site">
+  {:else}
+  <Header class="p-4 md:p-8">
+    <Logo slot="left" class="ml-8" />
+    <nav slot="center" class="flex flex-col items-center justify-center md:flex-row gap-6 capitalize">
+      <Link href="#home">Home</Link>
+      <Link href="#docs">Docs</Link>
+    </nav>
+    <div class="flex items-center justify-center gap-2" slot="right">
+      <Link href="https://discord.gg/6Ys7gEr" target="_blank">
+        <Icon name="discord" viewBox="0 0 28 28" size="42" class="fill--primary rounded-full" />
+      </Link>
+      <Theme />
+      <Button href="/signup" class="ml-2">Sign Up</Button>
+    </div>
+  </Header>
+  {/if}
+
   <slot />
-</main>
 
-<footer class="container mx-auto p-4 md:p-8">
-	<Social />
-</footer>
+  <footer class="container mx-auto p-4 md:p-8">
+    <Social />
+  </footer>
+</Page>
