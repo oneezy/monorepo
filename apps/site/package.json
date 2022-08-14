@@ -22,8 +22,8 @@
   "type": "module",
   "dependencies": {
     "@packages/config": "workspace:^0.1.0",
-    "@packages/metadata": "workspace:^0.1.1",
-    "@packages/components": "workspace:^0.1.1"
+    "@packages/metadata": "workspace:^0.1.0",
+    "@packages/components": "workspace:^0.1.0"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "next",
