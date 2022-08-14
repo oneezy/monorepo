@@ -2,7 +2,7 @@
   "name": "@apps/docs",
   "description": "",
   "author": "Scavenger Dev Team",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "inherits": [
     "@packages/dependencies/package.svelte.json",
     "@packages/dependencies/package.site.json"
@@ -42,9 +42,9 @@
     "svelte-accessible-accordion": "^2.1.0"
   },
   "dependencies": {
-    "@packages/metadata": "workspace:^0.0.1",
-    "@packages/components": "workspace:^0.0.1",
-    "@packages/config": "workspace:^0.0.1"
+    "@packages/metadata": "workspace:^0.1.0",
+    "@packages/components": "workspace:^0.1.0",
+    "@packages/config": "workspace:^0.1.0"
   },
   "type": "module"
 }
