@@ -1,15 +1,15 @@
-<script lang="ts">
+<script>
 	import Portal from './utils/Portal.svelte';
 	import { bookit_state } from './state';
 	import BookIcon from './BookIcon.svelte';
-	export let responsive = true;
-	export let size: [string | number, string | number] = [700, 'auto'];
-	export let bg = '#ffffff';
-	export let padding = 20;
-	export let border = true;
-	export let checker = false;
-	export let title: string;
-	export let controls: null | any = null;
+  export let responsive = true;
+  export let size = [700, 'auto'];
+  export let bg = '#ffffff';
+  export let padding = 20;
+  export let border = true;
+  export let checker = false;
+  export let title;
+  export let controls = null;
 
 	let encoded_title = encodeURI(title);
 	$: encoded_title = encodeURI(title);

@@ -1,21 +1,20 @@
-<script lang="ts">
+<script>
 	import { bookit_state } from './state';
 	import set from 'just-safe-set';
-	export let key: string;
-	export let value: string | boolean | number;
-	export let path: string;
+  export let key;
+  export let value;
+  export let path;
 
-	$: selected_title = $bookit_state?.selected_frame;
-
-	function updateStore(value: string | boolean | number) {
-		// If it's single value
-
-		bookit_state.update((u) => {
-			let newData = { ...u };
-			set(newData, 'loaded.frames.' + selected_title + '.controls.' + path, value);
-			return newData;
-		});
-	}
+  $: selected_title = $bookit_state === null || $bookit_state === void 0 ? void 0 : $bookit_state.selected_frame;
+  
+  function updateStore(value) {
+      // If it's single value
+      bookit_state.update((u) => {
+          let newData = Object.assign({}, u);
+          set(newData, 'loaded.frames.' + selected_title + '.controls.' + path, value);
+          return newData;
+      });
+  }
 </script>
 
 {#if value !== null}

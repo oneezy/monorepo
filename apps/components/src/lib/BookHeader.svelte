@@ -1,8 +1,8 @@
-<script lang="ts">
+<script>
 	import { bookit_state } from './state';
 	import BookDropMenu from './BookDropMenu.svelte';
 	import BookIcon from './BookIcon.svelte';
-	export let title: string;
+	export let title;
 </script>
 
 <div class="wrapper">

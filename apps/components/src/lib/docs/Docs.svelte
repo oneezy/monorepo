@@ -2,7 +2,7 @@
 	<slot />
 </div>
 
-<style lang="scss">
+<style>
 	.bookit-docs {
 		width: 100%;
 		color: #fff;

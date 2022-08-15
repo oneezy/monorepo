@@ -1,13 +1,6 @@
-<script lang="ts">
-	export let props: {
-		[key: string]: {
-			text: string;
-			default?: any;
-			type: string;
-		};
-	} = {};
-
-	export let title: string | boolean = 'Props';
+<script>
+  export let props = {};
+  export let title = 'Props';
 </script>
 
 {#if title}

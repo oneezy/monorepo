@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import { slide } from 'svelte/transition';
 	import ControlsRow from './ControlsRow.svelte';
 	import SideBarHeading from './elements/SideBarHeading.svelte';

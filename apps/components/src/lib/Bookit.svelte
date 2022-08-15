@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import { getStory } from './get_story';
 	import { bookit_state } from './state';
 

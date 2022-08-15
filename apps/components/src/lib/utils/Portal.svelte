@@ -1,6 +1,6 @@
-<script lang="ts">
-	import { onMount, tick } from 'svelte';
-	let iframeRef: HTMLIFrameElement;
+<script>
+  let iframeRef;
+  export {};
 
 	// export function portal(el) {
 	// 	async function update() {

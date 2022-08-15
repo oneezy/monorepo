@@ -1,13 +1,11 @@
-<script lang="ts">
+<script>
 	import BookIcon from './BookIcon.svelte';
 
-	export let buttonText = 'Click Me!';
-	export let onUpdate;
-	export let options;
-
-	export let icon: 'frame' | 'component' | 'size' | 'canvas' | null = null;
-
-	let is_active = false;
+  export let buttonText = 'Click Me!';
+  export let onUpdate;
+  export let options;
+  export let icon = null;
+  let is_active = false;
 </script>
 
 <div class="bookit-container">

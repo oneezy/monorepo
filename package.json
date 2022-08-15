@@ -18,7 +18,7 @@
 	"license": "MIT",
 	"workspaces": [
 		"apps/*",
-		"packages/*"
+		"packages/**"
 	],
 	"scripts": {
 		"preinstall": "pnpm exec inherit -u",
@@ -26,10 +26,10 @@
 		"dev": "turbo run dev --parallel",
 		"preview": "turbo run preview",
 		"lint": "turbo run lint",
-		"clean": "git clean -fXd",
 		"test": "turbo run test",
+		"prepare": "husky install",
 		"plop": "plop",
-		"prepare": "husky install"
+		"clean": "git clean -fXd"
 	},
 	"devDependencies": {
 		"@changesets/cli": "^2.23.1",

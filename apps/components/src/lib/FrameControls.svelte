@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import { slide } from 'svelte/transition';
 	import BookDropMenu from './BookDropMenu.svelte';
 	import BookIcon from './BookIcon.svelte';
@@ -13,9 +13,10 @@
 
 {#if $bookit_state?.loaded.frames?.[selected_title]}
 	<div class="wrapper">
-		<SideBarHeading on:click={() => (is_toggled = !is_toggled)}
-			><BookIcon name="frame" /> Controls</SideBarHeading
-		>
+		<SideBarHeading on:click={() => (is_toggled = !is_toggled)}>
+      <BookIcon name="frame" />
+      Controls
+    </SideBarHeading>
 
 		{#if is_toggled}
 			<div class="inputs" transition:slide>

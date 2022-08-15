@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import BookIcon from './BookIcon.svelte';
 	import SideBarHeading from './elements/SideBarHeading.svelte';
 	import { bookit_state } from './state';
@@ -6,7 +6,7 @@
 	$: selected_title = $bookit_state?.selected_frame;
 	$: selected_raw = $bookit_state?.loaded?.raw;
 
-	let code: { [name: string]: string } = {};
+	let code = {};
 	let last_index = 0;
 
 	$: if (selected_raw) {
@@ -36,7 +36,7 @@
 </div>
 
 <!-- TODO Syntax Highlighting -->
-<style lang="scss">
+<style>
 	code,
 	p {
 		color: var(--bookit_color, white);

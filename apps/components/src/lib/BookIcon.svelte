@@ -1,16 +1,5 @@
-<script lang="ts">
-	export let name:
-		| 'frame'
-		| 'component'
-		| 'size'
-		| 'canvas'
-		| 'code'
-		| 'chev'
-		| 'search'
-		| 'group'
-		| 'warning'
-		| 'info'
-		| 'correct';
+<script>
+	export let name;
 </script>
 
 {#if name === 'frame'}
