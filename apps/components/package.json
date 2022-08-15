@@ -1,5 +1,5 @@
 {
-  "name": "@apps/docs",
+  "name": "@apps/components",
   "description": "",
   "author": "Scavenger Dev Team",
   "version": "0.1.0",
@@ -8,15 +8,24 @@
     "@packages/dependencies/package.site.json"
   ],
   "scripts": {
-    "dev": "vite dev --port 4457 --open",
+    "dev": "vite dev --port 4470 --open",
     "build": "vite build",
-    "preview": "vite preview --port 5409 --open",
+    "preview": "vite preview --port 5967 --open",
     "package": "svelte-kit package",
     "prepare": "svelte-kit sync",
     "check": "svelte-check",
     "check:watch": "svelte-check --watch",
     "lint": "eslint --ignore-path .gitignore .",
     "preinstall": "pnpm exec inherit -u"
+  },
+  "dependencies": {
+		"@leveluptuts/svelte-side-menu": "1.0.5",
+		"@leveluptuts/svelte-toy": "2.0.3",
+		"just-safe-set": "^4.1.1",
+		"svelte-splitpanes": "^0.7.3",
+    "@packages/metadata": "workspace:^0.1.0",
+    "@packages/components": "workspace:^0.1.0",
+    "@packages/config": "workspace:^0.1.0"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
@@ -35,15 +44,7 @@
     "eslint-config-prettier": "^8.5.0",
     "prettier": "^2.6.2",
     "prettier-plugin-svelte": "^2.7.0",
-    "prettier-plugin-tailwindcss": "^0.1.10",
-    "mdsvex": "^0.10.5",
-    "vite": "latest",
-    "svelte-accessible-accordion": "^2.1.0"
-  },
-  "dependencies": {
-    "@packages/metadata": "workspace:^0.1.0",
-    "@packages/components": "workspace:^0.1.0",
-    "@packages/config": "workspace:^0.1.0"
+    "prettier-plugin-tailwindcss": "^0.1.10"
   },
   "type": "module"
 }
