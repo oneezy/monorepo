@@ -8,9 +8,9 @@
     "@packages/dependencies/package.site.json"
   ],
   "scripts": {
-    "dev": "vite dev --port 4470 --open",
+    "dev": "vite dev --port 6006 --open",
     "build": "vite build",
-    "preview": "vite preview --port 5967 --open",
+    "preview": "vite preview --port 7007 --open",
     "package": "svelte-kit package",
     "prepare": "svelte-kit sync",
     "check": "svelte-check",
@@ -19,15 +19,15 @@
     "preinstall": "pnpm exec inherit -u"
   },
   "dependencies": {
-    "@leveluptuts/svelte-side-menu": "1.0.5",
-    "@leveluptuts/svelte-toy": "2.0.3",
-    "just-safe-set": "^4.1.1",
-    "svelte-splitpanes": "^0.7.3",
     "@packages/metadata": "workspace:^0.1.0",
     "@packages/components": "workspace:^0.1.0",
     "@packages/config": "workspace:^0.1.0"
   },
   "devDependencies": {
+    "@leveluptuts/svelte-side-menu": "1.0.5",
+    "@leveluptuts/svelte-toy": "2.0.3",
+    "just-safe-set": "^4.1.1",
+    "svelte-splitpanes": "^0.7.3",
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
     "autoprefixer": "^10.4.7",
