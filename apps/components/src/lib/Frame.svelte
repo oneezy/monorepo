@@ -10,6 +10,7 @@
   export let checker = false;
   export let title;
   export let controls = null;
+  export let colorScheme = 'lite';
 
 	let encoded_title = encodeURI(title);
 	$: encoded_title = encodeURI(title);
@@ -36,21 +37,21 @@
 	$: local_controls = $bookit_state.loaded.frames[encoded_title]?.controls;
 </script>
 
-<div
+<div on:click={() => ($bookit_state.selected_frame = encoded_title)}
 	class="bookit_frame_wrapper"
 	style:width
 	class:selected={$bookit_state?.selected_frame === encoded_title}
 >
 	<!-- Change how controls are loaded. These should probably be put into the tree or something -->
-	<h4 on:click={() => ($bookit_state.selected_frame = encoded_title)}>
+	<h4 class="bottom-[100%] flex items-center gap-2">
 		<BookIcon name="frame" />
 		{title}
 	</h4>
 
 	<div
+    class="bookit_frame"
 		style:padding={local_padding + 'px'}
 		style={`--bookit_frame_bg: ${local_bg}`}
-		class="bookit_frame"
 		style:height
 		style:width
 		style:overflow={responsive ? 'auto' : 'initial'}
@@ -66,9 +67,16 @@
 			</svg>
 		{/if}
 		<div class="bookit_content" style:border={local_border ? 'dashed 1px #999' : 'none'}>
-			<Portal>
-				<slot props={local_controls} />
-			</Portal>
+      <div class="lite">
+        <Portal>
+          <slot props={local_controls} />
+        </Portal>
+      </div>
+      <div class="dark">
+        <Portal>
+          <slot props={local_controls} />
+        </Portal>
+      </div>
 		</div>
 	</div>
 </div>
@@ -110,9 +118,8 @@
 		font-family: monospace;
 		font-weight: 500;
 		position: absolute;
-		top: -25px;
 		font-size: 12px;
-		opacity: 0.6;
+		/* opacity: 0.6; */
 	}
 
 	.bookit_frame_wrapper.selected h4 {
