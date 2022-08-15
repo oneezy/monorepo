@@ -14,6 +14,7 @@ const config = {
       $site: resolve('../../apps/site/src'),
       
       // Apps (plop added)
+      $vitebook: resolve('../../apps/vitebook/src'),
       $docs: resolve('../../apps/docs/src'),
     }
   },

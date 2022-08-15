@@ -1,5 +1,5 @@
 <script>
-  import './global.css';
+  import '@packages/components/global.css';
 
   export let component;
 </script>
