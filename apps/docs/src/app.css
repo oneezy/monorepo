@@ -1,9 +1,0 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer components {
-  #docs .button {
-    @apply bg-slate-300 p-4 px-8 font-semibold text-2xl rounded-full;
-  }
-}

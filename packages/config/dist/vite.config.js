@@ -19,10 +19,10 @@ const config = {
 	ssr: {
 		noExternal: Object.keys(pkg.dependencies || {})
 	},
-	// plugins: [sveltekit()],
   plugins: [
-    // WORKAROUND Vitebook doesn't work with SvelteKit
-    // https://github.com/vitebook/vitebook/issues/89
+
+   /* Vitebook Fix: https://github.com/vitebook/vitebook/issues/89
+    *********************************************************************/
     process.env.KLUDGE_VITEBOOK ? undefined : sveltekit(),
   ],
 };

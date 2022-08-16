@@ -4,6 +4,4 @@ const config = {
     ...postcssConfig
 };
 
-console.log(config);
-
 module.exports = config;

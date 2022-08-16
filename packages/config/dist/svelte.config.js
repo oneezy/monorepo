@@ -15,7 +15,6 @@ const config = {
       
       // Apps (plop added)
       $vitebook: resolve('../../apps/vitebook/src'),
-      $docs: resolve('../../apps/docs/src'),
     }
   },
 

@@ -8,8 +8,6 @@ export default defineConfig({
   include: ['src/**/*.md', 'src/**/*.story.svelte'],
   alias: {
     $app: '/node_modules/@sveltejs/kit/assets/app',
-    $ui: '/node_modules/@packages/components',
-    $data: '/node_modules/@packages/data',
     $lib: '/src/lib',
   },
   plugins: [
