@@ -15,7 +15,7 @@ const config = {
       
       // Apps (plop added)
       $bookit: resolve('../../apps/bookit/src'),
-      $docs: resolve('../../apps/docs/src'),
+      $vitebook: resolve('../../apps/vitebook/src'),
     }
   },
 

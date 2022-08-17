@@ -19,7 +19,12 @@ const config = {
 	ssr: {
 		noExternal: Object.keys(pkg.dependencies || {})
 	},
-	plugins: [sveltekit()]
+  plugins: [
+
+   /* Vitebook Fix: https://github.com/vitebook/vitebook/issues/89
+    *********************************************************************/
+    !process.env.VITEBOOK && sveltekit(),
+  ],
 };
 
 if (process.env.NODE_ENV === "production") config.resolve.preserveSymlinks = true;
