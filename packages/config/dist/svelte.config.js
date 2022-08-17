@@ -1,6 +1,6 @@
 import { resolve } from 'path';
-import preprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-auto';
+import preprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -14,6 +14,7 @@ const config = {
       $site: resolve('../../apps/site/src'),
       
       // Apps (plop added)
+      $bookit: resolve('../../apps/bookit/src'),
       $docs: resolve('../../apps/docs/src'),
     }
   },

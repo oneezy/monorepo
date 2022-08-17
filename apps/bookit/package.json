@@ -1,5 +1,5 @@
 {
-  "name": "@apps/docs",
+  "name": "@apps/bookit",
   "description": "",
   "author": "Scavenger Dev Team",
   "version": "0.1.0",
@@ -8,19 +8,28 @@
     "@packages/dependencies/package.site.json"
   ],
   "scripts": {
-    "dev": "vite dev --port 4457 --open",
+    "dev": "vite dev --port 6006 --open",
     "build": "vite build",
-    "preview": "vite preview --port 5409 --open",
-    "package": "vite package",
+    "preview": "vite preview --port 7007 --open",
+    "package": "svelte-kit package",
     "prepare": "svelte-kit sync",
     "check": "svelte-check",
     "check:watch": "svelte-check --watch",
     "lint": "eslint --ignore-path .gitignore .",
     "preinstall": "pnpm exec inherit -u"
   },
+  "dependencies": {
+    "@packages/metadata": "workspace:^0.1.0",
+    "@packages/components": "workspace:^0.1.0",
+    "@packages/config": "workspace:^0.1.0"
+  },
   "devDependencies": {
+    "@leveluptuts/svelte-side-menu": "1.0.5",
+    "@leveluptuts/svelte-toy": "2.0.3",
+    "just-safe-set": "^4.1.1",
+    "svelte-splitpanes": "^0.7.3",
     "@sveltejs/adapter-auto": "next",
-    "@sveltejs/kit": "next",
+    "@sveltejs/kit": "1.0.0-next.405",
     "autoprefixer": "^10.4.7",
     "eslint": "^7.32.0",
     "eslint-plugin-svelte3": "^3.4.1",
@@ -39,11 +48,6 @@
     "mdsvex": "^0.10.5",
     "vite": "latest",
     "svelte-accessible-accordion": "^2.1.0"
-  },
-  "dependencies": {
-    "@packages/metadata": "workspace:^0.1.0",
-    "@packages/components": "workspace:^0.1.0",
-    "@packages/config": "workspace:^0.1.0"
   },
   "type": "module"
 }

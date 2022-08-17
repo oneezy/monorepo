@@ -82,3 +82,5 @@ package
 !packages/libs/*/dist/
 !packages/utils/*/dist/
 !packages/*/dist/
+
+!apps/bookit/package
