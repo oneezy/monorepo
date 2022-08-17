@@ -1,7 +1,7 @@
 <script context="module">
 	import Toy from '@leveluptuts/svelte-toy/Toy.svelte';
-	import { bookit_state } from '$components/lib/state';
-	import { layoutLoad as load, Book } from '$components/lib';
+	import { bookit_state } from '$bookit/lib/state';
+	import { layoutLoad as load, Book } from '$bookit/lib';
 	export { load };
 </script>
 

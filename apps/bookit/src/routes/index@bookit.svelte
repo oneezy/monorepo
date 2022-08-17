@@ -2,7 +2,7 @@
 	import { SITE_NAME, SITE_TITLE, SITE_SEPARATOR, SITE_AUTHOR, SITE_DESCRIPTION } from '@packages/metadata'
 	import { page } from '$app/stores'
 	// import { Button } from '@packages/components'
-  // import Components from '$components/lib/Components.svelte'
+  // import Components from '$bookit/lib/Components.svelte'
 </script>
 
 <svelte:head>

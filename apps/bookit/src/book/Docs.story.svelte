@@ -1,5 +1,5 @@
 <script context="module">
-	import { Canvas, Frame, Docs, Callout, PropTable } from '$components/lib';
+	import { Canvas, Frame, Docs, Callout, PropTable } from '$bookit/lib';
   import { Button } from '@packages/components';
 
 	export const parent = 'Docs';

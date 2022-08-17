@@ -1,5 +1,5 @@
 <script context="module">
-	import { Bookit, load } from '$components/lib';
+	import { Bookit, load } from '$bookit/lib';
 	export { load };
 </script>
 

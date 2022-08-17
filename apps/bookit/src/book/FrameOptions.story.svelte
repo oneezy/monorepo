@@ -1,5 +1,5 @@
 <script context="module">
-	import { Canvas, Frame } from '$components/lib';
+	import { Canvas, Frame } from '$bookit/lib';
   import { Button } from '@packages/components';
 
 	export const title = 'Frame Options';

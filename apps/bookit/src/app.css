@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer components {
-  #components .button {
+  #bookit .button {
     @apply bg-slate-300 p-4 px-8 font-semibold text-2xl rounded-full;
   }
 }

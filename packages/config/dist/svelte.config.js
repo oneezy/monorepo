@@ -14,7 +14,7 @@ const config = {
       $site: resolve('../../apps/site/src'),
       
       // Apps (plop added)
-      $components: resolve('../../apps/components/src'),
+      $bookit: resolve('../../apps/bookit/src'),
       $docs: resolve('../../apps/docs/src'),
     }
   },
