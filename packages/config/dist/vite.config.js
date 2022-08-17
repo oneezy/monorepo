@@ -23,7 +23,7 @@ const config = {
 
    /* Vitebook Fix: https://github.com/vitebook/vitebook/issues/89
     *********************************************************************/
-    process.env.KLUDGE_VITEBOOK ? undefined : sveltekit(),
+    !process.env.VITEBOOK && sveltekit(),
   ],
 };
 

@@ -4,11 +4,21 @@ import { clientPlugin, defineConfig } from '@vitebook/client/node';
 import { defaultThemePlugin } from '@vitebook/theme-default/node';
 import preprocess from 'svelte-preprocess';
 
+process.env.VITEBOOK = "true";
+
 export default defineConfig({
   include: ['src/**/*.md', 'src/**/*.story.svelte'],
   alias: {
-    $app: '/node_modules/@sveltejs/kit/assets/app',
-    $lib: '/src/lib',
+
+    // App
+    $app:         '/node_modules/@sveltejs/kit/assets/app',
+    $lib:         '/src/lib',
+
+    // Packages
+    $components:  '/node_modules/@packages/components',
+    $config:      '/node_modules/@packages/config',
+    $metadata:    '/node_modules/@packages/metadata',
+
   },
   plugins: [
     svelteMarkdownPlugin(),
@@ -19,8 +29,6 @@ export default defineConfig({
         hydratable: true
       },
       extensions: ['.md', '.svelte'],
-      // Consult https://github.com/sveltejs/svelte-preprocess for more information
-      // about preprocessors.
       preprocess: preprocess(),
     }),
   ],

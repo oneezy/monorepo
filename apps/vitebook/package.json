@@ -4,9 +4,9 @@
   "author": "Scavenger Dev Team",
   "version": "0.1.0",
   "scripts": {
-    "dev": "env KLUDGE_VITEBOOK=t vitebook dev --port 6006 --open",
-    "build": "env KLUDGE_VITEBOOK=t vitebook build",
-    "preview": "env KLUDGE_VITEBOOK=t vitebook preview --port 7007 --open",
+    "dev": "vitebook dev --port 6006 --open",
+    "build": "vitebook build",
+    "preview": "vitebook preview --port 7007 --open",
     "package": "svelte-kit package",
     "check": "svelte-check",
     "check:watch": "svelte-check --watch",
