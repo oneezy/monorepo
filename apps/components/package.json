@@ -29,7 +29,7 @@
     "just-safe-set": "^4.1.1",
     "svelte-splitpanes": "^0.7.3",
     "@sveltejs/adapter-auto": "next",
-    "@sveltejs/kit": "next",
+    "@sveltejs/kit": "1.0.0-next.405",
     "autoprefixer": "^10.4.7",
     "eslint": "^7.32.0",
     "eslint-plugin-svelte3": "^3.4.1",
