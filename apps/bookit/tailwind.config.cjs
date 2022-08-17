@@ -1,7 +1,7 @@
 const tailwindConfig = require('@packages/config/tailwindConfig');
 
 const config = {
-  ...tailwindConfig
+    ...tailwindConfig
 };
 
 module.exports = config;
