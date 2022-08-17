@@ -8,9 +8,9 @@
     "@packages/dependencies/package.site.json"
   ],
   "scripts": {
-    "dev": "vite dev --port 6000 --open",
+    "dev": "vite dev --port 6002 --open",
     "build": "vite build",
-    "preview": "vite preview --port 6000 --open",
+    "preview": "vite preview --port 6002 --open",
     "package": "svelte-kit package",
     "prepare": "svelte-kit sync",
     "check": "svelte-check",
