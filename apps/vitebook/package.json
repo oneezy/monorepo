@@ -2,7 +2,7 @@
   "name": "@apps/vitebook",
   "description": "",
   "author": "Scavenger Dev Team",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "scripts": {
     "dev": "vitebook dev --port 6001 --open",
     "build": "vitebook build",
@@ -45,7 +45,7 @@
   },
   "dependencies": {
     "@packages/metadata": "workspace:^0.1.0",
-    "@packages/components": "workspace:^0.1.0",
+    "@packages/components": "workspace:^0.2.0",
     "@packages/config": "workspace:^0.1.0"
   },
   "type": "module"
