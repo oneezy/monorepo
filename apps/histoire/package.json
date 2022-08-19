@@ -1,0 +1,25 @@
+{
+  "name": "@apps/histoire",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "histoire dev --port 6006 --open",
+    "build": "histoire build",
+    "preview": "histoire preview --port 6006 --open",
+    "clean": "git clean -fXd"
+  },
+  "type": "module",
+  "dependencies": {
+    "@packages/config": "workspace:^0.1.0",
+    "@packages/metadata": "workspace:^0.1.0",
+    "@packages/components": "workspace:^0.1.0"
+  },
+  "devDependencies": {
+    "svelte": "^3.49.0",
+    "@histoire/plugin-svelte": "^0.10.0",
+    "@sveltejs/vite-plugin-svelte": "^1.0.1",
+    "histoire": "^0.10.0",
+    "svelte-preprocess": "^4.10.7",
+    "vite": "^3.0.5"
+  }
+}
