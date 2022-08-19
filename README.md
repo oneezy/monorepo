@@ -17,8 +17,12 @@ This is a monorepo starter powered by [Turborepo](https://turborepo.org/), [PNPM
 - [x] Open multiple apps on different ports w/ `pnpm dev`
 - [x] Build multiple apps w/ `pnpm build` (turborepo build under hood)
 - [x] Preview built apps w/ `pnpm preview`
+- [x] Implement Changesets [(link)](https://github.com/changesets/changesets)
+- [x] Setup Component Stories
+  - [x] Histoire
+  - [x] Vitebook
+  - [x] Bookit 
 - [ ] Commitlint Emojis
-- [ ] Implement Changelogs w/ [(Changesets)](https://github.com/changesets/changesets)
 - [ ] Setup Docker w/ Turborepo
 - [ ] Deploy `dev`, `beta`, and `prod` to real web host
 - [ ] CI Build Process
