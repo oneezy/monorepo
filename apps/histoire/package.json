@@ -1,0 +1,36 @@
+{
+  "name": "@apps/histoire",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "histoire dev --port 6006 --open",
+    "build": "histoire build",
+    "preview": "histoire preview --port 6006 --open",
+    "clean": "git clean -fXd"
+  },
+  "type": "module",
+  "dependencies": {
+    "@packages/config": "workspace:^0.1.0",
+    "@packages/metadata": "workspace:^0.1.0",
+    "@packages/components": "workspace:^0.1.0"
+  },
+  "devDependencies": {
+    "svelte": "^3.49.0",
+    "@histoire/plugin-svelte": "^0.10.0",
+    "@sveltejs/vite-plugin-svelte": "^1.0.1",
+    "@tailwindcss/typography": "^0.5.2",
+    "autoprefixer": "^10.4.7",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-svelte3": "^3.4.1",
+    "postcss": "^8.4.13",
+    "postcss-load-config": "^3.1.4",
+    "prettier": "^2.6.2",
+    "prettier-plugin-svelte": "^2.7.0",
+    "prettier-plugin-tailwindcss": "^0.1.10",
+    "histoire": "^0.10.0",
+    "svelte-preprocess": "^4.10.7",
+    "tailwindcss": "^3.0.24",
+    "vite": "latest"
+  }
+}
