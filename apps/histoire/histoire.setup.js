@@ -1,1 +1,0 @@
-import '@packages/components/global.css';
