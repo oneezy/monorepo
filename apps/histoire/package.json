@@ -3,9 +3,9 @@
   "version": "0.2.0",
   "private": true,
   "scripts": {
-    "dev": "histoire dev --port 6006 --open",
+    "dev": "histoire dev --port 6006",
     "build": "histoire build",
-    "preview": "histoire preview --port 6006 --open",
+    "preview": "histoire preview --port 6006",
     "clean": "git clean -fXd"
   },
   "type": "module",

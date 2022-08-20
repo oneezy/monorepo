@@ -19,6 +19,9 @@ const config = {
 	ssr: {
 		noExternal: Object.keys(pkg.dependencies || {})
 	},
+  server: {
+    open: '/'
+  },
   plugins: [
 
    /* Vitebook Fix: https://github.com/vitebook/vitebook/issues/89

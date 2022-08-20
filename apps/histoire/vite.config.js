@@ -38,6 +38,9 @@ const config = {
       }
     }
   },
+  server: {
+    open: '/'
+  },
 };
 
 export default config

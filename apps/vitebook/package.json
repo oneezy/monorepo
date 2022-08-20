@@ -4,9 +4,9 @@
   "author": "Scavenger Dev Team",
   "version": "0.2.0",
   "scripts": {
-    "dev": "vitebook dev --port 6001 --open",
+    "dev": "vitebook dev --port 6001",
     "build": "vitebook build",
-    "preview": "vitebook preview --port 6001 --open",
+    "preview": "vitebook preview --port 6001",
     "package": "svelte-kit package",
     "check": "svelte-check",
     "check:watch": "svelte-check --watch",

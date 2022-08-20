@@ -9,8 +9,8 @@
   ],
   "scripts": {
     "build": "vite build",
-    "preview": "vite preview --port 3000 --open",
-    "dev": "vite dev --port 3000 --open",
+    "preview": "vite preview --port 3000",
+    "dev": "vite dev --port 3000",
     "package": "svelte-kit package",
     "prepare": "svelte-kit sync",
     "check": "svelte-check",
