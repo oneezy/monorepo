@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "preinstall": "pnpm exec inherit -u"
+        "preinstall": "pnpm exec inherit -u --unsafe-perm"
     },
     "devDependencies": {
         "@sveltejs/adapter-auto": "next",

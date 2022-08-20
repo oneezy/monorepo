@@ -17,7 +17,7 @@
     "check:watch": "svelte-check --watch",
     "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
-    "preinstall": "pnpm exec inherit -u"
+    "preinstall": "pnpm exec inherit -u --unsafe-perm"
   },
   "type": "module",
   "dependencies": {
