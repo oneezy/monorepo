@@ -2,8 +2,9 @@
 	"pipeline": {
 
 		"build": {
+			"dependsOn": ["^build"],
       "outputs": [".vercel_build_output/**", ".svelte-kit/**"],
-			"dependsOn": ["^build"]
+      "inputs": ["src/**/*.{html,js,svelte,svx,ts}", "../../packages/components/**/*.{html,js,svelte,svx,ts}" ]
 		},
 
 		"lint": {

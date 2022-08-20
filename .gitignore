@@ -76,6 +76,7 @@ static/resources
 /turbosvelte-cli
 package
 /package
+vitebook/.vitebook/dist
 
 # Exceptions
 ###################################################################################################################### 

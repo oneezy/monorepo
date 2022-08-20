@@ -88,7 +88,7 @@ pnpm preview --filter @apps/site
 ```json
 {
   "name": "@packages/components",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "main": "index.js"
 }
@@ -102,7 +102,7 @@ pnpm add @packages/components
 > *pnpm adds the workspace at the bottom of your `docs/package.json`*
 ```json
 "dependencies": {
-  "@packages/components": "workspace:^0.1.0"
+  "@packages/components": "workspace:^0.2.0"
 }
 ```
 
@@ -148,9 +148,9 @@ i.e.
         "svelte-accessible-accordion": "^2.1.0"
     },
     "dependencies": {
-        "@packages/config": "workspace:^0.1.0",
-        "@packages/metadata": "workspace:^0.1.0",
-        "@packages/components": "workspace:^0.1.0"
+        "@packages/config": "workspace:^0.2.0",
+        "@packages/metadata": "workspace:^0.2.0",
+        "@packages/components": "workspace:^0.2.0"
     }
 }
 ```
@@ -169,7 +169,7 @@ If you want to run multiple dev enviornments in parallel, you will have to defin
 
 ```json
 "name": "@apps/docs",
-"version": "0.1.0",
+"version": "0.2.0",
 "scripts": {
   "dev": "svelte-kit dev -p 4000 -o",
   "build": "svelte-kit build",

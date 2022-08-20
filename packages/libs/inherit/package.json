@@ -1,6 +1,6 @@
 {
     "name": "@packages/inherit",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "",
     "author": "Scavenger Dev Team",
     "license": "MIT",
@@ -13,7 +13,7 @@
     },
     "keywords": [],
     "dependencies": {
-        "@packages/minify": "workspace:^0.1.0",
+        "@packages/minify": "workspace:^0.2.0",
         "argv-to-object": "^1.0.1",
         "detect-newline": "^4.0.0",
         "parse-package-name": "^1.0.0",

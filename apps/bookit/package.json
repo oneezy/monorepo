@@ -19,9 +19,9 @@
     "preinstall": "pnpm exec inherit -u"
   },
   "dependencies": {
-    "@packages/metadata": "workspace:^0.1.0",
+    "@packages/metadata": "workspace:^0.2.0",
     "@packages/components": "workspace:^0.2.0",
-    "@packages/config": "workspace:^0.1.0"
+    "@packages/config": "workspace:^0.2.0"
   },
   "devDependencies": {
     "@leveluptuts/svelte-side-menu": "1.0.5",

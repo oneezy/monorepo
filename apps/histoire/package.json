@@ -1,6 +1,6 @@
 {
   "name": "@apps/histoire",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "histoire dev --port 6006 --open",
@@ -10,8 +10,8 @@
   },
   "type": "module",
   "dependencies": {
-    "@packages/config": "workspace:^0.1.0",
-    "@packages/metadata": "workspace:^0.1.0",
+    "@packages/config": "workspace:^0.2.0",
+    "@packages/metadata": "workspace:^0.2.0",
     "@packages/components": "workspace:^0.2.0"
   },
   "devDependencies": {
