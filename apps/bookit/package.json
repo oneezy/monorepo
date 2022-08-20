@@ -16,7 +16,7 @@
     "check": "svelte-check",
     "check:watch": "svelte-check --watch",
     "lint": "eslint --ignore-path .gitignore .",
-    "preinstall": "pnpm exec inherit -u --unsafe-perm"
+    "preinstall": "pnpm exec inherit -u"
   },
   "dependencies": {
     "@packages/metadata": "workspace:^0.2.0",

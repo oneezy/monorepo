@@ -21,7 +21,7 @@
 		"packages/**"
 	],
 	"scripts": {
-		"preinstall": "pnpm exec inherit -u --unsafe-perm",
+		"preinstall": "pnpm exec inherit -u",
 		"build": "turbo run build",
 		"dev": "turbo run dev --parallel",
 		"preview": "turbo run preview",

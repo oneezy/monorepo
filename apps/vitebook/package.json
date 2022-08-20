@@ -11,7 +11,7 @@
     "check": "svelte-check",
     "check:watch": "svelte-check --watch",
     "lint": "eslint --ignore-path .gitignore .",
-    "preinstall": "pnpm exec inherit -u --unsafe-perm"
+    "preinstall": "pnpm exec inherit -u"
   },
   "devDependencies": {
     "@lukeed/uuid": "^2.0.0",
