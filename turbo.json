@@ -2,7 +2,7 @@
 	"pipeline": {
 
 		"build": {
-      "outputs": ["build/**", ".svelte-kit/**", "svelte-kit/**"],
+      "outputs": [".vercel_build_output/**", ".svelte-kit/**"],
 			"dependsOn": ["^build"]
 		},
 
