@@ -3,12 +3,12 @@
 # Turborepo + Sveltekit + PNPM + Tailwind Starter [(Demo)](https://oneezy-monorepo.vercel.app)
 
 
-This is a monorepo starter powered by [Turborepo](https://turborepo.org/), [PNPM Workspaces](https://pnpm.io/), [Sveltekit](https://kit.svelte.dev/), and [TailWindCSS](https://tailwindcss.com/).
+This is a monorepo starter powered by [Turborepo](https://turborepo.org/), [PNPM](https://pnpm.io/), [Sveltekit](https://kit.svelte.dev/), and [TailWindCSS](https://tailwindcss.com/).
 
 # Features
 
 - [x] Turborepo
-- [x] PNPM Workspaces
+- [x] PNPM
 - [x] Husky
 - [x] Commitlint
 - [x] Symlink routes between apps
