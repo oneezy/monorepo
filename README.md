@@ -1,13 +1,17 @@
-![image](https://oneezy.vercel.app/logo.svg) 
+<a href="" style="text-align: center; display: block;" target="_blank">
+  <img src="https://scavengerbot.io/images/icon.svg" width="150" />
+</a>
 
-# Turborepo + Sveltekit + PNPM + Tailwind Starter [(Demo [broke])](https://oneezy-monorepo.vercel.app)
+# Turborepo + Sveltekit + PNPM + Tailwind Starter [(Demo)](https://oneezy-monorepo.vercel.app)
 
 
-This is a monorepo starter powered by [Turborepo](https://turborepo.org/), [PNPM](https://pnpm.io/), [Sveltekit](https://kit.svelte.dev/), and [TailWindCSS](https://tailwindcss.com/).
+This is a monorepo starter powered by [Turborepo](https://turborepo.org/), [PNPM](https://pnpm.io/), [Sveltekit](https://kit.svelte.dev/), and [TailWindCSS](https://tailwindcss.com/). 
+
+It also includes 3 Storybook alternatives for building and documenting components ([Bookit](https://bookit.leveluptutorials.com), [Vitebook](https://vitebook.dev), [Histoire](https://histoire.dev))
 
 # To Do
 
-- [ ] Fix Demo
+- [x] Demo
 - [x] Turborepo
 - [x] PNPM
 - [x] Husky
@@ -23,6 +27,7 @@ This is a monorepo starter powered by [Turborepo](https://turborepo.org/), [PNPM
   - [x] Histoire
   - [x] Vitebook
   - [x] Bookit 
+- [ ] Update SvelteKit to latest version
 - [ ] Commitlint Emojis
 - [ ] Setup Docker w/ Turborepo
 - [ ] Deploy `dev`, `beta`, and `prod` to real web host
