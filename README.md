@@ -1,11 +1,10 @@
-[![image](https://user-images.githubusercontent.com/7369575/186302450-66b66860-24f4-405e-b856-a4e7e0358966.png)](https://oneezy-monorepo.vercel.app)
+[![image](https://user-images.githubusercontent.com/7369575/186303872-0f9ebc82-dc80-4008-9aa5-189421fb4244.png)](https://oneezy-monorepo.vercel.app)
 
 # Turborepo + Sveltekit + Tailwind [(Demo)](https://oneezy-monorepo.vercel.app)
 
+This is a monorepo starter powered by: [Turborepo](https://turborepo.org/), [PNPM](https://pnpm.io/), [Sveltekit](https://kit.svelte.dev/), and [TailWindCSS](https://tailwindcss.com/). 
 
-This is a monorepo starter powered by [Turborepo](https://turborepo.org/), [PNPM](https://pnpm.io/), [Sveltekit](https://kit.svelte.dev/), and [TailWindCSS](https://tailwindcss.com/). 
-
-It also includes 3 Storybook alternatives for building and documenting components ([Bookit](https://bookit.leveluptutorials.com), [Vitebook](https://vitebook.dev), [Histoire](https://histoire.dev))
+It includes 3 Storybook alternatives for building and documenting components: [Bookit](https://bookit.leveluptutorials.com), [Vitebook](https://vitebook.dev), and [Histoire](https://histoire.dev)
 
 # To Do
 
@@ -42,6 +41,8 @@ websites and webapps live in the `./apps` folder. They all live at the same leve
 
 ### Packages
 libraries, configs and components live in the `./packages` folder.
+- **components**
+  - where components and global css live
 - **config**
   - shared configs between all apps
 - **dependencies**
@@ -50,8 +51,6 @@ libraries, configs and components live in the `./packages` folder.
   - useful libraries from npm and other 3rd party resources
 - **metadata**
   - base metadata shared between apps
-- **ui**
-  - where components live
 - **utils**
   - where utilities live
 
