@@ -24,7 +24,7 @@ It includes 3 Storybook alternatives for building and documenting components: [B
   - [x] Histoire
   - [x] Vitebook
   - [x] Bookit 
-- [ ] Update SvelteKit to latest version
+- [x] Update SvelteKit to latest version
 - [ ] Commitlint Emojis
 - [ ] Setup Docker w/ Turborepo
 - [ ] Deploy `dev`, `beta`, and `prod` to real web host
@@ -86,8 +86,8 @@ pnpm preview --filter @apps/site
 
 **Add Package**
 1. create new folder in `./apps` (i.e. `docs`)
-2. create new folder in `./packages` (i.e. `ui`)
-3. go to `ui` folder and create `package.json` with proper namespace
+2. create new folder in `./packages` (i.e. `components`)
+3. go to `components` folder and create `package.json` with proper namespace
 ```json
 {
   "name": "@packages/components",
@@ -114,7 +114,7 @@ pnpm add @packages/components
 2. export new component from `packages/components/index.js` file
 > ***PROTIP:** Quickly geneate components using [plop](https://plopjs.com/documentation)! (automatically handles steps 1 and 2)*
 ```
-pnpm plop
+pnpm plop component
 ```
 3. use component in an app `apps/site/src/routes/index.svelte`
 ```html
@@ -174,12 +174,9 @@ If you want to run multiple dev enviornments in parallel, you will have to defin
 "name": "@apps/docs",
 "version": "0.2.0",
 "scripts": {
-  "dev": "svelte-kit dev -p 4000 -o",
-  "build": "svelte-kit build",
-  "preview": "svelte-kit preview -p 4000 -o",
-  "check": "svelte-check --tsconfig ./tsconfig.json",
-  "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
-  "package": "svelte-kit package"
+  "dev": "vite dev --port 4000",
+  "build": "vite build",
+  "preview": "vite preview --port 4000"
 },
 ```
 
