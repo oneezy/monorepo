@@ -143,7 +143,7 @@ Make sure to modify the contents in the project's root package json to fit your 
 You can create *base* `package.json`'s to inherit from each other. 
 
 i.e.
-`packages/dependencies/package.site.json`
+`packages/dependencies/package.packages.json`
 ```json
 {
     "devDependencies": {
@@ -162,7 +162,7 @@ And then add it to the app's `package.json` like...
   "name": "@apps/site",
   "inherits": [
     "@packages/dependencies/package.svelte.json",
-    "@packages/dependencies/package.site.json"
+    "@packages/dependencies/package.packages.json"
   ],
 ```
 

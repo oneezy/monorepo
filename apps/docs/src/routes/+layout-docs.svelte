@@ -4,7 +4,7 @@
 	import { Header, Scrollbar, Menu, Logo, Nav, Theme, Button, Social, Device, Page, Link, Icon } from '@packages/components'
   import { mediaQuery } from '@packages/components/lib/mediaQuery/mediaQuery.js'
 	import '@packages/components/global.css';
-  import '${{name}}/app.css';
+  import '$docs/app.css';
 
 	const sm = mediaQuery('(min-width: 0px) and (max-width: 767px)')
 	const md = mediaQuery('(min-width: 0px) and (max-width: 1024px)')
@@ -31,7 +31,7 @@
 
 <Device device="hidden" />
 
-<Page id="{{name}}">
+<Page id="docs">
   {#if !$md}
     <Scrollbar />
   {/if}
@@ -47,15 +47,15 @@
   <Header class="p-4 md:p-8">
     <Logo slot="left" class="ml-8" />
     <nav slot="center" class="flex flex-col items-center justify-center md:flex-row gap-6 capitalize">
-      <Link href="#home">Home</Link>
-      <Link href="#docs">Docs</Link>
+      <Link href="/">Home</Link>
+      <Link href="/docs">Docs</Link>
     </nav>
     <div class="flex items-center justify-center gap-2" slot="right">
       <Link href="https://discord.gg/6Ys7gEr" target="_blank">
         <Icon name="discord" viewBox="0 0 28 28" size="42" class="fill--primary rounded-full" />
       </Link>
       <Theme />
-      <Button href="/signup" class="ml-2">Sign Up</Button>
+      <Button href="/" class="ml-2">Sign Up</Button>
     </div>
   </Header>
   {/if}

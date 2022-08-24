@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@packages/config": "workspace:^0.2.0",
+    "@packages/metadata": "workspace:^0.2.0",
+    "@packages/components": "workspace:^0.2.0"
+  }
+}

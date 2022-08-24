@@ -5,7 +5,7 @@
   "version": "0.2.0",
   "inherits": [
     "@packages/dependencies/package.svelte.json",
-    "@packages/dependencies/package.site.json"
+    "@packages/dependencies/package.packages.json"
   ],
   "scripts": {
     "build": "vite build",
@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
-    "@sveltejs/kit": "1.0.0-next.405",
+    "@sveltejs/kit": "next",
     "@tailwindcss/typography": "^0.5.2",
     "autoprefixer": "^10.4.7",
     "eslint": "^7.32.0",

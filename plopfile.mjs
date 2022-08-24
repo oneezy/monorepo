@@ -75,11 +75,7 @@
     return str.toLowerCase().replace(/\s/g, '');
   });
   
-  plop.setHelper("createDevPortNumber", function() {
-    return Math.floor(Math.random() * 1000) + 4000;
-  });
-  
-  plop.setHelper("createProdPortNumber", function() {
-    return Math.floor(Math.random() * 1000) + 5000;
+  plop.setHelper("createPortNumber", function() {
+    return Math.floor(Math.random() * 1000) + 3000;
   });
 }

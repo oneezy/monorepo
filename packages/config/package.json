@@ -35,7 +35,7 @@
 	"dependencies": {},
 	"devDependencies": {
     "@sveltejs/adapter-auto": "next",
-    "@sveltejs/kit": "1.0.0-next.405",
+    "@sveltejs/kit": "next",
 		"@tailwindcss/typography": "^0.5.2",
 		"autoprefixer": "^10.4.7",
 		"postcss": "^8.4.14",

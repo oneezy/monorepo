@@ -5,12 +5,12 @@
   "version": "0.2.0",
   "inherits": [
     "@packages/dependencies/package.svelte.json",
-    "@packages/dependencies/package.site.json"
+    "@packages/dependencies/package.packages.json"
   ],
   "scripts": {
-    "dev": "vite dev --port {{createDevPortNumber}}",
+    "dev": "vite dev --port {{createPortNumber}}",
     "build": "vite build",
-    "preview": "vite preview --port {{createProdPortNumber}}",
+    "preview": "vite preview --port {{createPortNumber}}",
     "package": "svelte-kit package",
     "prepare": "svelte-kit sync",
     "check": "svelte-check",
@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
-    "@sveltejs/kit": "1.0.0-next.405",
+    "@sveltejs/kit": "next",
     "autoprefixer": "^10.4.7",
     "eslint": "^7.32.0",
     "eslint-plugin-svelte3": "^3.4.1",
@@ -29,7 +29,6 @@
     "svelte": "^3.48.0",
     "svelte-check": "^2.7.1",
     "svelte-preprocess": "^4.10.6",
-    "svrollbar": "^0.12.0",
     "tailwindcss": "^3.0.24",
     "@tailwindcss/typography": "^0.5.2",
     "eslint-config-prettier": "^8.5.0",
