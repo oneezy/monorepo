@@ -1,8 +1,6 @@
-<a href="" style="text-align: center; display: block;" target="_blank">
-  <img src="https://scavengerbot.io/images/icon.svg" width="150" />
-</a>
+[![image](https://user-images.githubusercontent.com/7369575/186302450-66b66860-24f4-405e-b856-a4e7e0358966.png)](https://oneezy-monorepo.vercel.app)
 
-# Turborepo + Sveltekit + PNPM + Tailwind Starter [(Demo)](https://oneezy-monorepo.vercel.app)
+# Turborepo + Sveltekit + Tailwind [(Demo)](https://oneezy-monorepo.vercel.app)
 
 
 This is a monorepo starter powered by [Turborepo](https://turborepo.org/), [PNPM](https://pnpm.io/), [Sveltekit](https://kit.svelte.dev/), and [TailWindCSS](https://tailwindcss.com/). 
