@@ -7,9 +7,5 @@
 </script>
 
 <a href="/">
-  {#if $md}
-    <Icon name="oneezy-icon" width="48" href="/" class="fill--primary" />
-  {:else}
-    <Icon name="oneezy-logo" width="200" href="/" class="-mb-6 fill--primary" />
-  {/if}
+  <Icon name="scavenger" width="100" href="/" class="fill--primary" />
 </a>

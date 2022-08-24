@@ -50,11 +50,11 @@
       <Link href="docs">Docs</Link>
     </nav>
     <div class="flex items-center justify-center gap-2" slot="right">
-      <Link href="https://discord.gg/6Ys7gEr" target="_blank">
-        <Icon name="discord" viewBox="0 0 28 28" size="42" class="fill--primary rounded-full" />
+      <Link href="https://github.com/oneezy/monorepo" target="_blank">
+        <Icon name="github" viewBox="0 0 24 24" size="32" class="fill--primary rounded-full" />
       </Link>
       <Theme />
-      <Button href="/signup" class="ml-2">Sign Up</Button>
+      <Button href="https://github.com/oneezy/monorepo" target="_blank" class="ml-2">Lets Gooo</Button>
     </div>
   </Header>
   {/if}
