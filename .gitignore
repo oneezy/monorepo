@@ -8,6 +8,7 @@
 ## Directory-based project format:
 .idea/
 .vscode/
+.vscode
 
 ## File-based project format:
 *.ipr
