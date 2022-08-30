@@ -16,7 +16,7 @@
 
 <nav class="menu--active active flex flex-col items-center justify-center md:flex-row gap-6 capitalize {_class || ''}">
   {#each menu as link}
-    <Link href="{link.href}" sveltekit:prefetch>
+    <Link href="{link.href}" data-sveltekit-prefetch>
       {link.label}
     </Link>
   {/each}

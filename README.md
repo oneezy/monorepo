@@ -10,6 +10,8 @@ It includes 3 Storybook alternatives for building and documenting components: [B
 
 - [x] Demo
 - [x] Turborepo
+- [x] Sveltekit `^1.0.0-next.455`
+- [x] Tailwind `^3.1.8`
 - [x] PNPM
 - [x] Husky
 - [x] Commitlint
@@ -24,7 +26,6 @@ It includes 3 Storybook alternatives for building and documenting components: [B
   - [x] Histoire
   - [x] Vitebook
   - [x] Bookit 
-- [ ] Update SvelteKit to latest version
 - [ ] Commitlint Emojis
 - [ ] Setup Docker w/ Turborepo
 - [ ] Deploy `dev`, `beta`, and `prod` to real web host
