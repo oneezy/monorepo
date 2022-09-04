@@ -86,7 +86,21 @@ pnpm preview
 pnpm preview --filter @apps/site
 ```
 
-**Add Package**
+## Add App
+
+use `pnpm plop app` to generate a new sveltekit app
+
+This monorepo makes use of symlinks to handle 2 separate scenarios. if you plan on using either you will need to follow the steps below for your app(s) to work properly. Learn more about symlinks by [clicking here](#setting-up-symlinks-if-youre-on-windows). 
+
+> **note**: there's a bug since the sveltekit `1.0.0-next.432` that's [breaking symlinks](https://github.com/sveltejs/kit/issues/6303) - but this is still the proper way to set them up once it's fixed).
+
+**symlink static assets** <br>
+this monorepo only uses one folder for static assets located at `./apps/site/static` so you will need to symlink that `static` folder into every app you add to the `apps/*` folder to get static images working (this may change in the future but this is how we're handling it at the moment).
+   
+**symlink app routes** <br>
+if you want to link entire apps together as routes you will need to symlink the `./apps/new-app/src/routes` folder into your main `./apps/site/src/routes` directory.
+
+## Add Package
 1. create new folder in `./apps` (i.e. `docs`)
 2. create new folder in `./packages` (i.e. `components`)
 3. go to `components` folder and create `package.json` with proper namespace
@@ -111,7 +125,7 @@ pnpm add @packages/components
 }
 ```
 
-**Add Component**
+## Add Component
 1. create new component in `packages/components/lib` directory 
 2. export new component from `packages/components/index.js` file
 > ***PROTIP:** Quickly geneate components using [plop](https://plopjs.com/documentation)! (automatically handles steps 1 and 2)*
