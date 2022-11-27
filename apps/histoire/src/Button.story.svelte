@@ -1,6 +1,6 @@
 <script>
   import { hstEvent } from 'histoire/client'
-  import Button from '@packages/components/lib/Button/Button.svelte'
+  import Button from '@packages/components/src/Button/Button.svelte'
 
   export let Hst
   const source = `

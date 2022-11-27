@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+
+    /* 
+    Tailwind CSS Colors:        https://tailwindcss.com/docs/customizing-colors#default-color-palette
+    Tailwind CSS Google Sheet:  https://docs.google.com/spreadsheets/d/1msfXV0TwK0kppbUxVTXlVdO4K--X-fblXk0FQ5QVErI/edit#gid=0
+
+    Also check out the <KitchenSink> component
+    */
+
+    /* brand
+    ************************************************************/
+    --color-brand:                37 99 235;     /* blue-600 */
+    --color-brand-1:              37 99 235;     /* blue-600    ==>   Default */
+    --color-brand-2:              244 63 94;     /* rose-500    ==>   Default */
+
+    --color-brand-primary:        37 99 235;     /* blue-600 */
+    --color-brand-secondary:      244 63 94;     /* rose-500 */
+
+    --color-brand-primary-1:      219 234 254;   /* blue-100 */
+    --color-brand-primary-2:      191 219 254;   /* blue-200 */
+    --color-brand-primary-3:      147 197 253;   /* blue-300 */
+    --color-brand-primary-4:      96 165 250;    /* blue-400 */
+    --color-brand-primary-5:      59 130 246;    /* blue-500 */
+    --color-brand-primary-6:      37 99 235;     /* blue-600    ==>   Default */
+    --color-brand-primary-7:      29 78 216;     /* blue-700 */
+    --color-brand-primary-8:      30 64 175;     /* blue-800 */
+    --color-brand-primary-9:      30 58 138;     /* blue-900 */
+
+    /* Pink */
+    /* --color-brand-secondary-1:    252 231 243; */
+    /* --color-brand-secondary-2:    251 207 232; */
+    /* --color-brand-secondary-3:    249 168 212; */
+    /* --color-brand-secondary-4:    244 114 182; */
+    /* --color-brand-secondary-5:    236 72 153;  */
+    /* --color-brand-secondary-6:    219 39 119;  */
+    /* --color-brand-secondary-7:    190 24 93;   */
+    /* --color-brand-secondary-8:    157 23 77;   */
+    /* --color-brand-secondary-9:    131 24 67;   */
+
+    /* Rose */
+    --color-brand-secondary-1:    255 228 230;   
+    --color-brand-secondary-2:    254 205 211;   
+    --color-brand-secondary-3:    253 164 175;   
+    --color-brand-secondary-4:    251 113 133;   
+    --color-brand-secondary-5:    244 63 94;     
+    --color-brand-secondary-6:    225 29 72;     
+    --color-brand-secondary-7:    190 18 60;     
+    --color-brand-secondary-8:    159 18 57;     
+    --color-brand-secondary-9:    136 19 55;     
+    
+    /* lite
+    *******************************************************/
+    --color-lite:            255 255 255;    /* white     */
+    --color-lite-primary:    255 255 255;    /* white     */
+    --color-lite-secondary:  148 163 184;    /* slate-400 */
+    --color-lite-dim:        100 116 139;    /* slate-500 */
+
+    --color-lite-1:          241 245 249;    /* slate-100 */
+    --color-lite-2:          226 232 240;    /* slate-200 */
+    --color-lite-3:          203 213 225;    /* slate-300 */
+    --color-lite-4:          148 163 184;    /* slate-400 */
+    --color-lite-5:          100 116 139;    /* slate-500 */
+    --color-lite-6:          71 85 105;      /* slate-600 */
+    --color-lite-7:          51 65 85;       /* slate-700 */
+    --color-lite-8:          30 41 59;       /* slate-800 */
+    --color-lite-9:          15 23 42;       /* slate-900 */
+  
+    /* dark
+    *******************************************************/
+    --color-dark:            0 0 0;          /* black     */
+    --color-dark-primary:    0 0 0;          /* black     */
+    --color-dark-secondary:  100 116 139;    /* slate-500 */
+    --color-dark-dim:        148 163 184;    /* slate-400 */
+
+    --color-dark-1:          15 23 42;       /* slate-900 */
+    --color-dark-2:          30 41 59;       /* slate-800 */
+    --color-dark-3:          51 65 85;       /* slate-700 */
+    --color-dark-4:          71 85 105;      /* slate-600 */
+    --color-dark-5:          100 116 139;    /* slate-500 */
+    --color-dark-6:          148 163 184;    /* slate-400 */
+    --color-dark-7:          203 213 225;    /* slate-300 */
+    --color-dark-8:          226 232 240;    /* slate-200 */
+    --color-dark-9:          241 245 249;    /* slate-100 */
+  }
+
+  
+  /* Theme 
+  ***********************************************************************************/
+  /* BG */
+  .bg--brand         { @apply bg-gradient-to-r from-brand-primary to-brand-secondary dark:from-brand-primary dark:to-brand-secondary-6; }
+  .bg--primary       { @apply bg-lite-primary headerActive:bg-dark-primary dark:bg-dark-primary dark:headerActive:bg-lite-primary; }
+  .bg--secondary     { @apply bg-lite-2 dark:bg-dark-2/70; }
+  .bg--dim           { @apply bg-dark-dim dark:bg-lite-dim; }
+  .bg--neutral       { @apply bg-lite-4 text-white; }
+  .bg--disabled      { @apply opacity-[.38] pointer-events-none; }
+
+  /* Fill */
+  .fill--brand       { @apply fill-transparent bg-gradient-to-r from-brand-primary to-brand-secondary dark:from-brand-primary dark:to-brand-secondary-6; }
+  .fill--primary     { @apply fill-dark-primary headerActive:fill-lite-primary dark:fill-lite-primary dark:headerActive:fill-dark-primary; }
+  .fill--secondary   { @apply fill-dark-secondary dark:fill-lite-secondary; }
+  .fill--dim         { @apply fill-dark-6 dark:fill-lite-5; }
+  .fill--neutral     { @apply fill-lite-4; }
+  .fill--disabled    { @apply opacity-[.38] pointer-events-none; }
+
+  /* Text */
+  .text--brand       { @apply text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary dark:from-brand-primary dark:to-brand-secondary-6; }
+  .text--primary     { @apply text-dark-primary dark:text-lite-primary; }
+  .text--secondary   { @apply text-dark-secondary dark:text-lite-secondary; }
+  .text--dim         { @apply text-dark-6 dark:text-lite-5; }
+  .text--neutral     { @apply text-lite-4; }
+  .text--disabled    { @apply opacity-[.38] pointer-events-none; }
+
+  /* Border */
+  .border--brand     { @apply border-2 border-slate-500 dark:border-transparent dark:bg-slate-700/30; }
+  .border--primary   { @apply border-2 border-dark dark:border-lite; }
+  .border--secondary { @apply border-2; }
+  .border--dim       { @apply border-2; }
+  .border--neutral   { @apply border-2; }
+  .border--disabled  { @apply border-2; }
+
+  html, body {
+    -webkit-overflow-scrolling: touch;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  button, textarea, input, select, a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
+
+@layer components {
+
+  /* Components 
+  ***********************************************************************************/
+  .container {
+    @apply mx-auto px-8 sm:px-0;
+  }
+
+  .img-icon {
+    opacity: .65; filter: invert(71%) sepia(25%) saturate(249%) hue-rotate(175deg) brightness(88%) contrast(85%);
+  }
+
+  .dark .img-icon {
+    opacity: .5; filter: invert(48%) sepia(25%) saturate(418%) hue-rotate(176deg) brightness(86%) contrast(84%);
+  }
+
+  .linktext {
+    @apply 
+      font-medium
+      no-underline
+      text-transparent bg-clip-text bg-gradient-to-r 
+      
+      from-slate-400
+      to-slate-400
+
+      dark:from-slate-500
+      dark:to-slate-500;
+  }
+
+  .linktext:hover {
+    @apply 
+      text-transparent bg-clip-text bg-gradient-to-r 
+      from-pink-600 
+      via-yellow-500
+      to-green-500
+      
+      dark:from-sky-400 
+      dark:via-purple-500 
+      dark:to-pink-500;
+  }
+}
+
+
+/* Menu.svelte
+****************************************/
+.mobile-nav .logo img { height: 3rem; }

@@ -4,8 +4,9 @@ const plugin = require('tailwindcss/plugin');
 
 const config = {
 	content: [
-		'../../packages/components/**/*.{html,js,svelte,svx,ts}',
-		'./src/**/*.{html,js,svelte,svx,ts}'
+		// '../../packages/components/**/*.{html,js,svelte,svx,ts}',
+		'../../packages/components/src/**/*.{html,js,svelte,md,svx,ts}',
+		'./src/**/*.{html,js,svelte,md,svx,ts}'
 	],
 
 	darkMode: 'class',
@@ -157,7 +158,7 @@ const config = {
 					}
 				},
 
-        scavenger: {
+        oneezy: {
           css: {
             '--tw-prose-body':                  'rgb(var(--color-dark-secondary))',
             '--tw-prose-headings':              'rgb(var(--color-dark))',

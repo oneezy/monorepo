@@ -1,5 +1,5 @@
 <script>
-  import Button from '@packages/components/lib/Button/Button.svelte';
+  import Button from '@packages/components/src/Button/Button.svelte';
 
   export let Hst
 

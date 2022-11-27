@@ -1,14 +1,26 @@
 {
 	"name": "@packages/components",
-	"version": "0.2.0",
+	"version": "0.0.0",
+	"description": "",
+	"author": "Scavenger Dev Team",
+	"license": "MIT",
 	"type": "module",
 	"main": "index.js",
+	"module": "index.js",
 	"svelte": "index.js",
-	"dependencies": {
-		"@packages/metadata": "workspace:^0.2.0",
-		"svrollbar": "^0.12.0"
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"package": "echo \"No package script specified\" && exit 0",
+    "lint": "prettier --check --ignore-path=../../.prettierignore . && eslint \".\"",
+    "format": "prettier --write --ignore-path=../../.prettierignore ."
 	},
+	"keywords": [],
 	"devDependencies": {
-		"svelte-inview": "^3.0.1"
+		"@packages/metadata": "workspace:*",
+		"svelte-accessible-accordion": "^2.1.0",
+		"svelte-collapsible": "^0.2.1",
+		"svelte-inview": "^3.0.1",
+		"svrollbar": "^0.12.0",
+    "svelte": "^3.53.1"
 	}
 }

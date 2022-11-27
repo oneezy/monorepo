@@ -22,6 +22,6 @@ export const socials = [
   {
     "id": "5",
     "name": "github",
-    "url": "https://github.com/ScavengerBot/ScavengerBot"
+    "url": "https://github.com/oneezy/monorepo"
   }
 ]

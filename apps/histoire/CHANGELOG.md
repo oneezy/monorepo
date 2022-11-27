@@ -12,4 +12,4 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @packages/components@0.2.0
+  - @packages/components@0.0.0

@@ -19,12 +19,12 @@
       <Stories class="my-2 lg:my-10" />
     
       <div class="flex flex-col md:flex-row items-center justify-center gap-4">
-        <Button href="https://github.com/oneezy/monorepo" target="_blank" display="hero">Github</Button>
-        <Button href="https://oneezy-monorepo.vercel.app" target="_blank" button="outline" display="hero">Demo</Button>
+        <Button href="https://github.com/oneezy/monorepo" target="_blank" rel="noreferrer" display="hero">Github</Button>
+        <Button href="https://oneezy-monorepo.vercel.app" target="_blank" rel="noreferrer" button="outline" display="hero">Demo</Button>
       </div>
     
       <h2 class="text--primary text-center font-medium text-base md:text-2xl md:mt-10 tracking-wide">
-        Built with ❤️ by the <a href="https://scavengerbot.io" class="text--brand" target="_blank">ScavengerBot™</a> Team  
+        Built with ❤️ by the <a href="https://scavengerbot.io" class="text--brand" target="_blank" rel="noreferrer">ScavengerBot™</a> Team  
       </h2>
     </Content>
   </Container>

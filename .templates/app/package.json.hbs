@@ -2,10 +2,10 @@
   "name": "@apps/{{name}}",
   "description": "{{description}}",
   "author": "Scavenger Dev Team",
-  "version": "0.2.0",
+  "version": "0.0.0",
   "inherits": [
     "@packages/dependencies/package.svelte.json",
-    "@packages/dependencies/package.packages.json"
+    "@packages/dependencies/package.shared.json"
   ],
   "scripts": {
     "dev": "vite dev --port {{createPortNumber}}",
@@ -26,10 +26,10 @@
     "eslint-plugin-svelte3": "^3.4.1",
     "postcss": "^8.4.13",
     "postcss-load-config": "^3.1.4",
-    "svelte": "^3.48.0",
+    "svelte": "^3.53.1",
     "svelte-check": "^2.7.1",
-    "svelte-preprocess": "^4.10.6",
-    "tailwindcss": "^3.0.24",
+    "svelte-preprocess": "^4.10.5",
+    "tailwindcss": "^3.2.4",
     "@tailwindcss/typography": "^0.5.2",
     "eslint-config-prettier": "^8.5.0",
     "prettier": "^2.6.2",
@@ -37,9 +37,9 @@
     "prettier-plugin-tailwindcss": "^0.1.10"
   },
   "dependencies": {
-    "@packages/metadata": "workspace:^0.2.0",
-    "@packages/components": "workspace:^0.2.0",
-    "@packages/config": "workspace:^0.2.0"
+    "@packages/metadata": "workspace:*",
+    "@packages/components": "workspace:*",
+    "@packages/config": "workspace:*"
   },
   "type": "module"
 }

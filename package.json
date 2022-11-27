@@ -1,8 +1,9 @@
 {
+  "type": "module",
 	"name": "sveltekit-turborepo",
 	"description": "PNPM + Turborepo + Sveltekit",
-	"version": "0.2.0",
-	"author": "oneezy",
+	"version": "0.0.0",
+	"author": "Scavenger Dev Team",
 	"keywords": [
 		"Svelte",
 		"Sveltekit",
@@ -35,18 +36,16 @@
 		"@changesets/cli": "^2.23.1",
 		"@commitlint/cli": "^17.0.2",
 		"@commitlint/config-conventional": "^17.0.2",
-		"@packages/inherit": "workspace:^0.2.0",
-		"@packages/minify": "workspace:^0.2.0",
+		"@packages/inherit": "workspace:*",
+		"@packages/minify": "workspace:*",
 		"autoprefixer": "^10.4.7",
 		"husky": "^8.0.1",
 		"lint-staged": "^12.5.0",
 		"plop": "^3.1.0",
 		"prettier": "^2.7.0",
+		"svelte-preprocess": "^4.10.6",
 		"turbo": "latest",
-		"vite": "^3.1.0-beta.1"
+		"vite": "^3.2.4"
 	},
-	"type": "module",
-	"dependencies": {
-		"svelte-preprocess": "^4.10.6"
-	}
+  "packageManager": "pnpm@7.15.0"
 }

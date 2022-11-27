@@ -1,9 +1,8 @@
 <script>
 	import { page } from '$app/stores'
 	import { SITE_URL, SITE_NAME, SITE_TITLE, SITE_SEPARATOR, SITE_AUTHOR, SITE_DESCRIPTION } from '@packages/metadata'
-	import { Header, Scrollbar, Menu, Logo, Nav, Theme, Button, Social, Device, Page, Link, Icon } from '@packages/components'
-  import { mediaQuery } from '@packages/components/lib/mediaQuery/mediaQuery.js'
-	import '@packages/components/global.css';
+	import { mediaQuery, Header, Scrollbar, Logo, Nav, Theme, Button, Social, Device, Page, Link, Icon } from '@packages/components'
+	import '@packages/components/css/global.css';
   import '$docs/app.css';
 
 	const sm = mediaQuery('(min-width: 0px) and (max-width: 767px)')
@@ -38,7 +37,7 @@
 
   {#if $md}
   <Header class="p-4 md:p-8">
-    <Menu slot="left" />
+    <div slot="left">menu</div>
     <Logo slot="center" />
     <Theme slot="right" />
   </Header>
@@ -51,7 +50,7 @@
       <Link href="/docs">Docs</Link>
     </nav>
     <div class="flex items-center justify-center gap-2" slot="right">
-      <Link href="https://discord.gg/6Ys7gEr" target="_blank">
+      <Link href="https://discord.gg/6Ys7gEr" target="_blank" rel="noreferrer">
         <Icon name="discord" viewBox="0 0 28 28" size="42" class="fill--primary rounded-full" />
       </Link>
       <Theme />

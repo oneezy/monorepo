@@ -1,0 +1,73 @@
+<script>
+	import { page } from '$app/stores'
+  import { fade, fly } from 'svelte/transition';
+	import { SITE_URL, SITE_NAME, SITE_TITLE, SITE_SEPARATOR, SITE_AUTHOR, SITE_DESCRIPTION } from '@packages/metadata'
+	import { mediaQuery, Intro, BG, Header, Scrollbar, Dialog, Logo, Nav, Theme, Button, Social, Device, Page, Link, Icon, Copyright } from '@packages/components'
+	import '@packages/components/css/global.css'
+	import '$site/app.css'
+
+	const sm = mediaQuery('(min-width: 0px) and (max-width: 1024px)')
+	const md = mediaQuery('(min-width: 1025px)')
+
+	let device
+</script>
+
+<svelte:head>
+	<title>{SITE_NAME} {SITE_SEPARATOR} {SITE_DESCRIPTION}</title>
+
+	<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="{SITE_URL}{$page.url.pathname}" />
+
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content={$page.url.href} />
+	<meta property="og:site_name" content={SITE_NAME} />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<!--   
+  <meta property="fb:app_id" content="{FB_ID}" />
+  <meta property="fb:admins" content="{FB_ADMINS}" /> -->
+</svelte:head>
+
+<Device device="hidden" />
+
+{#if $md}
+  <Scrollbar />
+{/if}
+
+<!-- Mobile -->
+<Header class="block md:hidden">
+  <Dialog slot="left" type="nav">
+    <Nav />
+  </Dialog>
+  <Logo slot="center" />
+  <Theme slot="right" />
+</Header>
+
+<!-- Desktop -->
+<Header class="hidden md:block">
+  <Logo slot="left" class="ml-8" />
+  <Nav slot="center" />
+  <div class="flex items-center justify-center gap-2" slot="right">
+    <Link href="https://discord.gg/6Ys7gEr" target="_blank" rel="noreferrer">
+      <Icon name="discord" viewBox="0 0 28 28" size="42" class="fill--primary rounded-full" />
+    </Link>
+    <Theme />
+    <Button href="/signin" class="ml-2">Sign Up</Button>
+  </div>
+</Header>
+
+<!-- Layout -->
+<Intro>
+  <div in:fade="{{ delay: 50, duration: 750 }}" out:fade>
+    <BG class="h-[150vh] mt-[-35vh] md:mt-0 md:h-screen" />
+  </div>
+
+  <div in:fly="{{ y: 20, delay: 800, duration: 800 }}">
+    <slot />
+    <footer class="container mx-auto p-4 md:p-8">
+      <Social />
+      <Copyright>ScavengerBot™</Copyright>
+    </footer>
+  </div>
+</Intro>

@@ -4,7 +4,7 @@
  */
 
  export default function (plop) {
-  
+
   /* App
   ***********************************************************/
   plop.setGenerator("app", {
@@ -37,45 +37,93 @@
   ***********************************************************/
   plop.setGenerator("component", {
     description: "Create a new component",
-    prompts: [ 
+    prompts: [
       { // Name your Component
         type: "input",
         name: "name",
         message: "What is the name of your component?"
       }
-    ], 
-    actions: [ 
-      
-      { // Create the component and add to @packages workspace
+    ],
+    actions: [
+      { // Create the component and add to @components workspace
         type: "addMany",
-        destination: "./packages/components/lib/{{properCase name}}",
-        base: `.templates/component/`,
-        templateFiles: `.templates/component/**/*.hbs`
+        destination: "./packages/components/src/{{name}}",
+        base: `.templates/component/template`,
+        templateFiles: `.templates/component/template/**/*`
       },
       { // Export component 
         type: "append",
-        path: "./packages/components/index.js",
+        path: "./packages/components/src/index.js",
         templateFile: ".templates/component/index.js.hbs"
       },
-      {
-        // Vitebook: Create Component.story.svelte
+      { // Histoire: Create Component.story.svelte
         type: "addMany",
-        destination: "./apps/vitebook/lib/{{properCase name}}",
-        base: `.templates/component/`,
-        templateFiles: `.templates/component/**/*.hbs`
-      },
-    ], 
+        destination: "./apps/histoire/src/{{name}}",
+        base: `.templates/story/`,
+        templateFiles: `.templates/story/**/*.hbs`
+      }
+    ],
   });
-  
+
+
+  /* Story
+  ***********************************************************/
+  plop.setGenerator("story", {
+    description: "Create a new story",
+    prompts: [
+      { // Name your story
+        type: "input",
+        name: "name",
+        message: "What is the name of your story?"
+      }
+    ],
+    actions: [
+      { // Histoire: Create Component.story.svelte
+        type: "addMany",
+        destination: "./apps/histoire/src/{{name}}",
+        base: `.templates/story/`,
+        templateFiles: `.templates/story/**/*.hbs`
+      }
+    ],
+  });
+
+
+  /* CI 
+  ***********************************************************/
+  plop.setGenerator("ci", {
+    description: "What is the name of the app?",
+    prompts: [
+      { // Name your CI
+        type: "input",
+        name: "name",
+        message: "What is the name of the app?"
+      }
+    ],
+    actions: [
+      { // Add CI templates
+        type: "addMany",
+        destination: "./apps/{{name}}/",
+        base: `.templates/ci/`,
+        templateFiles: `.templates/ci/**/*.hbs`
+      },
+      { // Add to the "include" inside the root .gitlab-ci.yml file
+        type: "append",
+        path: "./.gitlab-ci.yml",
+        pattern: /include\:/g,
+        templateFile: ".templates/.gitlab-ci.yml.hbs"
+      }
+    ],
+  });
+
 
   /* Helper functions
   ***********************************************************/
   // lowerCaseNoSpace: convert "Awesome Text" to "awesometext"
-  plop.setHelper("lowerCaseNoSpace", function(str) {
+  plop.setHelper("lowerCaseNoSpace", function (str) {
     return str.toLowerCase().replace(/\s/g, '');
   });
-  
-  plop.setHelper("createPortNumber", function() {
+
+  plop.setHelper("createPortNumber", function () {
     return Math.floor(Math.random() * 1000) + 3000;
   });
 }

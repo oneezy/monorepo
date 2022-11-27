@@ -107,7 +107,7 @@ if you want to link entire apps together as routes you will need to symlink the 
 ```json
 {
   "name": "@packages/components",
-  "version": "0.2.0",
+  "version": "0.0.0",
   "type": "module",
   "main": "index.js"
 }
@@ -121,7 +121,7 @@ pnpm add @packages/components
 > *pnpm adds the workspace at the bottom of your `docs/package.json`*
 ```json
 "dependencies": {
-  "@packages/components": "workspace:^0.2.0"
+  "@packages/components": "workspace:*"
 }
 ```
 
@@ -143,7 +143,7 @@ pnpm plop component
 > *Or...*
 ```html
 <script>
-  import { MyComponent } from '@packages/components/lib/MyComponent/MyComponent.svelte';
+  import { MyComponent } from '@packages/components';
 </script>
 
 <MyComponent />
@@ -167,9 +167,9 @@ i.e.
         "svelte-accessible-accordion": "^2.1.0"
     },
     "dependencies": {
-        "@packages/config": "workspace:^0.2.0",
-        "@packages/metadata": "workspace:^0.2.0",
-        "@packages/components": "workspace:^0.2.0"
+        "@packages/config": "workspace:*",
+        "@packages/metadata": "workspace:*",
+        "@packages/components": "workspace:*"
     }
 }
 ```
@@ -188,7 +188,7 @@ If you want to run multiple dev enviornments in parallel, you will have to defin
 
 ```json
 "name": "@apps/docs",
-"version": "0.2.0",
+"version": "0.0.0",
 "scripts": {
   "dev": "vite dev --port 4000",
   "build": "vite build",

@@ -1,9 +1,8 @@
 <script>
 	import { page } from '$app/stores'
 	import { SITE_URL, SITE_NAME, SITE_TITLE, SITE_SEPARATOR, SITE_AUTHOR, SITE_DESCRIPTION } from '@packages/metadata'
-	import { Header, Scrollbar, Menu, Logo, Theme, Button, Social, Device, Page, Link, Icon } from '@packages/components'
-  import { mediaQuery } from '@packages/components/lib/mediaQuery/mediaQuery.js'
-	import '@packages/components/global.css';
+	import { mediaQuery, Header, Scrollbar, Logo, Theme, Button, Social, Device, Page, Link, Icon } from '@packages/components'
+	import '@packages/components/css/global.css';
   import '$site/app.css';
 
 	const sm = mediaQuery('(min-width: 0px) and (max-width: 767px)')
@@ -37,7 +36,7 @@
 
   {#if $md}
   <Header class="p-4 md:p-8">
-    <Menu slot="left" />
+    <div slot="left">menu</div>
     <Logo slot="center" />
     <Theme slot="right" />
   </Header>
@@ -50,11 +49,11 @@
       <Link href="docs">Docs</Link>
     </nav>
     <div class="flex items-center justify-center gap-2" slot="right">
-      <Link href="https://github.com/oneezy/monorepo" target="_blank">
+      <Link href="https://github.com/oneezy/monorepo" target="_blank" rel="noreferrer">
         <Icon name="github" viewBox="0 0 24 24" size="32" class="fill--primary rounded-full" />
       </Link>
       <Theme />
-      <Button href="https://github.com/oneezy/monorepo" target="_blank" class="ml-2">Lets Gooo</Button>
+      <Button href="https://github.com/oneezy/monorepo" target="_blank" rel="noreferrer" class="ml-2">Lets Gooo</Button>
     </div>
   </Header>
   {/if}

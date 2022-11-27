@@ -1,2 +1,2 @@
-import '@packages/components/global.css';
+import '@packages/components/css/global.css';
 import './histoire.css';

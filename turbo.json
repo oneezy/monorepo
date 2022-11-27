@@ -3,7 +3,7 @@
 
 		"build": {
 			"dependsOn": ["^build"],
-      "outputs": ["build/**", ".vercel_build_output/**", ".svelte-kit/**"],
+      "outputs": [".svelte-kit/**", ".vercel/**", "build/**"],
       "inputs": ["src/**/*.{html,js,svelte,svx,ts}", "../../packages/components/**/*.{html,js,svelte,svx,ts}" ]
 		},
 

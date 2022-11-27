@@ -7,9 +7,6 @@ const pkg = JSON.parse(readFileSync(join(cwd(), 'package.json')));
 
 /** @type {import('vite').UserConfig} */
 const config = {
-	build: {
-		target: ['es2020'],
-	},
 	resolve: {
 		preserveSymlinks: false,
 		build: {

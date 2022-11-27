@@ -1,0 +1,43 @@
+html {
+
+  /* Track */
+  --svrollbar-track-width: 32px;
+  --svrollbar-track-background:	initial;
+  --svrollbar-track-radius:	initial;
+  --svrollbar-track-opacity:	0;
+  --svrollbar-track-shadow:	initial;
+
+  /* Thumb */
+  --svrollbar-thumb-width: 16px;
+  --svrollbar-thumb-radius:	100px;
+  --svrollbar-thumb-shadow:	initial;
+  --svrollbar-thumb-opacity: 1;
+  --svrollbar-thumb-background: black;
+}
+
+html, body {
+  -ms-overflow-style: none;
+  touch-action: manipulation;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  /* scroll-padding-top: 100px; */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html.dark {
+
+  /* Thumb */
+  --svrollbar-thumb-background: white;
+}
+
+.v-scrollbar { 
+  transform: scale(.98); 
+  z-index: 20; 
+}
+.v-thumb {
+  will-change: top;
+}

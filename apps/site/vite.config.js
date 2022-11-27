@@ -20,13 +20,11 @@ const config = {
 		noExternal: Object.keys(pkg.dependencies || {})
 	},
   server: {
+    host: '0.0.0.0',
     open: '/'
   },
   plugins: [
-
-   /* Vitebook Fix: https://github.com/vitebook/vitebook/issues/89
-    *********************************************************************/
-    !process.env.VITEBOOK && sveltekit(),
+    sveltekit(),
   ],
 };
 

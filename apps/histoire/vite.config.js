@@ -23,7 +23,7 @@ const config = {
       ],
     },
     theme: {
-      title: 'Oneezy',
+      title: 'Starter',
       logo: {
         square: '/assets/logo.svg',
         light: '/assets/logo.svg',

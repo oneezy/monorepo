@@ -9,7 +9,7 @@ Many packages can be shared across apps. Packages can be things like `ui | lib |
 ```json
 {
   "name": "@packages/components",
-  "version": "0.2.0",
+  "version": "0.0.0",
   "type": "module",
   "main": "index.js"
 }
@@ -32,7 +32,7 @@ pnpm add @packages/components
 
 ```json
 "dependencies": {
-  "@packages/components": "workspace:^0.2.0"
+  "@packages/components": "workspace:*"
 }
 ```
 
