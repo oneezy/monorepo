@@ -1,7 +1,6 @@
 <script>
   import  { SITE_NAME, SITE_DESCRIPTION } from '@packages/metadata';
-  import { Section, Container, Content, Button } from '@packages/components';
-  import TextAnimate from './TextAnimate.svelte';
+  import { Section, Container, Content, Button, TextAnimate } from '@packages/components';
 </script>
 
 <Section class="h-screen pt-20 md:pt-32 md:pb-[10vh]" {...$$restProps}>
