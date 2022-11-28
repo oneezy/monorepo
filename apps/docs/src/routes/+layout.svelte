@@ -2,7 +2,7 @@
 	import { page } from '$app/stores'
   import { fade, fly } from 'svelte/transition';
 	import { SITE_URL, SITE_NAME, SITE_TITLE, SITE_SEPARATOR, SITE_AUTHOR, SITE_DESCRIPTION } from '@packages/metadata'
-	import { mediaQuery, Intro, Header, Scrollbar, Logo, Theme, Button, Social, Device, Page, Link, Icon } from '@packages/components'
+	import { mediaQuery, Intro, Header, Scrollbar, Dialog, Nav, Logo, Theme, Button, Social, Device, Page, Link, Icon } from '@packages/components'
 	import '@packages/components/css/global.css';
   import '$site/app.css';
 
@@ -35,29 +35,27 @@
   <Scrollbar />
 {/if}
 
-{#if $md}
-<Header class="p-4 md:p-8">
-  <div slot="left">menu</div>
+<!-- Mobile -->
+<Header class="block md:hidden">
+  <Dialog slot="left" type="nav">
+    <Nav />
+  </Dialog>
   <Logo slot="center" />
   <Theme slot="right" />
 </Header>
 
-{:else}
-<Header class="p-4 md:p-8">
+<!-- Desktop -->
+<Header class="hidden md:block">
   <Logo slot="left" class="ml-8" />
-  <nav slot="center" class="flex flex-col items-center justify-center md:flex-row gap-6 capitalize">
-    <Link href="/">Home</Link>
-    <Link href="docs">Docs</Link>
-  </nav>
+  <Nav slot="center" />
   <div class="flex items-center justify-center gap-2" slot="right">
-    <Link href="https://github.com/oneezy/monorepo" target="_blank" rel="noreferrer">
-      <Icon name="github" viewBox="0 0 24 24" size="32" class="fill--primary rounded-full" />
+    <Link href="https://discord.gg/6Ys7gEr" target="_blank" rel="noreferrer">
+      <Icon name="discord" viewBox="0 0 28 28" size="42" class="fill--primary rounded-full" />
     </Link>
     <Theme />
-    <Button href="https://github.com/oneezy/monorepo" target="_blank" rel="noreferrer" class="ml-2">Lets Gooo</Button>
+    <Button href="/signin" class="ml-2">Sign Up</Button>
   </div>
 </Header>
-{/if}
 
 <!-- Layout -->
 <Intro>

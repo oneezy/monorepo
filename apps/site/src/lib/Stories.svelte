@@ -2,8 +2,8 @@
   import { Container, Content, Button } from '@packages/components';
   
   const stories = [
-    { id: 1, name: 'vitebook', repo: 'https://github.com/vitebook/vitebook', demo: 'https://vitebook.dev' },
-    { id: 2, name: 'bookit', repo: 'https://github.com/leveluptuts/bookit', demo: 'https://bookit.leveluptutorials.com' },
+    // { id: 1, name: 'vitebook', repo: 'https://github.com/vitebook/vitebook', demo: 'https://vitebook.dev' },
+    // { id: 2, name: 'bookit', repo: 'https://github.com/leveluptuts/bookit', demo: 'https://bookit.leveluptutorials.com' },
     { id: 3, name: 'histoire', repo: 'https://github.com/histoire-dev/histoire', demo: 'https://histoire.dev' },
   ]
 </script>
