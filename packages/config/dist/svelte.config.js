@@ -15,6 +15,7 @@ const config = {
       
       // Apps (plop added)
       $test: resolve('../../apps/test/src'),
+      $test: resolve('../../apps/test/src'),
       $docs: resolve('../../apps/docs/src'),
       $bookit: resolve('../../apps/bookit/src'),
       $vitebook: resolve('../../apps/vitebook/src'),
