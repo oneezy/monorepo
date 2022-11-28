@@ -5,7 +5,7 @@
   "version": "0.0.0",
   "inherits": [
     "@packages/dependencies/package.svelte.json",
-    "@packages/dependencies/package.packages.json"
+    "@packages/dependencies/package.shared.json"
   ],
   "scripts": {
     "dev": "vite dev --port 3000",
