@@ -1,9 +1,10 @@
 <script>
 	import { page } from '$app/stores'
+  import { fade, fly } from 'svelte/transition';
 	import { SITE_URL, SITE_NAME, SITE_TITLE, SITE_SEPARATOR, SITE_AUTHOR, SITE_DESCRIPTION } from '@packages/metadata'
-	import { mediaQuery, Header, Scrollbar, Logo, Nav, Theme, Button, Social, Device, Page, Link, Icon } from '@packages/components'
+	import { mediaQuery, Intro, Header, Scrollbar, Logo, Theme, Button, Social, Device, Page, Link, Icon } from '@packages/components'
 	import '@packages/components/css/global.css';
-  import '$docs/app.css';
+  import '$site/app.css';
 
 	const sm = mediaQuery('(min-width: 0px) and (max-width: 767px)')
 	const md = mediaQuery('(min-width: 0px) and (max-width: 1024px)')
@@ -30,38 +31,40 @@
 
 <Device device="hidden" />
 
-<Page id="docs">
-  {#if !$md}
-    <Scrollbar />
-  {/if}
+{#if !$md}
+  <Scrollbar />
+{/if}
 
-  {#if $md}
-  <Header class="p-4 md:p-8">
-    <div slot="left">menu</div>
-    <Logo slot="center" />
-    <Theme slot="right" />
-  </Header>
+{#if $md}
+<Header class="p-4 md:p-8">
+  <div slot="left">menu</div>
+  <Logo slot="center" />
+  <Theme slot="right" />
+</Header>
 
-  {:else}
-  <Header class="p-4 md:p-8">
-    <Logo slot="left" class="ml-8" />
-    <nav slot="center" class="flex flex-col items-center justify-center md:flex-row gap-6 capitalize">
-      <Link href="/">Home</Link>
-      <Link href="/docs">Docs</Link>
-    </nav>
-    <div class="flex items-center justify-center gap-2" slot="right">
-      <Link href="https://discord.gg/6Ys7gEr" target="_blank" rel="noreferrer">
-        <Icon name="discord" viewBox="0 0 28 28" size="42" class="fill--primary rounded-full" />
-      </Link>
-      <Theme />
-      <Button href="/" class="ml-2">Sign Up</Button>
-    </div>
-  </Header>
-  {/if}
+{:else}
+<Header class="p-4 md:p-8">
+  <Logo slot="left" class="ml-8" />
+  <nav slot="center" class="flex flex-col items-center justify-center md:flex-row gap-6 capitalize">
+    <Link href="/">Home</Link>
+    <Link href="docs">Docs</Link>
+  </nav>
+  <div class="flex items-center justify-center gap-2" slot="right">
+    <Link href="https://github.com/oneezy/monorepo" target="_blank" rel="noreferrer">
+      <Icon name="github" viewBox="0 0 24 24" size="32" class="fill--primary rounded-full" />
+    </Link>
+    <Theme />
+    <Button href="https://github.com/oneezy/monorepo" target="_blank" rel="noreferrer" class="ml-2">Lets Gooo</Button>
+  </div>
+</Header>
+{/if}
 
-  <slot />
-
-  <footer class="container mx-auto p-4 md:p-8">
-    <Social />
-  </footer>
-</Page>
+<!-- Layout -->
+<Intro>
+  <div in:fly="{{ y: 20, delay: 800, duration: 800 }}">
+    <slot />
+    <footer class="container mx-auto p-4 md:p-8">
+      <Social />
+    </footer>
+  </div>
+</Intro>
