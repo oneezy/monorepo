@@ -53,7 +53,7 @@
       },
       { // Export component 
         type: "append",
-        path: "./packages/components/src/index.js",
+        path: "./packages/components/index.js",
         templateFile: ".templates/component/index.js.hbs"
       },
       { // Histoire: Create Component.story.svelte
