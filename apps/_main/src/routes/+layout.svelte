@@ -29,40 +29,4 @@
   <meta property="fb:admins" content="{FB_ADMINS}" /> -->
 </svelte:head>
 
-<Device device="hidden" />
-
-{#if !$md}
-  <Scrollbar />
-{/if}
-
-<!-- Mobile -->
-<Header class="block md:hidden">
-  <Dialog slot="left" type="nav">
-    <Nav />
-  </Dialog>
-  <Logo slot="center" />
-  <Theme slot="right" />
-</Header>
-
-<!-- Desktop -->
-<Header class="hidden md:block">
-  <Logo slot="left" class="ml-8" />
-  <Nav slot="center" />
-  <div class="flex items-center justify-center gap-2" slot="right">
-    <Link href="https://discord.gg/6Ys7gEr" target="_blank" rel="noreferrer">
-      <Icon name="discord" viewBox="0 0 28 28" size="42" class="fill--primary rounded-full" />
-    </Link>
-    <Theme />
-    <Button href="/signin" class="ml-2">Sign Up</Button>
-  </div>
-</Header>
-
-<!-- Layout -->
-<Intro>
-  <div in:fly="{{ y: 20, delay: 800, duration: 800 }}">
-    <slot />
-    <footer class="container mx-auto p-4 md:p-8">
-      <Social />
-    </footer>
-  </div>
-</Intro>
+<slot />
