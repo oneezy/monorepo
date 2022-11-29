@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" class="relative dark">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%sveltekit.assets%/images/manifest/apple-touch-icon.png">
+    <link rel="manifest" href="%sveltekit.assets%/manifest.json">
+    
+		<!-- <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" /> -->
+		<meta name="theme-color" content="black" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- Custom Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100;200;300;500;700;900&family=Bebas+Neue&family=Indie+Flower&family=Macondo&family=Major+Mono+Display&display=swap" rel="stylesheet">
+
+		<script>
+      let noThemeStored   =   !('theme' in localStorage);
+      let themeColor      =   document.head.querySelector('meta[name=theme-color]');
+      let darkTheme       =   window.matchMedia('(prefers-color-scheme: dark)');
+      let lightTheme      =   window.matchMedia('(prefers-color-scheme: light)');
+
+			if ( localStorage.theme === 'dark' || noThemeStored || darkTheme.matches) {
+				document.documentElement.classList.add('dark');
+        themeColor.setAttribute('content', 'black')
+			} 
+      else if (localStorage.theme === 'light' || window.matchMedia('(prefers-color-scheme: light)').matches) {
+				document.documentElement.classList.remove('dark');
+        themeColor.setAttribute('content', 'white')
+			}
+		</script>
+		%sveltekit.head%
+	</head>
+	<body class="bg-white text-black dark:bg-black dark:text-white">
+    <div>%sveltekit.body%</div>
+	</body>
+</html>

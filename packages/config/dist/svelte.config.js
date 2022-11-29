@@ -11,15 +11,11 @@ const config = {
       $root: resolve('../../'),
 
       // App (main)
-      $site: resolve('../../apps/site/src'),
+      $main: resolve('../../apps/_main/src'),
       
       // Apps (plop added)
-      $new: resolve('../../apps/new/src'),
-      $test: resolve('../../apps/test/src'),
-      $test: resolve('../../apps/test/src'),
+      $site: resolve('../../apps/site/src'),
       $docs: resolve('../../apps/docs/src'),
-      $bookit: resolve('../../apps/bookit/src'),
-      $vitebook: resolve('../../apps/vitebook/src'),
     }
   },
 
