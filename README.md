@@ -13,9 +13,9 @@ It includes 3 Storybook alternatives for building and documenting components: [B
 - [x] 🆕 created `$base` links so stand-alone app links will work
 - [x] 🆕 bumped histoire to `v0.11.7`
 - [x] 🆕 better tailwind.config content paths
-- [ ] 🔜 convert Histoire (svelte) to Histoire (sveltekit)
-- [ ] 🔜 fix `plop app` to work w/ new layout structure
-- [x] Demo
+- [ ] ❌ convert Histoire (svelte) to Histoire (sveltekit)
+- [ ] ❌ fix `plop app` to work w/ new layout structure
+- [ ] ❌ Fix Vercel Build (symlink routes broke)
 - [x] Turborepo
 - [x] Sveltekit `^1.0.0-next.455`
 - [x] Tailwind `^3.1.8`
