@@ -11,7 +11,7 @@ const config = {
       $root: resolve('../../../'),
 
       // App (main)
-      $main: resolve('../../apps/_main/src'),
+      $main: resolve('../../apps/main/src'),
       
       // Apps (plop added)
       $site: resolve('../../apps/site/src'),
