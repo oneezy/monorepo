@@ -8,7 +8,7 @@ const config = {
     adapter: adapter(),
     alias: {
       // Root
-      $root: resolve('../../'),
+      $root: resolve('../../../'),
 
       // App (main)
       $main: resolve('../../apps/_main/src'),
@@ -16,7 +16,7 @@ const config = {
       // Apps (plop added)
       $site: resolve('../../apps/site/src'),
       $docs: resolve('../../apps/docs/src'),
-    }
+    },
   },
 
   preprocess: [

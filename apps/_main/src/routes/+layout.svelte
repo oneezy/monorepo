@@ -12,21 +12,36 @@
 	let device
 </script>
 
-<svelte:head>
-	<title>{SITE_NAME} {SITE_SEPARATOR} {SITE_DESCRIPTION}</title>
+<Device device="hidden" />
 
-	<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-	<link rel="canonical" href="{SITE_URL}{$page.url.pathname}" />
+{#if !$md}
+  <Scrollbar />
+{/if}
 
-	<meta property="og:locale" content="en_US" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content={$page.url.href} />
-	<meta property="og:site_name" content={SITE_NAME} />
-	<meta property="og:image:width" content="1200" />
-	<meta property="og:image:height" content="630" />
-	<!--   
-  <meta property="fb:app_id" content="{FB_ID}" />
-  <meta property="fb:admins" content="{FB_ADMINS}" /> -->
-</svelte:head>
+<!-- Mobile -->
+<Header class="block md:hidden">
+  <Dialog slot="left" type="nav">
+    <Nav />
+  </Dialog>
+  <Logo slot="center" />
+  <Theme slot="right" />
+</Header>
+
+<!-- Desktop -->
+<Header class="hidden md:block">
+  <Logo slot="left" class="ml-8" />
+  <Nav slot="center" />
+  <div class="flex items-center justify-center gap-2" slot="right">
+    <Link href="https://discord.gg/6Ys7gEr" target="_blank" rel="noreferrer">
+      <Icon name="discord" viewBox="0 0 28 28" size="42" class="fill--primary rounded-full" />
+    </Link>
+    <Theme />
+    <Button href="/signin" class="ml-2">Sign Up</Button>
+  </div>
+</Header>
 
 <slot />
+
+<footer class="container mx-auto p-4 md:p-8">
+  <Social />
+</footer>

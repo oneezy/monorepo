@@ -1,7 +1,13 @@
 import { svelteConfig } from '@packages/config';
 
 const config = {
-  ...svelteConfig
+  ...svelteConfig,
+  kit: {
+      ...svelteConfig.kit,
+      paths: {
+          base: "/site",
+      },
+  }
 };
 
 export default config;

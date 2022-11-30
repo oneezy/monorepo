@@ -45,7 +45,7 @@
 </svelte:head>
 
 <Button
-  class="fill--primary block dark:hidden"
+  class="fill--primary flex dark:hidden"
   aria-label="Toggle Dark Mode"
   aria-live="polite"
   button="icon"
@@ -56,7 +56,7 @@
 </Button>
 
 <Button
-  class="fill--primary hidden dark:block"
+  class="fill--primary hidden dark:flex"
   aria-label="Toggle Dark Mode"
   aria-live="polite"
   button="icon"

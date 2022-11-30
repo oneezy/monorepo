@@ -2,7 +2,11 @@ import { viteConfig } from '@packages/config';
 
 /** @type {import('vite').UserConfig} */
 const config = {
-  ...viteConfig
+  ...viteConfig,
+  server: {
+    host: '0.0.0.0',
+    open: '/docs'
+  },
 };
 
 export default config;

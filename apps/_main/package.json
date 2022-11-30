@@ -8,9 +8,9 @@
     "@packages/dependencies/package.shared.json"
   ],
   "scripts": {
-    "dev": "vite dev --port 3926",
+    "dev": "vite dev --port 3000",
     "build": "vite build",
-    "preview": "vite preview --port 3958",
+    "preview": "vite preview --port 5000",
     "package": "svelte-kit package",
     "prepare": "svelte-kit sync",
     "check": "svelte-check",

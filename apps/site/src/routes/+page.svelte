@@ -1,7 +1,8 @@
 <script>
 	import { SITE_NAME, SITE_TITLE, SITE_SEPARATOR, SITE_AUTHOR, SITE_DESCRIPTION } from '@packages/metadata'
 	import { page } from '$app/stores'
-  import Hero from '$site/lib/Hero.svelte';
+  import { Intro } from '@packages/components'
+  import Hero from '$site/lib/Hero.svelte'
 </script>
 
 <svelte:head>
@@ -13,4 +14,7 @@
 	<meta property="og:image" content="{$page.url.origin}/og.png" />
 </svelte:head>
 
-<Hero id="home" />
+
+<Intro>
+  <Hero />
+</Intro>

@@ -2,67 +2,45 @@
 	import { page } from '$app/stores'
   import { fade, fly } from 'svelte/transition';
 	import { SITE_URL, SITE_NAME, SITE_TITLE, SITE_SEPARATOR, SITE_AUTHOR, SITE_DESCRIPTION } from '@packages/metadata'
-	import { mediaQuery, Intro, Header, Scrollbar, Dialog, Nav, Logo, Theme, Button, Social, Device, Page, Link, Icon } from '@packages/components'
-	import '@packages/components/css/global.css';
-  import '$site/app.css';
+	import { Section, Container, Content, TextAnimate, mediaQuery, Intro, Header, Scrollbar, Dialog, Nav, Logo, Theme, Button, Social, Device, Page, Link, Icon } from '@packages/components'
+
+  import '@packages/components/css/global.css';
+  import '$docs/app.css';
 
 	const sm = mediaQuery('(min-width: 0px) and (max-width: 767px)')
 	const md = mediaQuery('(min-width: 0px) and (max-width: 1024px)')
-
-	let device
 </script>
-
-<svelte:head>
-	<title>{SITE_NAME} {SITE_SEPARATOR} {SITE_DESCRIPTION}</title>
-
-	<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-	<link rel="canonical" href="{SITE_URL}{$page.url.pathname}" />
-
-	<meta property="og:locale" content="en_US" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content={$page.url.href} />
-	<meta property="og:site_name" content={SITE_NAME} />
-	<meta property="og:image:width" content="1200" />
-	<meta property="og:image:height" content="630" />
-	<!--   
-  <meta property="fb:app_id" content="{FB_ID}" />
-  <meta property="fb:admins" content="{FB_ADMINS}" /> -->
-</svelte:head>
-
-<Device device="hidden" />
-
-{#if !$md}
-  <Scrollbar />
-{/if}
-
-<!-- Mobile -->
-<Header class="block md:hidden">
-  <Dialog slot="left" type="nav">
-    <Nav />
-  </Dialog>
-  <Logo slot="center" />
-  <Theme slot="right" />
-</Header>
-
-<!-- Desktop -->
-<Header class="hidden md:block">
-  <Logo slot="left" class="ml-8" />
-  <Nav slot="center" />
-  <div class="flex items-center justify-center gap-2" slot="right">
-    <Link href="https://discord.gg/6Ys7gEr" target="_blank" rel="noreferrer">
-      <Icon name="discord" viewBox="0 0 28 28" size="42" class="fill--primary rounded-full" />
-    </Link>
-    <Theme />
-    <Button href="/signin" class="ml-2">Sign Up</Button>
-  </div>
-</Header>
 
 <!-- Layout -->
 <Intro>
-  <div in:fly="{{ y: 20, delay: 800, duration: 800 }}">
-    <slot />
-    <footer class="container mx-auto p-4 md:p-8">
-      <Social />
-    </footer>
-  </div>
+  <nav class="h-screen w-48 border-r fixed left-0 top-0 bottom-0 z-10">
+    <div class="grid items-center justify-center gap-4 my-4">
+      <Logo />
+      <Theme />
+    </div>
+    <Link href="/docs/page-1">Page 1</Link>
+    <Link href="/docs/page-2">Page 2</Link>
+    <Link href="/docs/page-3">Page 3</Link>
+  </nav>
+
+  <Section class="pt-20 md:pt-32 md:pb-[10vh]" {...$$restProps}>
+    <Container class="h-full bg-blue-500/0">
+      <Content class="h-full flex flex-col justify-around">
+        <h1 class="text-black dark:text-white text-4xl font-bold sr-only">{SITE_NAME}</h1>
+      
+        <h3 class="select-none grid items-center justify-center text-center text-6xl md:text-[14vw] lg:text-[12vw] xl:text-[8vw] tracking-tight font-black">
+          <span class="-mb-6">The</span>
+          <TextAnimate class="py-6"><slot /></TextAnimate>
+          <span class="-mt-6">Page</span>
+        </h3>
+        
+        <h2 class="text--secondary text-center font-medium text-base md:text-2xl md:mt-10 tracking-wide">{SITE_DESCRIPTION}</h2>
+      
+        <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+          <Button href="https://scavengerbot.io" display="hero">Learn More</Button>
+          <Button href="https://scavengerbot.io" button="outline" display="hero">Sign Up</Button>
+        </div>
+      </Content>
+    </Container>
+  </Section>
 </Intro>

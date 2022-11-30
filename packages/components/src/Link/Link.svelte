@@ -1,13 +1,12 @@
 <script>
-	import { activeSectionId } from '../Section/store';
+  import { base } from '$app/paths'
   import { page } from '$app/stores';
-
-  let _class = null;
-  export { _class as class };
+	import { activeSectionId } from '../Section/store';
 
   /* Props
   *************************/
-  export let href = null;
+  export let usebase = false;
+  export let href = '';
   // export let size;
   // export let type;
   export let state = null;
@@ -46,7 +45,8 @@
 </script>
 
 <a 
-  {href} 
+  href="{usebase === true ? base : ''}{href}"
+  {usebase}
   {state} 
   class="{ _default }
 
@@ -60,10 +60,10 @@
     
   {  /* Custom class... 
     *************************/
-    _class || ''}" {...$$restProps}>
+    $$restProps.class || ''}" {...$$restProps}>
     
   <slot></slot>
-
+  
   <b class="
     h-[3px] 
     w-full 

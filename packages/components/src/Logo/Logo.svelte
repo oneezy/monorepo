@@ -6,6 +6,6 @@
 	const md = mediaQuery('(min-width: 0px) and (max-width: 1024px)')
 </script>
 
-<a href="/">
-  <Icon name="scavenger" width="100" href="/" class="fill--primary" />
-</a>
+<Link href="/" usebase={true}>
+  <Icon name="scavenger" width="100" class="fill--primary" />
+</Link>

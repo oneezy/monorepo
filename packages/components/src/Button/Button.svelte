@@ -1,4 +1,5 @@
 <script>
+  import { base } from '$app/paths'
   import { getEventsAction } from "./utils";
   import { current_component } from "svelte/internal";
   import Icon from '../Icon/Icon.svelte';
@@ -22,7 +23,7 @@
 
   let _default = `
     flex items-center justify-center
-    w-full md:w-auto 
+    w-full lg:w-auto 
     font-semibold rounded-full relative whitespace-nowrap overflow-hidden no-underline`;
   
   let _focusButton = `
@@ -91,7 +92,7 @@
   <a 
     {...$$restProps}
     use:events
-    {href}
+    href="{base}{href}"
     style="{`${$$props.style || ''}`}"
     class="{`${_default} ${$$props.class || ''}`}
 
