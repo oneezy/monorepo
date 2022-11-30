@@ -1,5 +1,5 @@
 <script>
-  import  { SITE_NAME } from '@packages/metadata';
+  import  { SITE_NAME, SITE_DESCRIPTION } from '@packages/metadata';
   import { Section, Container, Content, Button, TextAnimate } from '@packages/components';
 </script>
 
@@ -14,7 +14,7 @@
         <span class="-mt-6">Page</span>
       </h3>
       
-      <h2 class="text--secondary text-center font-medium text-base md:text-2xl md:mt-10 tracking-wide">Check out that sweet sidebar</h2>
+      <h2 class="text--secondary text-center font-medium text-base md:text-2xl md:mt-10 tracking-wide">{SITE_DESCRIPTION}</h2>
     
       <div class="flex flex-col md:flex-row items-center justify-center gap-4">
         <Button href="https://scavengerbot.io" display="hero">Learn More</Button>

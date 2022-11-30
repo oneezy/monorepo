@@ -1,7 +1,4 @@
 <script>
-	import { page } from '$app/stores'
-  import { fade, fly } from 'svelte/transition';
-	import { SITE_URL, SITE_NAME, SITE_TITLE, SITE_SEPARATOR, SITE_AUTHOR, SITE_DESCRIPTION } from '@packages/metadata'
 	import { mediaQuery, Intro, Header, Scrollbar, Dialog, Nav, Logo, Theme, Button, Social, Device, Page, Link, Icon } from '@packages/components'
 	import '@packages/components/css/global.css';
   import '$main/app.css';
@@ -40,7 +37,9 @@
   </div>
 </Header>
 
-<slot />
+<Intro>
+  <slot />
+</Intro>
 
 <footer class="container mx-auto p-4 md:p-8">
   <Social />

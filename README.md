@@ -8,6 +8,13 @@ It includes 3 Storybook alternatives for building and documenting components: [B
 
 # To Do
 
+- [x] 🆕 create "main" app for all other apps to live on the same level 
+- [x] 🆕 fixed layouts / duplicate content 
+- [x] 🆕 created `$base` links so stand-alone app links will work
+- [x] 🆕 bumped histoire to `v0.11.7`
+- [x] 🆕 better tailwind.config content paths
+- [ ] 🔜 convert Histoire (svelte) to Histoire (sveltekit)
+- [ ] 🔜 fix `plop app` to work w/ new layout structure
 - [x] Demo
 - [x] Turborepo
 - [x] Sveltekit `^1.0.0-next.455`
@@ -15,7 +22,7 @@ It includes 3 Storybook alternatives for building and documenting components: [B
 - [x] PNPM
 - [x] Husky
 - [x] Commitlint
-- [ ] Symlink routes broken [(sveltekit issue #6303) ](https://github.com/sveltejs/kit/issues/6303)
+- [x] Symlink routes fixed! [(sveltekit issue #6303) ](https://github.com/sveltejs/kit/issues/6303)
 - [x] Shared `@packages/*` between `@apps/*`
 - [x] Remove all build folder w/ `pnpm clean` script
 - [x] Open multiple apps on different ports w/ `pnpm dev`
@@ -24,9 +31,8 @@ It includes 3 Storybook alternatives for building and documenting components: [B
 - [x] Implement Changesets [(link)](https://github.com/changesets/changesets)
 - [x] Setup Component Stories
   - [x] Histoire
-  - [x] Vitebook
-  - [x] Bookit 
-- [ ] Update SvelteKit to latest version
+  - [x] ~~Vitebook~~
+  - [x] ~~Bookit~~ 
 - [ ] Commitlint Emojis
 - [ ] Setup Docker w/ Turborepo
 - [ ] Deploy `dev`, `beta`, and `prod` to real web host

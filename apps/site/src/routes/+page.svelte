@@ -1,20 +1,15 @@
 <script>
-	import { SITE_NAME, SITE_TITLE, SITE_SEPARATOR, SITE_AUTHOR, SITE_DESCRIPTION } from '@packages/metadata'
 	import { page } from '$app/stores'
-  import { Intro } from '@packages/components'
-  import Hero from '$site/lib/Hero.svelte'
+  import { SITE_NAME, SITE_SEPARATOR, SITE_DESCRIPTION } from '@packages/metadata';
 </script>
 
 <svelte:head>
-	<title>{SITE_NAME} {SITE_SEPARATOR} {SITE_TITLE}</title>
+	<title>Site {SITE_SEPARATOR} {SITE_NAME}</title>
 	<meta name="description" content={SITE_DESCRIPTION} />
 
-	<meta property="og:title" content="{SITE_NAME} {SITE_SEPARATOR} {SITE_TITLE}" />
+	<meta property="og:title" content="Site {SITE_NAME} {SITE_SEPARATOR}" />
 	<meta property="og:description" content={SITE_DESCRIPTION} />
 	<meta property="og:image" content="{$page.url.origin}/og.png" />
 </svelte:head>
 
-
-<Intro>
-  <Hero />
-</Intro>
+Site
