@@ -1,9 +1,10 @@
 {
-	"pipeline": {
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
 
 		"build": {
 			"dependsOn": ["^build"],
-      "outputs": [".svelte-kit/**", ".vercel/**", "build/**"],
+      "outputs": [".svelte-kit/**", ".vercel_build_output/**", ".vercel/**", "build/**"],
       "inputs": ["src/**/*.{html,js,svelte,svx,ts}", "../../packages/components/**/*.{html,js,svelte,svx,ts}" ]
 		},
 
