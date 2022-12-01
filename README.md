@@ -15,9 +15,8 @@ It includes 3 Storybook alternatives for building and documenting components: [B
 - [x] 🆕 better tailwind.config content paths
 - [ ] ❌ convert Histoire (svelte) to Histoire (sveltekit)
 - [ ] ❌ fix `plop app` to work w/ new layout structure
-- [ ] ❌ Fix Vercel Build (symlink routes broke)
 - [x] Turborepo
-- [x] Sveltekit `^1.0.0-next.455`
+- [x] Sveltekit `^1.0.0-next.570`
 - [x] Tailwind `^3.1.8`
 - [x] PNPM
 - [x] Husky
