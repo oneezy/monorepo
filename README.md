@@ -1,10 +1,13 @@
 [![image](https://user-images.githubusercontent.com/7369575/186303872-0f9ebc82-dc80-4008-9aa5-189421fb4244.png)](https://oneezy-monorepo.vercel.app)
 
-# Turborepo + Sveltekit + Tailwind [(Demo)](https://oneezy-monorepo.vercel.app)
+# Turborepo + Sveltekit + Tailwind + Histoire [(Demo)](https://oneezy-monorepo.vercel.app)
 
-This is a monorepo starter powered by: [Turborepo](https://turborepo.org/), [PNPM](https://pnpm.io/), [Sveltekit](https://kit.svelte.dev/), and [TailWindCSS](https://tailwindcss.com/). 
-
-It includes 3 Storybook alternatives for building and documenting components: [Bookit](https://bookit.leveluptutorials.com), [Vitebook](https://vitebook.dev), and [Histoire](https://histoire.dev)
+This is a monorepo starter powered by: 
+- [PNPM](https://pnpm.io/)
+- [Turborepo](https://turborepo.org/)
+- [Sveltekit](https://kit.svelte.dev/)
+- [TailWindCSS](https://tailwindcss.com/)
+- [Histoire](https://histoire.dev)
 
 # To Do
 
@@ -30,15 +33,18 @@ It includes 3 Storybook alternatives for building and documenting components: [B
 - [x] Implement Changesets [(link)](https://github.com/changesets/changesets)
 - [x] Setup Component Stories
   - [x] Histoire
-  - [x] ~~Vitebook~~
-  - [x] ~~Bookit~~ 
+  - [x] ~~Vitebook~~ (deprecated / no iframe)
+  - [x] ~~Bookit~~ (no iframe)
 - [ ] Commitlint Emojis
 - [ ] Setup Docker w/ Turborepo
 - [ ] Deploy `dev`, `beta`, and `prod` to real web host
 - [ ] CI Build Process
 - [ ] Create `env` variables shared in `packages`
-- [ ] Limit access certain directories
+- [ ] Limit access to certain directories
 - [ ] Setup git submodules for opensource repos
+- [ ] Create `@oneezy/components`GitHub repo + NPM package for sharing components between projects
+- [ ] Automate Release Tags
+- [ ] Testing
 
 ### Apps
 websites and webapps live in the `./apps` folder. They all live at the same level but the app routes are also *symlinked* into the **site (main app)** so they inherit Sveltekit's SPA routing system (Single Page Application).
@@ -384,4 +390,4 @@ cd ../.. && npx turbo run build --scope=site --include-dependencies --no-deps
 - [SVEMIX](https://www.svemix.com/)
 
 
-# Thanks Everyone for your help!
+# Thanks Everyone for your contributions!
