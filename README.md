@@ -11,7 +11,7 @@ This is a monorepo starter powered by:
 
 # To Do
 
-- [x] 🆕 create "main" app for all other apps to live on the same level 
+- [x] 🆕 create "main" app for all other apps to live on the same level / better control of (group) layouts
 - [x] 🆕 fixed layouts / duplicate content 
 - [x] 🆕 created `$base` links so stand-alone app links will work
 - [x] 🆕 bumped histoire to `v0.11.7`
