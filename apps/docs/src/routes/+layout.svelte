@@ -1,8 +1,7 @@
 <script>
-  import { Intro, Logo, Theme, Link } from '@packages/components'
+  import { Intro, App, Hero, Logo, Theme, Link } from '@packages/components'
   import '@packages/components/css/global.css';
   import '$docs/app.css';
-  import Docs from '$docs/lib/Docs.svelte'
 </script>
 
 <!-- Layout -->
@@ -17,7 +16,10 @@
     <Link href="/docs/page-3">Page 3</Link>
   </nav>
 
-  <Docs>
-    <slot />
-  </Docs>
+  <App id="docs">
+    <Hero>
+      <svelte:fragment slot="title"><slot/></svelte:fragment>
+      <svelte:fragment slot="description">Check out that sweeet sidebar</svelte:fragment>
+    </Hero>
+  </App>
 </Intro>

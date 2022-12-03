@@ -1,13 +1,15 @@
 <script>
-  import { Intro } from '@packages/components'
+  import { Intro, App, Hero } from '@packages/components'
   import '@packages/components/css/global.css';
   import '$site/app.css';
-  import Site from '$site/lib/Site.svelte'
 </script>
 
 <!-- Layout -->
 <Intro>
-  <Site>
-    <slot />
-  </Site>
+  <App id="site">
+    <Hero>
+      <svelte:fragment slot="title"><slot/></svelte:fragment>
+      <svelte:fragment slot="description">A badass starter project</svelte:fragment>
+    </Hero>
+  </App>
 </Intro>

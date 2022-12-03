@@ -38,7 +38,7 @@
 </Header>
 
 <Intro>
-  <App>
+  <App id="app">
     <slot />
   </App>
 </Intro>
