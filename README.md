@@ -1,6 +1,13 @@
-[![image](https://user-images.githubusercontent.com/7369575/186303872-0f9ebc82-dc80-4008-9aa5-189421fb4244.png)](https://oneezy-monorepo.vercel.app)
+[![image](https://user-images.githubusercontent.com/7369575/205452326-f9b9dcc7-b995-46bb-b5ba-7a6b5b93a1af.png)](https://oneezy-monorepo.vercel.app)
 
-# Turborepo + Sveltekit + Tailwind + Histoire [(Demo)](https://oneezy-monorepo.vercel.app)
+<h1 align="center">Turborepo + Sveltekit + Tailwind + Histoire <a href="https://oneezy-monorepo.vercel.app" target="_blank">(Demo)</a></h1>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/7369575/205452404-40441d73-c804-44fc-8f04-4ddb534ca5d2.png" alt="oneezy" />
+</p>
+
+<div style="text-align: center; margin: 0 auto; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+</div>
 
 This is a monorepo starter powered by: 
 - [PNPM](https://pnpm.io/)
@@ -47,9 +54,11 @@ This is a monorepo starter powered by:
 - [ ] Testing
 
 ### Apps
-websites and webapps live in the `./apps` folder. They all live at the same level but the app routes are also *symlinked* into the **site (main app)** so they inherit Sveltekit's SPA routing system (Single Page Application).
+websites and webapps live in the `./apps` folder. They all live at the same level but the app routes are *symlinked* into the **_apps (main app)** so they inherit Sveltekit's SPA routing system (Single Page Application).
 
-- **site** (main)
+- **_apps** (main app)
+- **_components** (histoire stories)
+- **site** 
 - **docs**
 
 ### Packages
@@ -72,8 +81,8 @@ libraries, configs and components live in the `./packages` folder.
 
 **Prereqs**
 ```
-node v16.13.2  (or later)
-pnpm v7        (or later)
+node v18.8.0  (or later)
+pnpm v7       (or later)
 ```
 
 **Installation**
@@ -94,7 +103,7 @@ pnpm build
 pnpm preview
 
 + production preview single app
-pnpm preview --filter @apps/site
+pnpm preview --filter @apps/apps
 ```
 
 ## Add App
@@ -103,13 +112,11 @@ use `pnpm plop app` to generate a new sveltekit app
 
 This monorepo makes use of symlinks to handle 2 separate scenarios. if you plan on using either you will need to follow the steps below for your app(s) to work properly. Learn more about symlinks by [clicking here](#setting-up-symlinks-if-youre-on-windows). 
 
-> **note**: there's a bug since sveltekit `1.0.0-next.432` that's [breaking symlinks](https://github.com/sveltejs/kit/issues/6303) - but this is still the proper way to set them up once it's fixed).
-
 **symlink static assets** <br>
-this monorepo only uses one folder for static assets located at `./apps/site/static` so you will need to symlink that `static` folder into every app you add to the `apps/*` folder to get static images working (this may change in the future but this is how we're handling it at the moment).
+this monorepo only uses one folder for static assets located at `./apps/_apps/static` so you will need to symlink that `static` folder into every app you add to the `apps/*` folder to get static assets working (this may change in the future but this is how we're handling it at the moment).
    
 **symlink app routes** <br>
-if you want to link entire apps together as routes you will need to symlink the `./apps/new-app/src/routes` folder into your main `./apps/site/src/routes` directory.
+if you want to link entire apps together as routes you will need to symlink the `./apps/new-app/src/routes` folder into your main `./apps/site/src/routes` directory. (more on this below)
 
 ## Add Package
 1. create new folder in `./apps` (i.e. `docs`)
@@ -135,11 +142,14 @@ pnpm add @packages/components
   "@packages/components": "workspace:*"
 }
 ```
-
+> ***PROTIP:** Quickly generate an `app` using [plop](https://plopjs.com/documentation)! (automatically handles steps 1-4!)*
+```
+pnpm plop app
+```
 ## Add Component
 1. create new component in `packages/components/lib` directory 
 2. export new component from `packages/components/index.js` file
-> ***PROTIP:** Quickly geneate components using [plop](https://plopjs.com/documentation)! (automatically handles steps 1 and 2)*
+> ***PROTIP:** Quickly generate components using [plop](https://plopjs.com/documentation)! (automatically handles steps 1 and 2!)*
 ```
 pnpm plop component
 ```
