@@ -1,6 +1,10 @@
 <script>
   import  { SITE_NAME, SITE_DESCRIPTION } from '@packages/metadata';
-  import  { Section, Container, Content, Button, TextAnimate } from '@packages/components';
+  import Section from '../Section/Section.svelte'
+  import Container from '../Container/Container.svelte'
+  import Content from '../Content/Content.svelte'
+  import Button from '../Button/Button.svelte'
+  import TextAnimate from '../TextAnimate/TextAnimate.svelte'
 </script>
 
 <Section class="h-screen pt-20 md:pt-32 md:pb-[10vh]" {...$$restProps}>

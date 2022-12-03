@@ -2,7 +2,7 @@
 	import { SITE_NAME, SITE_TITLE, SITE_SEPARATOR, SITE_AUTHOR, SITE_DESCRIPTION } from '@packages/metadata'
 	import { page } from '$app/stores'
   import { Intro } from '@packages/components';
-  import Hero from '$lib/Hero.svelte'
+  import Hero from '$apps/lib/Hero.svelte'
 </script>
 
 <svelte:head>

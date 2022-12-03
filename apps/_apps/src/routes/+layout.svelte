@@ -1,5 +1,5 @@
 <script>
-	import { mediaQuery, Intro, Header, Scrollbar, Dialog, Nav, Logo, Theme, Button, Social, Device, Page, Link, Icon } from '@packages/components'
+	import { mediaQuery, Intro, App, Header, Scrollbar, Dialog, Nav, Logo, Theme, Button, Social, Device, Link, Icon } from '@packages/components'
 	import '@packages/components/css/global.css';
   import '$apps/app.css';
 
@@ -38,7 +38,9 @@
 </Header>
 
 <Intro>
-  <slot />
+  <App>
+    <slot />
+  </App>
 </Intro>
 
 <footer class="container mx-auto p-4 md:p-8">
