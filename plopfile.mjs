@@ -91,7 +91,7 @@
   /* CI 
   ***********************************************************/
   plop.setGenerator("ci", {
-    description: "What is the name of the app?",
+    description: "Create a new CI",
     prompts: [
       { // Name your CI
         type: "input",

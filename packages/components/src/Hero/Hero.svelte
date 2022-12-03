@@ -1,16 +1,16 @@
 <script>
   import  { SITE_NAME, SITE_DESCRIPTION } from '@packages/metadata';
-  import { Section, Container, Content, Button, TextAnimate } from '@packages/components';
+  import  { Section, Container, Content, Button, TextAnimate } from '@packages/components';
 </script>
 
 <Section class="h-screen pt-20 md:pt-32 md:pb-[10vh]" {...$$restProps}>
   <Container class="h-full bg-blue-500/0">
-    <Content class="h-full flex flex-col justify-around">
+    <Content class="h-full flex flex-col justify-around gap-4">
       <h1 class="text-black dark:text-white text-4xl font-bold sr-only">{SITE_NAME}</h1>
     
       <h3 class="select-none grid items-center justify-center text-center text-6xl md:text-[14vw] lg:text-[12vw] xl:text-[8vw] tracking-tight font-black">
         <span class="-mb-6">The</span>
-        <TextAnimate class="py-6">{{properCase name}}</TextAnimate>
+        <TextAnimate class="py-6"><slot /></TextAnimate>
         <span class="-mt-6">Page</span>
       </h3>
       
