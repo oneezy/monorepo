@@ -1,5 +1,5 @@
 <script>
-  import { base } from '$app/paths'
+  // import { base } from '$app/paths'
   
   export let alt
   export let src
@@ -7,7 +7,7 @@
 
 <img 
   class="max-w-full {$$props.class || ''}" 
-  src="{base}{src}"
+  src="{src}"
   {alt}
   {...$$restProps}
 />

@@ -7,8 +7,8 @@
     <link rel="manifest" href="%sveltekit.assets%/manifest.json">
     
 		<!-- <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" /> -->
-		<meta name="theme-color" content="black" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="theme-color" content="white" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Custom Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,13 +21,13 @@
       let darkTheme       =   window.matchMedia('(prefers-color-scheme: dark)');
       let lightTheme      =   window.matchMedia('(prefers-color-scheme: light)');
 
-			if ( localStorage.theme === 'dark' || noThemeStored || darkTheme.matches) {
-				document.documentElement.classList.add('dark');
-        themeColor.setAttribute('content', 'black')
-			} 
-      else if (localStorage.theme === 'light' || window.matchMedia('(prefers-color-scheme: light)').matches) {
-				document.documentElement.classList.remove('dark');
+			if ( localStorage.theme === 'light' || noThemeStored || lightTheme.matches) {
+				document.documentElement.classList.add('light');
         themeColor.setAttribute('content', 'white')
+			} 
+      else if (localStorage.theme === 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				document.documentElement.classList.remove('light');
+        themeColor.setAttribute('content', 'black')
 			}
 		</script>
 		%sveltekit.head%

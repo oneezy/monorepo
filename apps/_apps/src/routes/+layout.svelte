@@ -1,7 +1,7 @@
 <script>
 	import { mediaQuery, Intro, Header, Scrollbar, Dialog, Nav, Logo, Theme, Button, Social, Device, Page, Link, Icon } from '@packages/components'
 	import '@packages/components/css/global.css';
-  import '$main/app.css';
+  import '$apps/app.css';
 
 	const sm = mediaQuery('(min-width: 0px) and (max-width: 767px)')
 	const md = mediaQuery('(min-width: 0px) and (max-width: 1024px)')

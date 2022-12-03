@@ -1,11 +1,11 @@
 <script>
-  import { base } from '$app/paths'
-  import { page } from '$app/stores';
+  // import { base } from '$app/paths'
+  // import { page } from '$app/stores';
 	import { activeSectionId } from '../Section/store';
 
   /* Props
   *************************/
-  export let usebase = false;
+  // export let usebase = false;
   export let href = '';
   // export let size;
   // export let type;
@@ -45,15 +45,14 @@
 </script>
 
 <a 
-  href="{usebase === true ? base : ''}{href}"
-  {usebase}
+  href="{href}"
   {state} 
   class="{ _default }
 
   {  /* State 
     *************************/
     `#${$activeSectionId}` === href ? _active : 
-    $page.url.pathname === href ? _active :
+    // $page.url.pathname === href ? _active :
     state == 'disabled' ? _disabled : 
     state == 'loading' ? _loading : 
     state == 'normal' ? _normal : _normal } 

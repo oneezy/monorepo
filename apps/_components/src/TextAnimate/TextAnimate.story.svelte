@@ -1,23 +1,23 @@
 <script>
 	import { hstEvent } from 'histoire/client'
-  import Intro from '@packages/components/src/Intro/Intro.svelte';
+  import TextAnimate from '@packages/components/src/TextAnimate/TextAnimate.svelte';
 
 	export let Hst
 	const source = `
-  <Intro>
-    Intro
-  </Intro>
+  <TextAnimate>
+    TextAnimate
+  </TextAnimate>
 `
 
 	let disabled = false
 	const hstEventClick = event => hstEvent('click', event)
 </script>
 
-<Hst.Story title="Intro" {source}>
+<Hst.Story title="TextAnimate" {source}>
   
-	<Intro on:click={hstEventClick}>
-		Intro
-	</Intro>
+	<TextAnimate class="text-[11vw] font-black text-center m-auto" on:click={hstEventClick}>
+		TextAnimate
+	</TextAnimate>
 
 	<svelte:fragment slot="controls">
 		<Hst.Checkbox bind:value={disabled} title="Disabled" />

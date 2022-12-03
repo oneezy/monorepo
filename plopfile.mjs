@@ -58,7 +58,7 @@
       },
       { // Histoire: Create Component.story.svelte
         type: "addMany",
-        destination: "./apps/histoire/src/{{name}}",
+        destination: "./apps/_components/src/{{name}}",
         base: `.templates/story/`,
         templateFiles: `.templates/story/**/*.hbs`
       }
@@ -80,7 +80,7 @@
     actions: [
       { // Histoire: Create Component.story.svelte
         type: "addMany",
-        destination: "./apps/histoire/src/{{name}}",
+        destination: "./apps/_components/src/{{name}}",
         base: `.templates/story/`,
         templateFiles: `.templates/story/**/*.hbs`
       }

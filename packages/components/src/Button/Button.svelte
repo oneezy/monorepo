@@ -1,5 +1,5 @@
 <script>
-  import { base } from '$app/paths'
+  // import { base } from '$app/paths'
   import { getEventsAction } from "./utils";
   import { current_component } from "svelte/internal";
   import Icon from '../Icon/Icon.svelte';
@@ -92,7 +92,7 @@
   <a 
     {...$$restProps}
     use:events
-    href="{base}{href}"
+    href="{href}"
     style="{`${$$props.style || ''}`}"
     class="{`${_default} ${$$props.class || ''}`}
 

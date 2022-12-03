@@ -2,11 +2,11 @@
   import { scale, fade, fly } from 'svelte/transition';
 	import { elasticOut } from 'svelte/easing';
   import Button from '../Button/Button.svelte';
-	let isDark;
+	let isDark = false;
 
 	if (typeof localStorage !== 'undefined') {
-		if ( localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-			isDark = true;
+		if ( localStorage.theme === 'light' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+			isDark = false;
 		}
 	}
 
