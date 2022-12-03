@@ -1,8 +1,6 @@
 <script>
+  import { page } from '$app/stores'
 	import { SITE_NAME, SITE_TITLE, SITE_SEPARATOR, SITE_AUTHOR, SITE_DESCRIPTION } from '@packages/metadata'
-	import { page } from '$app/stores'
-	import { Hero } from '@packages/components'
-  import {{ properCase name }} from '${{name}}/lib/{{properCase name}}.svelte'
 </script>
 
 <svelte:head>
@@ -14,6 +12,4 @@
 	<meta property="og:image" content="{$page.url.origin}/og.png" />
 </svelte:head>
 
-<Hero>
-  {{properCase name}}
-</Hero>
+{{properCase name}}

@@ -1,7 +1,6 @@
 <script>
 	import { page } from '$app/stores'
   import { SITE_NAME, SITE_SEPARATOR, SITE_DESCRIPTION } from '@packages/metadata';
-  import { Hero } from '@packages/components'
 </script>
 
 <svelte:head>
