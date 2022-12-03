@@ -23,8 +23,8 @@ This is a monorepo starter powered by:
 - [x] 🆕 created `$base` links so stand-alone app links will work
 - [x] 🆕 bumped histoire to `v0.11.7`
 - [x] 🆕 better tailwind.config content paths
-- [ ] ❌ convert Histoire (svelte) to Histoire (sveltekit)
-- [ ] ❌ fix `plop app` to work w/ new layout structure
+- [x] 🆕 fix `plop app` to work w/ new layout structure
+- [ ] convert Histoire (svelte) to Histoire (sveltekit)
 - [x] Turborepo
 - [x] Sveltekit `^1.0.0-next.570`
 - [x] Tailwind `^3.1.8`
