@@ -54,10 +54,10 @@ This is a monorepo starter powered by:
 - [ ] Testing
 
 ### Apps
-websites and webapps live in the `./apps` folder. They all live at the same level but the app routes are *symlinked* into the **_apps (main app)** so they inherit Sveltekit's SPA routing system (Single Page Application).
+websites and webapps live in the `./apps` folder. They all live at the same level but the app routes are *symlinked* into the **+app (main app)** so they inherit Sveltekit's SPA routing system (Single Page Application).
 
-- **_apps** (main app)
-- **_components** (histoire stories)
+- **+app** (main app)
+- **+stories** (histoire stories)
 - **site** 
 - **docs**
 
@@ -113,10 +113,10 @@ use `pnpm plop app` to generate a new sveltekit app
 This monorepo makes use of symlinks to handle 2 separate scenarios. if you plan on using either you will need to follow the steps below for your app(s) to work properly. Learn more about symlinks by [clicking here](#setting-up-symlinks-if-youre-on-windows). 
 
 **symlink static assets** <br>
-this monorepo only uses one folder for static assets located at `./apps/_apps/static` so you will need to symlink that `static` folder into every app you add to the `apps/*` folder to get static assets working (this may change in the future but this is how we're handling it at the moment).
+this monorepo only uses one folder for static assets located at `./apps/+app/static` so you will need to symlink that `static` folder into every app you add to the `apps/*` folder to get static assets working (this may change in the future but this is how we're handling it at the moment).
    
 **symlink app routes** <br>
-if you want to link entire apps together as routes you will need to symlink the `./apps/new-app/src/routes` folder into your main `./apps/_apps/src/routes` directory. (more on this below)
+if you want to link entire apps together as routes you will need to symlink the `./apps/new-app/src/routes` folder into your main `./apps/+app/src/routes` directory. (more on this below)
 
 ## Add Package
 1. create new folder in `./apps` (i.e. `docs`)
