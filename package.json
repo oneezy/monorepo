@@ -22,7 +22,7 @@
 		"packages/**"
 	],
 	"scripts": {
-		"preinstall": "pnpm exec inherit -u && pnpm exec ./.sh/symlinks.sh",
+		"preinstall": "pnpm exec inherit -u",
 		"build": "turbo run build",
 		"dev": "turbo run dev --parallel",
 		"preview": "turbo run preview",
@@ -30,6 +30,7 @@
 		"test": "turbo run test",
 		"prepare": "husky install",
 		"plop": "plop",
+		"symlinks": "pnpm exec ./.sh/symlinks.sh",
 		"clean": "git clean -fXd"
 	},
 	"devDependencies": {
