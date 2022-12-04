@@ -30,9 +30,9 @@
         templateFile: ".templates/svelte.config.js.hbs"
       },
       { // Add app to symlink function
-        type: "append",
+        type: "prepend",
         path: "./.sh/symlinks.sh",
-        pattern: /create symlinks/g,
+        pattern: /end/g,
         templateFile: ".templates/symlinks.sh.hbs"
       }
     ]
