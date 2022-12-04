@@ -12,12 +12,6 @@ NEW=./apps
 space() {
   pnpm exec echo ""
 }
-start() {
-  pnpm exec echo ""
-}
-end() {
-  pnpm exec echo ""
-}
 
 # symlinks function
 ##################################################################
@@ -62,7 +56,6 @@ create_symlinks() {
   space
 }
 
-start
-  create_symlinks "docs"
-  create_symlinks "site"
-end
+# create symlinks
+create_symlinks "docs"
+create_symlinks "site"
