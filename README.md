@@ -116,7 +116,7 @@ This monorepo makes use of symlinks to handle 2 separate scenarios. if you plan 
 this monorepo only uses one folder for static assets located at `./apps/_apps/static` so you will need to symlink that `static` folder into every app you add to the `apps/*` folder to get static assets working (this may change in the future but this is how we're handling it at the moment).
    
 **symlink app routes** <br>
-if you want to link entire apps together as routes you will need to symlink the `./apps/new-app/src/routes` folder into your main `./apps/site/src/routes` directory. (more on this below)
+if you want to link entire apps together as routes you will need to symlink the `./apps/new-app/src/routes` folder into your main `./apps/_apps/src/routes` directory. (more on this below)
 
 ## Add Package
 1. create new folder in `./apps` (i.e. `docs`)
