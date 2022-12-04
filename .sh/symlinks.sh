@@ -13,37 +13,27 @@ ROUTES="$HERE"/apps/+app/src/routes
 NEW="$HERE"/apps
 
 
-# docs app
+# symlinks function
 ##################################################################
-if test -d "$ROUTES"/docs; then
-  # failure message
-  echo "🟨 docs already exists"
-else
-  # docs: Create "static" symlink folder 
-  ln -s "$STATIC" "$NEW"/docs
+create_symlinks() {
 
-  # docs: Create "routes" symlink folder
-  ln -s "$NEW"/docs/src/routes "$ROUTES"
-  mv "$ROUTES"/routes "$ROUTES"/docs
+  if test -d "$ROUTES"/$1; then
+    # failure message
+    echo "🟨 $1 already exists"
+  else
+    # site: Create "static" symlink folder 
+    ln -s "$STATIC" "$NEW"/$1
 
-  # Success message
-  pnpm echo "✅ docs symlinks created"
-fi
+    # site: Create "routes" symlink folder
+    ln -s "$NEW"/$1/src/routes "$ROUTES"
+    mv "$ROUTES"/routes "$ROUTES"/$1
 
+    # Success message
+    pnpm echo "✅ $1 symlinks created"
+  fi
 
-# site app
-##################################################################
-if test -d "$ROUTES"/site; then
-  # failure message
-  echo "🟨 site already exists"
-else
-  # site: Create "static" symlink folder 
-  ln -s "$STATIC" "$NEW"/site
+}
 
-  # site: Create "routes" symlink folder
-  ln -s "$NEW"/site/src/routes "$ROUTES"
-  mv "$ROUTES"/routes "$ROUTES"/site
-
-  # Success message
-  pnpm echo "✅ site symlinks created"
-fi
+# create symlinks
+create_symlinks "docs"
+create_symlinks "site"
