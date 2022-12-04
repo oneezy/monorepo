@@ -54,7 +54,7 @@ This is a monorepo starter powered by:
 - [ ] Testing
 
 ### Apps
-websites and webapps live in the `./apps` folder. They all live at the same level but the app routes are *symlinked* into the **+app (main app)** so they inherit Sveltekit's SPA routing system (Single Page Application).
+websites and webapps live in the `./apps` folder. They all live at the same level but the app routes are *symlinked* into the **+app (main app)** directory so they inherit Sveltekit's SPA routing system (Single Page Application).
 
 - **+app** (main app)
 - **+stories** (histoire stories)
@@ -82,12 +82,12 @@ libraries, configs and components live in the `./packages` folder.
 **Prereqs**
 ```
 node v18.8.0  (or later)
-pnpm v7       (or later)
+pnpm v7       (or later)image.png
 ```
 
 **Installation**
 ```diff
-git clone https://github.com/oneezy/monorepo.git
+degit oneezy/monorepo my-app
 pnpm i
 
 + start all apps
@@ -103,20 +103,47 @@ pnpm build
 pnpm preview
 
 + production preview single app
-pnpm preview --filter @apps/apps
+pnpm preview --filter @apps/dev
 ```
 
 ## Add App
-
-use `pnpm plop app` to generate a new sveltekit app
-
 This monorepo makes use of symlinks to handle 2 separate scenarios. if you plan on using either you will need to follow the steps below for your app(s) to work properly. Learn more about symlinks by [clicking here](#setting-up-symlinks-if-youre-on-windows). 
 
+
+> ***PROTIP:** Quickly generate an app using [plop](https://plopjs.com/documentation) !*
+```
+pnpm plop app
+```
+
+
 **symlink static assets** <br>
-this monorepo only uses one folder for static assets located at `./apps/+app/static` so you will need to symlink that `static` folder into every app you add to the `apps/*` folder to get static assets working (this may change in the future but this is how we're handling it at the moment).
+this monorepo only uses one folder for static assets located at `./apps/+app/static` so you will need to symlink that `static` folder into every app you add to the `apps/*` folder to get static assets working (this may change in the future but this is how we're handling it at the moment). 
+> This is automatically handled for you when you `pnpm i` anywhere.
    
 **symlink app routes** <br>
-if you want to link entire apps together as routes you will need to symlink the `./apps/new-app/src/routes` folder into your main `./apps/+app/src/routes` directory. (more on this below)
+if you want to link entire apps together as routes you will need to symlink your `./apps/my-app/src/routes` directory into the main `./apps/+app/src/routes` directory.
+> This is automatically handled for you when you `pnpm i` anywhere.
+
+## Add Component
+Components are the building blocks of your apps.
+> ***PROTIP:** Quickly generate a component using [plop](https://plopjs.com/documentation) !*
+```
+pnpm plop component
+```
+**or do it manually...**
+1. create new component in `./packages/components/src` directory 
+2. export new component from `./packages/components/index.js` file
+
+
+3. use component in an app `./apps/site/src/routes/index.svelte`
+```html
+<script>
+  import { MyComponent } from '@packages/components';
+</script>
+
+<MyComponent />
+```
+
 
 ## Add Package
 1. create new folder in `./apps` (i.e. `docs`)
@@ -142,33 +169,7 @@ pnpm add @packages/components
   "@packages/components": "workspace:*"
 }
 ```
-> ***PROTIP:** Quickly generate an `app` using [plop](https://plopjs.com/documentation)! (automatically handles steps 1-4!)*
-```
-pnpm plop app
-```
-## Add Component
-1. create new component in `packages/components/lib` directory 
-2. export new component from `packages/components/index.js` file
-> ***PROTIP:** Quickly generate components using [plop](https://plopjs.com/documentation)! (automatically handles steps 1 and 2!)*
-```
-pnpm plop component
-```
-3. use component in an app `apps/site/src/routes/index.svelte`
-```html
-<script>
-  import * as UI from '@packages/components';
-</script>
 
-<UI.MyComponent />
-```
-> *Or...*
-```html
-<script>
-  import { MyComponent } from '@packages/components';
-</script>
-
-<MyComponent />
-```
 
 # Project Configuration
 
@@ -352,11 +353,16 @@ rw-r--r-- 1 oneezy 197609 1354 Jun  1 13:00 index.svelte
 # Deploying
 This uses Sveltkits `adapter-auto` and is being deployed to [Vercel](vercel.com) but you may need to change it depending on how you want to deploy.
 
-> _**Note:** You might have to do something like this for your build command (I tried running pnpm build --filter @apps/site but it was complaining_
+**BUILD COMMAND**
 ```
-cd ../.. && npx turbo run build --scope=site --include-dependencies --no-deps
+pnpm build --filter @apps/app
 ```
-![image](https://user-images.githubusercontent.com/7369575/176028732-4aabef62-240b-43d5-852b-89c9dd9db50a.png)
+**ROOD DIRECTORY**
+```
+apps/+app
+```
+
+![image](https://user-images.githubusercontent.com/7369575/205485770-146beac8-a7a8-4e09-bc61-f985c2b53b64.png)
 
 
 # References
