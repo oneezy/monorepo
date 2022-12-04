@@ -23,6 +23,7 @@
 	],
 	"scripts": {
 		"preinstall": "pnpm exec inherit -u",
+		"postinstall": "pnpm exec ./.sh/symlinks.sh",
 		"build": "turbo run build",
 		"dev": "turbo run dev --parallel",
 		"preview": "turbo run preview",
