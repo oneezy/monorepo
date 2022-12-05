@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 # variables
 ##################################################################
 
@@ -9,9 +11,7 @@ ROUTES=./apps/+app/src/routes
 # New Apps
 NEW=./apps
 
-space() {
-  pnpm exec echo ""
-}
+
 
 # symlinks function
 ##################################################################
@@ -19,7 +19,7 @@ create_route() {
 
   if test -d ./apps/+app/src/routes/$1; then
     # failure message
-    pnpm exec echo " ❌ $1 symlink route exists"
+    pnpm exec echo "😁　$1 route exists!"
   else
     # create route symlink
     cd ./apps/+app/src/routes
@@ -27,7 +27,7 @@ create_route() {
     cd ../../../..
 
     # Success message
-    pnpm exec echo " ✅ $1 symlink route created"
+    pnpm exec echo "✅　$1 route created!"
   fi
 
 }
@@ -38,24 +38,29 @@ create_static() {
 
   if test -d apps/$1/static; then
     # failure message
-    pnpm exec echo " ❌ $1 static folder exists"
+    pnpm exec echo "😁　$1 static exists!"
   else
     # create static folder
     cd ./apps/$1
     ln -s ../+app/static static
     cd ../..
 
-    pnpm exec echo " ✅ $1 static folder created"
+    pnpm exec echo "✅　$1 static created!"
   fi
 
 }
 
 create_symlinks() {
+pnpm exec echo "
+  　
+creating $1 symlinks ...
+⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼"
   create_static "$1"
   create_route "$1"
-  space
 }
 
 # create symlinks
 create_symlinks "docs"
 create_symlinks "site"
+
+pnpm exec echo " 　"
