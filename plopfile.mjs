@@ -3,10 +3,11 @@
  * https://plopjs.com/documentation/
  */
 
+
  export default function (plop) {
 
   /* App
-  ***********************************************************/
+  ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ */
   plop.setGenerator("app", {
     description: "create a new app",
     prompts: [
@@ -40,40 +41,96 @@
 
 
   /* Component
-  ***********************************************************/
+  ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ */
   plop.setGenerator("component", {
     description: "Create a new component",
+
     prompts: [
-      { // Name your Component
+      { // Name
         type: "input",
         name: "name",
-        message: "What is the name of your component?"
+        message: "What's the name of your component?"
+      },
+      
+      { // Type
+        type: 'list',
+        name: 'component',
+        message: 'What type of component?',
+        choices: ['Component', 'Action', 'Store', 'Utility']
       }
     ],
-    actions: [
-      { // Create the component and add to @components workspace
-        type: "addMany",
-        destination: "./packages/components/src/{{name}}",
-        base: `.templates/component/template`,
-        templateFiles: `.templates/component/template/**/*`
-      },
-      { // Export component 
-        type: "append",
-        path: "./packages/components/index.js",
-        templateFile: ".templates/component/index.js.hbs"
-      },
-      { // Histoire: Create Component.story.svelte
-        type: "addMany",
-        destination: "./apps/+stories/src/{{name}}",
-        base: `.templates/story/`,
-        templateFiles: `.templates/story/**/*.hbs`
+
+    actions: function(data) {
+      let actions = [];
+
+      /* Component Type */
+      switch (data.component) {
+        case 'Component':
+          actions.push({
+            type: "append",
+            path: "./packages/components/index.js",
+            pattern: /\/\* components \*\//i,
+            templateFile: ".templates/component/index.js.hbs"
+          });
+          break;
+        case 'Store':
+          actions.push({
+            type: "append",
+            path: "./packages/components/index.js",
+            pattern: /\/\* stores \*\//i,
+            templateFile: ".templates/component/index.js.hbs"
+          });
+          break;
+        case 'Action':
+          actions.push({
+            type: "append",
+            path: "./packages/components/index.js",
+            pattern: /\/\* actions \*\//i,
+            templateFile: ".templates/component/index.js.hbs"
+          });
+          break;
+        case 'Utility':
+          actions.push({
+            type: "append",
+            path: "./packages/components/index.js",
+            pattern: /\/\* utils \*\//i,
+            templateFile: ".templates/component/index.js.hbs"
+          });
+          break;
+        default:
+          actions.push({
+            type: "append",
+            path: "./packages/components/index.js",
+            pattern: /\/\* components \*\//i,
+            templateFile: ".templates/component/index.js.hbs"
+          });
       }
-    ],
+
+      actions.push(
+        
+        { // Create Component
+          type: "addMany",
+          destination: "./packages/components/src/{{name}}",
+          base: `.templates/component/template`,
+          templateFiles: `.templates/component/template/**/*`
+        },
+
+        { // Create Story
+          type: "addMany",
+          destination: "./apps/+stories/src/{{name}}",
+          base: `.templates/story/`,
+          templateFiles: `.templates/story/**/*.hbs`
+        },
+      );
+
+      return actions;
+      
+    },
   });
 
 
   /* Story
-  ***********************************************************/
+  ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ */
   plop.setGenerator("story", {
     description: "Create a new story",
     prompts: [
@@ -95,7 +152,7 @@
 
 
   /* CI 
-  ***********************************************************/
+  ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ */
   plop.setGenerator("ci", {
     description: "Create a new CI",
     prompts: [
@@ -122,9 +179,8 @@
   });
 
 
-  /* Helper functions
-  ***********************************************************/
-  // lowerCaseNoSpace: convert "Awesome Text" to "awesometext"
+  /* Helpers
+  ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ */
   plop.setHelper("lowerCaseNoSpace", function (str) {
     return str.toLowerCase().replace(/\s/g, '');
   });
