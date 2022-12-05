@@ -1,14 +1,11 @@
 <script>
-	import { hstEvent } from 'histoire/client'
   import {{name}} from '@packages/components/src/{{name}}/{{name}}.svelte';
 
 	export let Hst
 </script>
 
-<Hst.Story title="{{name}}">
+<Hst.Story group="components" title="{{component}}s/{{name}}">
   
-	<{{name}}>
-		{{name}}
-	</{{name}}>
+	<{{name}} />
   
 </Hst.Story>

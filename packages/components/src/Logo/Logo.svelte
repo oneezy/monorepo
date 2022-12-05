@@ -1,7 +1,7 @@
 <script>
   import Icon from '../Icon/Icon.svelte';
   import Link from '../Link/Link.svelte';
-  import { mediaQuery } from '../mediaQuery/mediaQuery'
+  import { mediaQuery } from '../stores/mediaQuery'
 
 	const md = mediaQuery('(min-width: 0px) and (max-width: 1024px)')
 </script>

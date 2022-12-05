@@ -56,7 +56,7 @@
         type: 'list',
         name: 'component',
         message: 'What type of component?',
-        choices: ['Component', 'Action', 'Store']
+        choices: ['Atom', 'Molecule', 'Organism', 'Template', 'Page', 'Particle' ]
       }
     ],
 
