@@ -1,4 +1,4 @@
-# @apps/histoire
+# @apps/stories
 
 ## 0.1.0
 

@@ -6,7 +6,8 @@
 </script>
 
 <Hst.Story
-  title="Icons"
+  group="components"
+  title="Atoms/Icon"
   layout={{ type: 'grid', width: 200 }}
   icon="carbon:home"
   iconColor="gray"

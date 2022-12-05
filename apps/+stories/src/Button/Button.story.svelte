@@ -1,13 +1,7 @@
 <script>
-  import { hstEvent } from 'histoire/client'
   import Button from '@packages/components/src/Button/Button.svelte'
 
   export let Hst
-  const source = `
-  <Button>
-    Click me!
-  </Button>
-`
 
   let disabled = false
   let display = 'normal'
@@ -21,7 +15,7 @@
   const hstEventClick = event => hstEvent('click', event)
 </script>
   
-<Hst.Story title="Button" {source}>
+<Hst.Story group="components" title="Molecules/Button">
   
   <Button {disabled} {display} {button} {href} {icon} {position} {size} {box} on:click={hstEventClick}>
     test

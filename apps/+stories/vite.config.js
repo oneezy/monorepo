@@ -20,6 +20,14 @@ const config = {
           id: 'top',
           title: '',
         },
+        {
+          id: 'components',
+          title: 'Components',
+        },
+        {
+          id: 'examples',
+          title: 'Story Examples',
+        },
       ],
     },
     theme: {
@@ -39,7 +47,7 @@ const config = {
     }
   },
   server: {
-    open: '/'
+    open: '/story/src-introduction-story-js'
   },
 };
 

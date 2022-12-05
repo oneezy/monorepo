@@ -4,9 +4,7 @@
   let content = 'Some content'
 </script>
 
-<Hst.Story
-  layout={{ type: 'single', iframe: false }}
->
+<Hst.Story group="examples" title="No iFrame" layout={{ type: 'single', iframe: false }} >
   No iframe story content
 
   <div>{content}</div>

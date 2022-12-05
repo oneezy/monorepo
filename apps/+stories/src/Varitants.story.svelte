@@ -2,7 +2,7 @@
   export let Hst
 </script>
 
-<Hst.Story title="Variants">
+<Hst.Story group="examples" title="Variants">
   <Hst.Variant title="Happy" source="😺">
     😺
   </Hst.Variant>
