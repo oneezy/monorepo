@@ -1,5 +1,5 @@
 <script>
-  import TextAnimate from '@packages/components/src/TextAnimate/TextAnimate.svelte';
+  import TextAnimate from '@packages/components/src/components/TextAnimate/TextAnimate.svelte';
 	export let Hst
 
 	let disabled = false

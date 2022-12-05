@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte'
   import { fade, fly, scale } from 'svelte/transition'
   import Button from '../Button/Button.svelte'
-	import clickOutside from '../actions/useClickOutside'
+	import clickOutside from '../../actions/useClickOutside'
 
   // Props
   export let type = 'dialog' // dialog / modal / tooltip / toast / menu / drawer / sidebar / wizard

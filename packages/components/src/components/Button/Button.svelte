@@ -1,6 +1,6 @@
 <script>
   // import { base } from '$app/paths'
-  import useEventsAction from '../actions/useEventsAction'
+  import useEventsAction from '../../actions/useEventsAction'
   import { current_component } from 'svelte/internal'
   import Icon from '../Icon/Icon.svelte'
 

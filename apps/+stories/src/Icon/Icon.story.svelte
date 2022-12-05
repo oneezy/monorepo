@@ -1,6 +1,6 @@
 <script>
   export let Hst
-  import Icon from '@packages/components/src/Icon/Icon.svelte'
+  import Icon from '@packages/components/src/components/Icon/Icon.svelte'
   let size = 100;
   let width;
 </script>
