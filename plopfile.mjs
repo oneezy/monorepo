@@ -63,7 +63,7 @@
     actions: [
       { // create component
         type: "addMany",
-        destination: "./packages/components/src/{{name}}",
+        destination: "./packages/components/src/components/{{name}}",
         base: `.templates/component/template`,
         templateFiles: `.templates/component/template/**/*`
       },
