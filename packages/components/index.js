@@ -25,7 +25,7 @@ export { default as Img } from './src/Img/Img.svelte'
 
 
 /* STORES */
-export { mediaQuery } from './src/mediaQuery/mediaQuery.js'
+export { mediaQuery } from './src/stores/mediaQuery.js'
 
 
 /* ACTIONS */

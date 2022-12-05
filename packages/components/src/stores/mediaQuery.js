@@ -1,3 +1,5 @@
+
+// STORE: mediaQuery
 import { onDestroy } from 'svelte';
 import { writable } from 'svelte/store';
 
