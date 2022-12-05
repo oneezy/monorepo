@@ -1,6 +1,6 @@
 import { bubble, listen } from "svelte/internal";
 
-export function getEventsAction(component) {
+export default function useEventsAction(component) {
   return (node) => {
     const events = Object.keys(component.$$.callbacks);
     const listeners = [];

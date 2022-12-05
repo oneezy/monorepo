@@ -1,5 +1,5 @@
 
-// Components
+/* COMPONENTS */
 export { default as App } from './src/App/App.svelte'
 export { default as Hero } from './src/Hero/Hero.svelte'
 export { default as Button } from './src/Button/Button.svelte'
@@ -21,9 +21,14 @@ export { default as Typography } from './src/Typography/Typography.svelte'
 export { default as Intro } from './src/Intro/Intro.svelte'
 export { default as TextAnimate } from './src/TextAnimate/TextAnimate.svelte'
 export { default as Dialog } from './src/Dialog/Dialog.svelte'
-
-// Actions
-export { mediaQuery } from './src/mediaQuery/mediaQuery.js'
-export { viewport } from './src/actions/useViewportAction'
-export { default as clickOutside } from './src/actions/useClickOutside'
 export { default as Img } from './src/Img/Img.svelte'
+
+
+/* STORES */
+export { mediaQuery } from './src/mediaQuery/mediaQuery.js'
+
+
+/* ACTIONS */
+export { default as useEventsAction } from './src/actions/useEventsAction'
+export { default as clickOutside } from './src/actions/useClickOutside'
+export { viewport } from './src/actions/useViewportAction'

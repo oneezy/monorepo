@@ -1,8 +1,8 @@
 <script>
   // import { base } from '$app/paths'
-  import { getEventsAction } from "./utils";
-  import { current_component } from "svelte/internal";
-  import Icon from '../Icon/Icon.svelte';
+  import useEventsAction from '../actions/useEventsAction'
+  import { current_component } from 'svelte/internal'
+  import Icon from '../Icon/Icon.svelte'
 
   /* Props
   *************************/
@@ -17,7 +17,7 @@
   // export let disabled = false;
   // export let isLoading = false;
 
-  const events = getEventsAction(current_component);
+  const events = useEventsAction(current_component);
 
   // $: iconStatus = disabled ? "noactive" : type === "filled" ? "white" : status;
 

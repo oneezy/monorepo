@@ -32,7 +32,8 @@
 		"prepare": "husky install",
 		"plop": "plop",
 		"symlinks": "pnpm exec ./.sh/symlinks.sh",
-		"clean": "git clean -fXd && git clean -f -d"
+		"clean": "git clean -fXd",
+    "untracked": "git clean -f -d"
 	},
 	"devDependencies": {
 		"@changesets/cli": "^2.25.2",
