@@ -3,10 +3,12 @@
 # variables
 ##################################################################
 
+MAIN="+app"
+
 # Main App
-APP=./apps/+app
-STATIC=./apps/+app/static
-ROUTES=./apps/+app/src/routes
+APP=./apps/$MAIN
+STATIC=./apps/$MAIN/static
+ROUTES=./apps/$MAIN/src/routes
 
 # New Apps
 NEW=./apps
@@ -17,12 +19,12 @@ NEW=./apps
 ##################################################################
 create_route() {
 
-  if test -d ./apps/+app/src/routes/$1; then
+  if test -d ./apps/$MAIN/src/routes/$1; then
     # failure message
     pnpm exec echo "😁　$1 route exists!"
   else
     # create route symlink
-    cd ./apps/+app/src/routes
+    cd ./apps/$MAIN/src/routes
     ln -s ../../../$1/src/routes $1
     cd ../../../..
 
@@ -42,7 +44,7 @@ create_static() {
   else
     # create static folder
     cd ./apps/$1
-    ln -s ../+app/static static
+    ln -s ../$MAIN/static static
     cd ../..
 
     pnpm exec echo "✅　$1 static created!"
