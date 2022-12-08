@@ -4,11 +4,8 @@ const plugin = require('tailwindcss/plugin');
 
 const config = {
 	content: [
-		// '../../packages/components/**/*.{html,js,svelte,svx,ts}',
 		'../../packages/components/src/**/*.{html,js,svelte,md,svx,ts}',
 		'../../apps/*/src/**/*.{html,js,svelte,md,svx,ts}'
-		// './src/**/*.{html,js,svelte,md,svx,ts}',
-		// '../*/src/**/*.{html,js,svelte,md,svx,ts}'
 	],
 
 	darkMode: 'class',
